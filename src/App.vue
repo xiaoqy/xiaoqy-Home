@@ -108,13 +108,12 @@ onMounted(() => {
   const styleTitle2 = "font-size:12px;color: rgb(244,167,89);";
   const styleContent = "color: rgb(30,152,255);";
   const title1 = "白小七羽的个人主页";
-  const title2 = `
- __  __  ___      _       ___     ___   __   __
- \ \/ / |_ _|    / \     / _ \   / _ \  \ \ / /
-  \  /   | |    / _ \   | | | | | | | |  \ V / 
-  /  \   | |   / ___ \  | |_| | | |_| |   | |  
- /_/\_\ |___| /_/   \_\  \___/   \__\_\   |_|  
-                                               `;
+  const title2 = `\n
+   _  __    ____    ___    ____    ____ __  __
+  | |/ /   /  _/   /   |  / __ \  / __ \\ \/ /
+  |   /    / /    / /| | / / / / / / / / \  / 
+ /   |   _/ /    / ___ |/ /_/ / / /_/ /  / /  
+/_/|_|  /___/   /_/  |_|\____/  \___\_\ /_/`;
   const content = `\n\n主页: https://www.xiaoqy.com`;
   console.info(`%c${title1} %c${title2} %c${content}`, styleTitle1, styleTitle2, styleContent);
 });
