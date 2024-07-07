@@ -1,37 +1,52 @@
 [
   {
     "icon": "Blog",
-    "name": "博客",
-    "link": "https://blog.imsyy.top/"
+    "name": "个人博客",
+    "link": "https://blog.xiaoqy.com/"
+  },
+  {
+    "icon": "Blog",
+    "name": "技术博客",
+    "link": "https://geek.xiaoqy.com/"
   },
   {
     "icon": "Cloud",
     "name": "网盘",
-    "link": "https://pan.imsyy.top/"
+    "link": "https://www.ihpan.com/"
   },
   {
     "icon": "CompactDisc",
     "name": "音乐",
-    "link": "https://music.imsyy.top/"
+    "link": "https://music.xiaoqy.com/"
   },
   {
     "icon": "Compass",
-    "name": "起始页",
-    "link": "https://nav.imsyy.top/"
+    "name": "导航",
+    "link": "https://www.wmnav.com/"
   },
   {
     "icon": "Book",
     "name": "网址集",
-    "link": "https://web.imsyy.top/"
+    "link": "https://web.xiaoqy.com/"
   },
   {
     "icon": "Fire",
     "name": "今日热榜",
-    "link": "https://hot.imsyy.top/"
+    "link": "https://hot.xiaoqy.com/"
   },
   {
     "icon": "LaptopCode",
-    "name": "站点监测",
-    "link": "https://status.imsyy.top/"
+    "name": "状态",
+    "link": "https://status.xiaoqy.com/"
+  },
+  {
+    "icon": "",
+    "name": "聊天",
+    "link": "https://chat.xiaoqy.com/"
+  },
+  {
+    "icon": "",
+    "name": "捐赠",
+    "link": "https://ko-fi.com/xiaoqy"
   }
 ]
