@@ -25,6 +25,11 @@
     "link": "https://music.xiaoqy.com"
   },
   {
+    "icon": "CompactDisc",
+    "name": "云音乐",
+    "link": "https://cmusic.xiaoqy.com"
+  },
+  {
     "icon": "Book",
     "name": "网址集",
     "link": "https://web.xiaoqy.com"
@@ -38,6 +43,16 @@
     "icon": "LaptopCode",
     "name": "状态",
     "link": "https://status.xiaoqy.com"
+  },
+  {
+    "icon": "",
+    "name": "相册",
+    "link": "https://photos.xiaoqy.com/"
+  },
+  {
+    "icon": "",
+    "name": "实验室",
+    "link": "https://lab.xiaoqy.com/"
   },
   {
     "icon": "",
