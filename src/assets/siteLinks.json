@@ -2,42 +2,42 @@
   {
     "icon": "Blog",
     "name": "个人博客",
-    "link": "https://blog.xiaoqy.com/"
+    "link": "https://blog.xiaoqy.com"
   },
   {
     "icon": "Blog",
     "name": "技术博客",
-    "link": "https://geek.xiaoqy.com/"
-  },
-  {
-    "icon": "Cloud",
-    "name": "网盘",
-    "link": "https://www.ihpan.com/"
-  },
-  {
-    "icon": "CompactDisc",
-    "name": "音乐",
-    "link": "https://music.xiaoqy.com/"
+    "link": "https://geek.xiaoqy.com"
   },
   {
     "icon": "Compass",
     "name": "导航",
-    "link": "https://www.wmnav.com/"
+    "link": "https://www.wmnav.com"
+  },
+  {
+    "icon": "Cloud",
+    "name": "网盘",
+    "link": "https://www.ihpan.com"
+  },
+  {
+    "icon": "CompactDisc",
+    "name": "音乐",
+    "link": "https://music.xiaoqy.com"
   },
   {
     "icon": "Book",
     "name": "网址集",
-    "link": "https://web.xiaoqy.com/"
+    "link": "https://web.xiaoqy.com"
   },
   {
     "icon": "Fire",
     "name": "今日热榜",
-    "link": "https://hot.xiaoqy.com/"
+    "link": "https://hot.xiaoqy.com"
   },
   {
     "icon": "LaptopCode",
     "name": "状态",
-    "link": "https://status.xiaoqy.com/"
+    "link": "https://status.xiaoqy.com"
   },
   {
     "icon": "",
