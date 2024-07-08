@@ -19,7 +19,7 @@
       <!-- 移动端菜单按钮 -->
       <Icon
         class="menu"
-        size="24"
+        size="20"
         v-show="!store.backgroundShow"
         @click="store.mobileOpenState = !store.mobileOpenState"
       >
