@@ -19,7 +19,7 @@
       <!-- 移动端菜单按钮 -->
       <Icon
         class="menu"
-        size="20"
+        size="24"
         v-show="!store.backgroundShow"
         @click="store.mobileOpenState = !store.mobileOpenState"
       >
@@ -167,7 +167,7 @@ onBeforeUnmount(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 84%;
+    top: 5%;
     left: calc(50% - 28px);
     width: 56px;
     height: 34px;
