@@ -15,6 +15,11 @@
     "link": "https://www.wmnav.com"
   },
   {
+    "icon": "Tools",
+    "name": "工具",
+    "link": "https://tools.xiaoqy.com"
+  },
+  {
     "icon": "Cloud",
     "name": "网盘",
     "link": "https://www.ihpan.com"
@@ -28,6 +33,26 @@
     "icon": "CompactDisc",
     "name": "云音乐",
     "link": "https://cmusic.xiaoqy.com"
+  },
+  {
+    "icon": "",
+    "name": "AI 聊天",
+    "link": "https://aichat.xiaoqy.com"
+  },
+  {
+    "icon": "",
+    "name": "白板",
+    "link": "https://draw.xiaoqy.com"
+  },
+  {
+    "icon": "",
+    "name": "思维导图",
+    "link": "https://mindmap.xiaoqy.com"
+  },
+  {
+    "icon": "",
+    "name": "计算器",
+    "link": "https://calc.xiaoqy.com"
   },
   {
     "icon": "Book",
