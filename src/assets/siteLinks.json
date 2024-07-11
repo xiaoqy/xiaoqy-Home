@@ -25,6 +25,11 @@
     "link": "https://www.ihpan.com"
   },
   {
+    "icon": "",
+    "name": "直播",
+    "link": "https://live.xiaoqy.com"
+  },
+  {
     "icon": "CompactDisc",
     "name": "音乐",
     "link": "https://music.xiaoqy.com"
