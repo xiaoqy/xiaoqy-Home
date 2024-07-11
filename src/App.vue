@@ -167,7 +167,7 @@ onBeforeUnmount(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 3%;
+    top: 90%;
     left: calc(50% - 28px);
     width: 56px;
     height: 34px;
