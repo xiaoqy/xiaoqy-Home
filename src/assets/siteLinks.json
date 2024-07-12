@@ -60,6 +60,16 @@
     "link": "https://calc.xiaoqy.com"
   },
   {
+    "icon": "",
+    "name": "知识库",
+    "link": "https://wiki.xiaoqy.com"
+  },
+  {
+    "icon": "",
+    "name": "打单词",
+    "link": "https://qwerty-learner-one-pied.vercel.app/"
+  },
+  {
     "icon": "Book",
     "name": "网址集",
     "link": "https://web.xiaoqy.com"
