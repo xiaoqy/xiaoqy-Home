@@ -10,6 +10,11 @@
     "link": "https://geek.xiaoqy.com"
   },
   {
+    "icon": "",
+    "name": "知识百科",
+    "link": "https://wiki.xiaoqy.com"
+  },
+  {
     "icon": "Compass",
     "name": "导航",
     "link": "https://www.wmnav.com"
@@ -18,6 +23,11 @@
     "icon": "Tools",
     "name": "工具",
     "link": "https://tools.xiaoqy.com"
+  },
+  {
+    "icon": "Fire",
+    "name": "今日热榜",
+    "link": "https://hot.xiaoqy.com"
   },
   {
     "icon": "Cloud",
@@ -61,23 +71,13 @@
   },
   {
     "icon": "",
-    "name": "知识库",
-    "link": "https://wiki.xiaoqy.com"
-  },
-  {
-    "icon": "",
-    "name": "打单词",
+    "name": "单词打字机",
     "link": "https://qwerty-learner-one-pied.vercel.app/"
   },
   {
     "icon": "Book",
     "name": "网址集",
     "link": "https://web.xiaoqy.com"
-  },
-  {
-    "icon": "Fire",
-    "name": "今日热榜",
-    "link": "https://hot.xiaoqy.com"
   },
   {
     "icon": "LaptopCode",
