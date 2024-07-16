@@ -20,9 +20,9 @@
     "link": "https://www.wmnav.com"
   },
   {
-    "icon": "Tools",
-    "name": "工具",
-    "link": "https://tools.xiaoqy.com"
+    "icon": "",
+    "name": "直播",
+    "link": "https://live.xiaoqy.com"
   },
   {
     "icon": "Fire",
@@ -30,14 +30,19 @@
     "link": "https://hot.xiaoqy.com"
   },
   {
+    "icon": "",
+    "name": "相册",
+    "link": "https://photos.xiaoqy.com/"
+  },
+  {
+    "icon": "Tools",
+    "name": "工具",
+    "link": "https://tools.xiaoqy.com"
+  },
+  {
     "icon": "Cloud",
     "name": "网盘",
     "link": "https://www.ihpan.com"
-  },
-  {
-    "icon": "",
-    "name": "直播",
-    "link": "https://live.xiaoqy.com"
   },
   {
     "icon": "CompactDisc",
@@ -72,7 +77,7 @@
   {
     "icon": "",
     "name": "单词打字机",
-    "link": "https://qwerty-learner-one-pied.vercel.app/"
+    "link": "https://qwerty.xiaoqy.com/"
   },
   {
     "icon": "Book",
@@ -83,11 +88,6 @@
     "icon": "LaptopCode",
     "name": "状态",
     "link": "https://status.xiaoqy.com"
-  },
-  {
-    "icon": "",
-    "name": "相册",
-    "link": "https://photos.xiaoqy.com/"
   },
   {
     "icon": "",
