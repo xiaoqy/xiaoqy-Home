@@ -167,10 +167,10 @@ onBeforeUnmount(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 90%;
+    top: 80%;
     left: calc(50% - 28px);
-    width: 56px;
-    height: 34px;
+    width: 50px;
+    height: 30px;
     background: rgb(0 0 0 / 20%);
     backdrop-filter: blur(10px);
     border-radius: 6px;
