@@ -101,6 +101,11 @@
   },
   {
     "icon": "",
+    "name": "个人项目",
+    "link": "/projects"
+  },
+  {
+    "icon": "",
     "name": "捐赠",
     "link": "https://ko-fi.com/xiaoqy"
   }
