@@ -12,6 +12,10 @@
     </transition>
     <el-row :gutter="40">
       <el-col :span="12" class="left">
+        <div class="logo text-hidden">
+          <span class="bg">{{ siteUrl[0] }}</span>
+          <span class="sm">.{{ siteUrl[1] }}</span>
+        </div>
         <el-card class="update">
           <template #header>
             <div class="card-header">
