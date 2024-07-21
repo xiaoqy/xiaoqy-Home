@@ -16,6 +16,12 @@
           <span class="bg">{{ siteUrl[0] }}</span>
           <span class="sm">.{{ siteUrl[1] }}</span>
         </div>
+        <div class="version">
+          <div class="num">v&nbsp;{{ config.version }}</div>
+          <el-tooltip content="Github 源代码仓库" placement="right" :show-arrow="false">
+            <github-one class="github" theme="outline" size="24" @click="jumpTo(config.github)" />
+          </el-tooltip>
+        </div>
         <el-card class="update">
           <template #header>
             <div class="card-header">
@@ -138,6 +144,23 @@ const jumpTo = (url) => {
         .sm {
           margin-left: 6px;
           font-size: 2rem;
+        }
+
+        @media (max-width: 990px) {
+          .bg {
+            font-size: 4.5rem;
+          }
+          .sm {
+            font-size: 1.7rem;
+          }
+        }
+        @media (max-width: 825px) {
+          .bg {
+            font-size: 3.8rem;
+          }
+          .sm {
+            font-size: 1.3rem;
+          }
         }
       }
 
