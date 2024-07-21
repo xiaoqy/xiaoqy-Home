@@ -32,7 +32,7 @@
   {
     "icon": "",
     "name": "相册",
-    "link": "https://photos.xiaoqy.com/"
+    "link": "https://photos.xiaoqy.com"
   },
   {
     "icon": "Tools",
@@ -77,7 +77,7 @@
   {
     "icon": "",
     "name": "单词打字机",
-    "link": "https://qwerty.xiaoqy.com/"
+    "link": "https://qwerty.xiaoqy.com"
   },
   {
     "icon": "Book",
@@ -92,17 +92,17 @@
   {
     "icon": "",
     "name": "实验室",
-    "link": "https://lab.xiaoqy.com/"
+    "link": "https://lab.xiaoqy.com"
   },
   {
     "icon": "",
     "name": "聊天",
-    "link": "https://chat.xiaoqy.com/"
+    "link": "https://chat.xiaoqy.com"
   },
   {
     "icon": "",
     "name": "个人项目",
-    "link": "/projects"
+    "link": "https://xiaoqy.com/projects"
   },
   {
     "icon": "",
