@@ -19,7 +19,7 @@
   },
   {
     "name": "捐赠",
-    "icon": "Coffee",
+    "icon": "/images/icon/coffee.png",
     "tip": "捐赠 ~",
     "url": "https://ko-fi.com/xiaoqy"
   }
