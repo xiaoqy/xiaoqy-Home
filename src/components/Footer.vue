@@ -13,7 +13,7 @@
         </span>
         <!-- 以下信息请不要修改哦 -->
         <span class="hidden">
-          &amp;&nbsp;xiaoqy (白小七羽)
+          &amp;&nbsp;Powered by xiaoqy (白小七羽)
         </span>
         <!-- 站点备案 -->
         <a v-if="siteIcp" href="https://beian.miit.gov.cn" target="_blank">
