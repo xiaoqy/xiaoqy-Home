@@ -83,7 +83,7 @@ const siteIcon = {
   FileWord,
   Atom,
   FacebookMessenger,
-  ProductHunt,
+  ProductHunt
 };
 
 // 链接跳转

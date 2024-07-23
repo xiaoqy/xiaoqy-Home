@@ -20,9 +20,9 @@
     "link": "https://www.wmnav.com"
   },
   {
-    "icon": "PhotoVideo",
-    "name": "相册(未开发)",
-    "link": "https://photos.xiaoqy.com"
+    "icon": "Tools",
+    "name": "工具",
+    "link": "https://tools.xiaoqy.com"
   },
   {
     "icon": "Fire",
@@ -40,9 +40,9 @@
     "link": "https://shop.xiaoqy.com"
   },
   {
-    "icon": "Tools",
-    "name": "工具",
-    "link": "https://tools.xiaoqy.com"
+    "icon": "PhotoVideo",
+    "name": "相册(未开发)",
+    "link": "https://photos.xiaoqy.com"
   },
   {
     "icon": "Cloud",
