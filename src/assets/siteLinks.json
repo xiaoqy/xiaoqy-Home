@@ -10,7 +10,7 @@
     "link": "https://geek.xiaoqy.com"
   },
   {
-    "icon": "",
+    "icon": "BookOpen",
     "name": "知识百科(未开发)",
     "link": "https://wiki.xiaoqy.com"
   },
@@ -20,7 +20,7 @@
     "link": "https://www.wmnav.com"
   },
   {
-    "icon": "",
+    "icon": "PhotoVideo",
     "name": "相册(未开发)",
     "link": "https://photos.xiaoqy.com"
   },
@@ -30,12 +30,12 @@
     "link": "https://hot.xiaoqy.com"
   },
   {
-    "icon": "",
+    "icon": "Video",
     "name": "直播(未开发)",
     "link": "https://live.xiaoqy.com"
   },
   {
-    "icon": "",
+    "icon": "ShoppingCart",
     "name": "店铺(未开发)",
     "link": "https://shop.xiaoqy.com"
   },
@@ -60,27 +60,27 @@
     "link": "https://cmusic.xiaoqy.com"
   },
   {
-    "icon": "",
+    "icon": "Robot",
     "name": "AI 聊天",
     "link": "https://aichat.xiaoqy.com"
   },
   {
-    "icon": "",
+    "icon": "PaintBrush",
     "name": "画板",
     "link": "https://draw.xiaoqy.com"
   },
   {
-    "icon": "",
+    "icon": "Sitemap",
     "name": "思维导图",
     "link": "https://mindmap.xiaoqy.com"
   },
   {
-    "icon": "",
+    "icon": "Calculator",
     "name": "计算器",
     "link": "https://calc.xiaoqy.com"
   },
   {
-    "icon": "",
+    "icon": "FileWord",
     "name": "单词打字机",
     "link": "https://qwerty.xiaoqy.com"
   },
@@ -95,23 +95,18 @@
     "link": "https://status.xiaoqy.com"
   },
   {
-    "icon": "",
+    "icon": "Atom",
     "name": "实验室(未开发)",
     "link": "https://lab.xiaoqy.com"
   },
   {
-    "icon": "",
+    "icon": "FacebookMessenger",
     "name": "聊天",
     "link": "https://chat.xiaoqy.com"
   },
   {
-    "icon": "",
+    "icon": "ProductHunt",
     "name": "个人项目",
     "link": "https://xiaoqy.com/projects"
-  },
-  {
-    "icon": "",
-    "name": "捐赠",
-    "link": "https://ko-fi.com/xiaoqy"
   }
 ]

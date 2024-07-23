@@ -18,15 +18,9 @@
     "url": "mailto:ixiaoqy@gmail.com"
   },
   {
-    "name": "Twitter",
-    "icon": "/images/icon/twitter.png",
-    "tip": "尽情期待 ~",
-    "url": ""
-  },
-  {
-    "name": "Telegram",
-    "icon": "/images/icon/telegram.png",
-    "tip": "尽情期待 ~",
-    "url": ""
+    "name": "捐赠",
+    "icon": "Coffee",
+    "tip": "捐赠 ~",
+    "url": "https://ko-fi.com/xiaoqy"
   }
 ]

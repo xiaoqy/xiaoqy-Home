@@ -70,6 +70,20 @@ const siteIcon = {
   Book,
   Fire,
   LaptopCode,
+  Coffee,
+  Robot,
+  BookOpen,
+  PhotoVideo,
+  Video,
+  ShoppingCart,
+  Tools,
+  PaintBrush,
+  Sitemap,
+  Calculator,
+  FileWord,
+  Atom,
+  FacebookMessenger,
+  ProductHunt,
 };
 
 // 链接跳转
