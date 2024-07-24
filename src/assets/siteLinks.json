@@ -1,22 +1,22 @@
 [
   {
     "icon": "Blog",
-    "name": "个人博客(暂停)",
+    "name": "个人博客|Paused",
     "link": "https://blog.xiaoqy.com"
   },
   {
     "icon": "Blog",
-    "name": "技术博客(暂停)",
+    "name": "技术博客|Paused",
     "link": "https://geek.xiaoqy.com"
   },
   {
     "icon": "BookOpen",
-    "name": "知识百科(未开发)",
+    "name": "知识百科|Undev",
     "link": "https://wiki.xiaoqy.com"
   },
   {
     "icon": "Compass",
-    "name": "导航(暂停)",
+    "name": "导航|Paused",
     "link": "https://www.wmnav.com"
   },
   {
@@ -31,22 +31,22 @@
   },
   {
     "icon": "Video",
-    "name": "直播(未开发)",
+    "name": "直播|Undev",
     "link": "https://live.xiaoqy.com"
   },
   {
     "icon": "ShoppingCart",
-    "name": "店铺(未开发)",
+    "name": "店铺|Undev",
     "link": "https://shop.xiaoqy.com"
   },
   {
     "icon": "PhotoVideo",
-    "name": "相册(未开发)",
+    "name": "相册|Undev",
     "link": "https://photos.xiaoqy.com"
   },
   {
     "icon": "Cloud",
-    "name": "网盘(暂停)",
+    "name": "网盘|Paused",
     "link": "https://www.ihpan.com"
   },
   {
@@ -81,22 +81,22 @@
   },
   {
     "icon": "FileWord",
-    "name": "单词打字机",
+    "name": "单词打字",
     "link": "https://qwerty.xiaoqy.com"
   },
   {
     "icon": "Book",
-    "name": "网址集(未开发)",
+    "name": "网址集|Undev",
     "link": "https://web.xiaoqy.com"
   },
   {
     "icon": "LaptopCode",
-    "name": "状态(开发中)",
+    "name": "状态|Dev",
     "link": "https://status.xiaoqy.com"
   },
   {
     "icon": "Atom",
-    "name": "实验室(未开发)",
+    "name": "实验室|Undev",
     "link": "https://lab.xiaoqy.com"
   },
   {
@@ -106,7 +106,7 @@
   },
   {
     "icon": "ProductHunt",
-    "name": "个人项目",
+    "name": "服务项目",
     "link": "https://xiaoqy.com/projects"
   }
 ]
