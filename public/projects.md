@@ -15,9 +15,9 @@
 
 ### 项目 1：白小七羽的个人博客
 
-![IMG_1759](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\IMG_1759.JPG)
+![IMG_1759](./imgs/IMG_1759.JPG)
 
-![IMG_1760](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\IMG_1760.JPG)
+![IMG_1760](./imgs/IMG_1760.JPG)
 
 **网址：** blog.xiaoqy.com / yublog.me
 
@@ -27,9 +27,9 @@
 
 ### 项目 2：白小七羽的技术博客
 
-![IMG_1759](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\IMG_1759.JPG)
+![IMG_1759](./imgs/IMG_1759.JPG)
 
-![IMG_1760](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\IMG_1760.JPG)
+![IMG_1760](./imgs/IMG_1760.JPG)
 
 **网址：** geek.xiaoqy.com / yugeek.me
 
@@ -83,9 +83,9 @@
 
 **描述：** 
 
-### 项目 23：白小七羽的社区
+### 项目 8：白小七羽的社区
 
-![Snipaste_2024-07-25_02-18-46](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\Snipaste_2024-07-25_02-18-46.png)
+![Snipaste_2024-07-25_02-18-46](./imgs/Snipaste_2024-07-25_02-18-46.png)
 
 （开发前概念图展示）
 
@@ -95,7 +95,7 @@
 
 **描述：** 
 
-### 项目 8：白小七羽的实验室
+### 项目 9：白小七羽的实验室
 
 **网址：** xiaoqy.com/experiment
 
@@ -103,7 +103,7 @@
 
 **描述：** 
 
-### 项目 9：白羽云音乐
+### 项目 10：白羽云音乐
 
 ![](./imgs/2024-07-24-06-55-50-image.png)![](./imgs/2024-07-24-06-57-03-image.png)<img src="./imgs/2024-07-24-06-57-49-image.png" >
 
@@ -113,7 +113,7 @@
 
 **描述：** 
 
-### 项目 10：白羽书屋
+### 项目 11：白羽书屋
 
 **网址：** books.xiaoqy.com
 
@@ -121,7 +121,7 @@
 
 **描述：** 
 
-### 项目 11：白羽画板
+### 项目 12：白羽画板
 
 **网址：** draw.xiaoqy.com
 
@@ -129,7 +129,7 @@
 
 **描述：** 
 
-### 项目 12：白羽思维导图
+### 项目 13：白羽思维导图
 
 **网址：** mindmap.xiaoqy.com
 
@@ -137,7 +137,7 @@
 
 **描述：** 
 
-### 项目 13：白羽今日热榜
+### 项目 14：白羽今日热榜
 
 ![](./imgs/2024-07-24-07-00-41-image.png)![](./imgs/2024-07-24-07-01-16-image.png)![](./imgs/2024-07-24-07-00-56-image.png)
 
@@ -147,7 +147,7 @@
 
 **描述：** 
 
-### 项目 14：白羽计算器
+### 项目 15：白羽计算器
 
 ![](./imgs/2024-07-24-07-01-51-image.png)![](./imgs/2024-07-24-07-03-02-image.png)![](./imgs/2024-07-24-07-03-10-image.png)![](./imgs/2024-07-24-07-02-18-image.png)![](./imgs/2024-07-24-07-02-33-image.png)
 
@@ -157,7 +157,7 @@
 
 **描述：** 
 
-### 项目 15：白羽 AI 聊天
+### 项目 16：白羽 AI 聊天
 
 ![](./imgs/2024-07-24-07-03-43-image.png)![](./imgs/2024-07-24-07-04-20-image.png)
 
@@ -167,9 +167,9 @@
 
 **描述：** 
 
-### 项目 16：完美导航网
+### 项目 17：完美导航网
 
-![IMG_1761](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\IMG_1761.JPG)
+![IMG_1761](./imgs/IMG_1761.JPG)
 
 **网址：** wmnav.com ( 原：24ta.com )
 
@@ -177,9 +177,9 @@
 
 **描述：** 
 
-### 项目 17：爱好盘
+### 项目 18：爱好盘
 
-![IMG_1762](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\IMG_1762.JPG)
+![IMG_1762](./imgs/IMG_1762.JPG)
 
 **网址：** ihpan.com
 
@@ -187,7 +187,7 @@
 
 **描述：** 
 
-### 项目 18：白羽单词打字机
+### 项目 19：白羽单词打字机
 
 ![](./imgs/2024-07-24-06-53-00-image.png)![](./imgs/2024-07-24-06-54-11-image.png)
 
@@ -223,7 +223,7 @@
 
 内置了常用的大学英语、新概念英语、考研英语、雅思托福、多邻国、专业四级英语、专业八级英语，也有程序员常见英语单词以及多种编程语言 API 等词库。 尽可能满足大部分用户对背单词的需求。
 
-### 项目 19：生命周期管理
+### 项目 20：生命周期管理
 
 **网址：** services.xiaoqy.com/lifecycle
 
@@ -231,7 +231,7 @@
 
 **描述：** 
 
-### 项目 20：在线审计系统
+### 项目 21：在线审计系统
 
 **网址：** developer.xiaoqy.com/ternimals
 
@@ -239,7 +239,7 @@
 
 **描述：** 
 
-### 项目 21：财产管理
+### 项目 22：财产管理
 
 **网址：** services.xiaoqy.com/finance
 
@@ -247,7 +247,7 @@
 
 **描述：** 
 
-### 项目 22：3D 查看器
+### 项目 23：3D 查看器
 
 **网址：** apps.xiaoqy.com/3dviewer
 
@@ -287,11 +287,21 @@
 
 **描述：** 
 
+### 项目 28：白羽安全聊天
+
+**网址：** chat.xiaoqy.com
+
+**状态：** 服务正常运行
+
+**描述：** 
+
+
+
 ## 白小七羽电子开发项目
 
-![IMG_1767](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\IMG_1767.JPG)
+![IMG_1767](./imgs/IMG_1767.JPG)
 
-![IMG_1768](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\IMG_1768.JPG)
+![IMG_1768](./imgs/IMG_1768.JPG)
 
 未来开发电子项目清单（白小七羽电子硬件创客计划）
 电源和电池类：
@@ -378,11 +388,11 @@ NFC智能标签墨水屏卡片（具有读写模拟NFC RFID加密卡片功能）
 ## 白小七羽作品创作项目
 
 ## 白小七羽设备运维项目
-![IMG_1766](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\IMG_1766.JPG)
+![IMG_1766](./imgs/IMG_1766.JPG)
 
-![IMG_1765](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\IMG_1765.JPG)
+![IMG_1765](./imgs/IMG_1765.JPG)
 
-![IMG_1764](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\IMG_1764.JPG)
+![IMG_1764](./imgs/IMG_1764.JPG)
 
 ## 白小七羽媒体管理项目
 
