@@ -1,15 +1,679 @@
-<template>
-  <div v-html="htmlContent"></div>
-</template>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<script>
-import htmlContent from './projects.html'; // 导入HTML文件
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
-export default {
-  data() {
-    return {
-      htmlContent
-    };
-  }
-};
-</script>
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.mac-os #write{
+    caret-color: AccentColor;
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>projects</title>
+</head>
+
+<template><div>
+<div id='write'  class=''><h1 id='白小七羽服务项目'><span>白小七羽服务项目</span></h1><p><span>此站点动态更新，请重点关注：</span><a href='https://www.xiaoqy.com/projects' target='_blank' class='url'>https://www.xiaoqy.com/projects</a></p><blockquote><p><span>目录</span></p></blockquote><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#白小七羽服务项目">白小七羽服务项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n7"><a class="md-toc-inner" href="#白小七羽网站开发项目">白小七羽网站开发项目</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n10"><a class="md-toc-inner" href="#项目-1白小七羽的个人博客">项目 1：白小七羽的个人博客</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n16"><a class="md-toc-inner" href="#项目-2白小七羽的技术博客">项目 2：白小七羽的技术博客</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n22"><a class="md-toc-inner" href="#项目-3白小七羽的知识百科">项目 3：白小七羽的知识百科</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n26"><a class="md-toc-inner" href="#项目-4白小七羽的直播">项目 4：白小七羽的直播</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n30"><a class="md-toc-inner" href="#项目-5白小七羽的商店">项目 5：白小七羽的商店</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n34"><a class="md-toc-inner" href="#项目-6白小七羽的相册">项目 6：白小七羽的相册</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n40"><a class="md-toc-inner" href="#项目-7白小七羽的音乐">项目 7：白小七羽的音乐</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n45"><a class="md-toc-inner" href="#项目-8白小七羽的社区">项目 8：白小七羽的社区</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n51"><a class="md-toc-inner" href="#项目-9白小七羽的实验室">项目 9：白小七羽的实验室</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n55"><a class="md-toc-inner" href="#项目-10白羽云音乐">项目 10：白羽云音乐</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n60"><a class="md-toc-inner" href="#项目-11白羽书屋">项目 11：白羽书屋</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n64"><a class="md-toc-inner" href="#项目-12白羽画板">项目 12：白羽画板</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n69"><a class="md-toc-inner" href="#项目-13白羽思维导图">项目 13：白羽思维导图</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n74"><a class="md-toc-inner" href="#项目-14白羽今日热榜">项目 14：白羽今日热榜</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n79"><a class="md-toc-inner" href="#项目-15白羽计算器">项目 15：白羽计算器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n84"><a class="md-toc-inner" href="#项目-16白羽-ai-聊天">项目 16：白羽 AI 聊天</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n89"><a class="md-toc-inner" href="#项目-17完美导航网">项目 17：完美导航网</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n94"><a class="md-toc-inner" href="#项目-18爱好盘">项目 18：爱好盘</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n99"><a class="md-toc-inner" href="#项目-19白羽单词打字机">项目 19：白羽单词打字机</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n117"><a class="md-toc-inner" href="#项目-20生命周期管理">项目 20：生命周期管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n121"><a class="md-toc-inner" href="#项目-21在线审计系统">项目 21：在线审计系统</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n125"><a class="md-toc-inner" href="#项目-22财产管理">项目 22：财产管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n129"><a class="md-toc-inner" href="#项目-233d-查看器">项目 23：3D 查看器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n133"><a class="md-toc-inner" href="#项目-24光学射线模拟器">项目 24：光学射线模拟器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n137"><a class="md-toc-inner" href="#项目-25爱好猫科技">项目 25：爱好猫科技</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n141"><a class="md-toc-inner" href="#项目-26宝库猫应用">项目 26：宝库猫应用</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n145"><a class="md-toc-inner" href="#项目-27代码编辑器">项目 27：代码编辑器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n149"><a class="md-toc-inner" href="#项目-28白羽安全聊天">项目 28：白羽安全聊天</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n154"><a class="md-toc-inner" href="#白小七羽电子开发项目">白小七羽电子开发项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n166"><a class="md-toc-inner" href="#白小七羽作品创作项目">白小七羽作品创作项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n167"><a class="md-toc-inner" href="#白小七羽设备运维项目">白小七羽设备运维项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n171"><a class="md-toc-inner" href="#白小七羽媒体管理项目">白小七羽媒体管理项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n172"><a class="md-toc-inner" href="#白小七羽产品设计项目">白小七羽产品设计项目</a></span></p></div><p>&nbsp;</p><h2 id='白小七羽网站开发项目'><span>白小七羽网站开发项目</span></h2><p><span>部分项目是采用的 </span><code>Vue3</code><span> + </span><code>Vite</code><span> + </span><code>TypeScript</code><span> + </span><code>JavaScript</code><span> + </span><code>React</code><span> 等框架和 </span><code>UI</code><span> 组件编程语言快速开发，部分静态站点由自托管平台运行，实现免维护，免受攻击，长期稳定运行，安全性极高。</span></p><p>&nbsp;</p><h3 id='项目-1白小七羽的个人博客'><span>项目 1：白小七羽的个人博客</span></h3><p><img src="./imgs/IMG_1759.JPG" referrerpolicy="no-referrer" alt="IMG_1759"></p><p><img src="./imgs/IMG_1760.JPG" referrerpolicy="no-referrer" alt="IMG_1760"></p><p><strong><span>网址：</span></strong><span> blog.xiaoqy.com / yublog.me</span></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> 个人分享，生活指南，购物指南，健康知识，直播知识，人生指南，建筑设计，建筑装修，家庭装修，旅行指南，美食食谱，心理健康，摄影指南，睡眠健康，职业规划，媒体编辑，写作规范，排版规范，笔记知识，行为管理，学术文献，创业知识，插画设计，法律知识，宠物护理，阅读书籍，手绘艺术，社会经历，美妆护理，工作简历，形象形体，产品评测，交通知识，文化知识，食品安全，语言交流，时间管理，效率管理，养生知识。</span></p><h3 id='项目-2白小七羽的技术博客'><span>项目 2：白小七羽的技术博客</span></h3><p><img src="./imgs/IMG_1759.JPG" referrerpolicy="no-referrer" alt="IMG_1759"></p><p><img src="./imgs/IMG_1760.JPG" referrerpolicy="no-referrer" alt="IMG_1760"></p><p><strong><span>网址：</span></strong><span> geek.xiaoqy.com / yugeek.me</span></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> 软件编程，软件开发，软件编译，网站开发，电子开发，硬件开发，自动化，桌面运维，系统优化，软件汇编，密码破解，视频编辑，音频编辑，网络安全，服务器，通讯系统，广播系统，应用容器，负载均衡，高可用，动画编程，代码压缩，加密解密，数据备份，数据恢复，编码解码，接口测试，网络测试，语言模型，人工智能，工业技术，电子维修，物联网，音乐编程，压力测试，逆向分析，颜色色卡，芯片烧录，产品渲染，远程控制，硬件 DIY，3D 打印，无线电，模型设计，建筑设计，平面设计，虚拟化，模拟器，微观生物，电池电源，传感器，数据存储，硬件刷机。</span></p><h3 id='项目-3白小七羽的知识百科'><span>项目 3：白小七羽的知识百科</span></h3><p><strong><span>网址：</span></strong><span> wiki.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-4白小七羽的直播'><span>项目 4：白小七羽的直播</span></h3><p><strong><span>网址：</span></strong><span> live.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-5白小七羽的商店'><span>项目 5：白小七羽的商店</span></h3><p><strong><span>网址：</span></strong><span> shop.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-6白小七羽的相册'><span>项目 6：白小七羽的相册</span></h3><p><img src="./imgs/image-20240725021516235.png" referrerpolicy="no-referrer" alt="image-20240725021516235"></p><p><span>（开发前概念图展示）</span></p><p><strong><span>网址：</span></strong><span> photos.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-7白小七羽的音乐'><span>项目 7：白小七羽的音乐</span></h3><p><img src="./imgs/2024-07-24-06-59-10-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> music.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-8白小七羽的社区'><span>项目 8：白小七羽的社区</span></h3><p><img src="./imgs/Snipaste_2024-07-25_02-18-46.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_02-18-46"></p><p><span>（开发前概念图展示）</span></p><p><strong><span>网址：</span></strong><span> social.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-9白小七羽的实验室'><span>项目 9：白小七羽的实验室</span></h3><p><strong><span>网址：</span></strong><span> xiaoqy.com/experiment</span></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-10白羽云音乐'><span>项目 10：白羽云音乐</span></h3><p><img src="./imgs/2024-07-24-06-55-50-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-57-03-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-57-49-image.png" ></p><p><strong><span>网址：</span></strong><span> cmusic.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-11白羽书屋'><span>项目 11：白羽书屋</span></h3><p><strong><span>网址：</span></strong><span> books.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-12白羽画板'><span>项目 12：白羽画板</span></h3><p><img src="./imgs/Snipaste_2024-07-25_03-45-48.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_03-45-48"></p><p><strong><span>网址：</span></strong><span> draw.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-13白羽思维导图'><span>项目 13：白羽思维导图</span></h3><p><img src="./imgs/Snipaste_2024-07-25_04-28-23.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_04-28-23"></p><p><strong><span>网址：</span></strong><span> mindmap.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-14白羽今日热榜'><span>项目 14：白羽今日热榜</span></h3><p><img src="./imgs/2024-07-24-07-00-41-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-01-16-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-00-56-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> hot.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-15白羽计算器'><span>项目 15：白羽计算器</span></h3><p><img src="./imgs/2024-07-24-07-01-51-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-03-02-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-03-10-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-02-18-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-02-33-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> calc.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-16白羽-ai-聊天'><span>项目 16：白羽 AI 聊天</span></h3><p><img src="./imgs/2024-07-24-07-03-43-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-04-20-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> aichat.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-17完美导航网'><span>项目 17：完美导航网</span></h3><p><img src="./imgs/IMG_1761.JPG" referrerpolicy="no-referrer" alt="IMG_1761"></p><p><strong><span>网址：</span></strong><span> wmnav.com ( 原：24ta.com )</span></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-18爱好盘'><span>项目 18：爱好盘</span></h3><p><img src="./imgs/IMG_1762.JPG" referrerpolicy="no-referrer" alt="IMG_1762"></p><p><strong><span>网址：</span></strong><span> ihpan.com</span></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-19白羽单词打字机'><span>项目 19：白羽单词打字机</span></h3><p><img src="./imgs/2024-07-24-06-53-00-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-54-11-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> qwerty.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> 白羽单词打字机：通过打字练习方式来实现肌肉记忆，让大脑更省力。学习时间更碎片化，更灵活！陪你从小到大，不分年龄，人人皆可学。</span></p><p><span>软件设计的目标群体为以英语作为主要工作语言的键盘工作者。部分人会出现输入母语时的打字速度快于英语的情况，因为多年的母语输入练就了非常坚固的肌肉记忆 💪，而英语输入的肌肉记忆相对较弱，易出现输入英语时“提笔忘字”的现象。</span></p><p><span>同时为了巩固英语技能，也需要持续的背诵单词，本软件将英语单词的记忆与英语键盘输入的肌肉记忆的锻炼相结合，可以在背诵单词的同时巩固肌肉记忆。</span></p><p><span>为了避免造成错误的肌肉记忆，设计上如果用户单词输入错误则需要重新输入单词，尽可能确保用户维持正确的肌肉记忆。</span></p><p><span>肌肉记忆是内隐记忆的一种，它指的是人在一段时间内重复做出一个动作后，大脑就会记住这一动作，最终人能在不用多想的情况下就能做出这一动作。许多日常活动中都有肌肉记忆的身影，例如骑自行车、驾驶机动车、玩球类运动、游泳、键盘打字、输入密码、演奏乐器、打扑克、表演武术和跳舞等。</span></p><p><span>软件也对需要机考英语的人群有一定的帮助。</span></p><p style="color:red;">背单词：</p><p><span>可以选择记忆或默写单词，提供了音标显示、发音功能（均可选美音、英音）、错误统计</span></p><p style="color:red;">错词本：</p><p><span>默写单词时输入错误会自动添加到错词本，以便后续复习。</span></p><p style="color:red;">默写模式：</p><p><span>在用户完成一个章节的练习后，如果有错误词，那么会重复练习错误词，直到没有错误词为止。完成之后弹出选项可选择默写本章、重复本章、下一章</span></p><p style="color:red;">词库：</p><p><span>内置了常用的大学英语、新概念英语、考研英语、雅思托福、多邻国、专业四级英语、专业八级英语，也有程序员常见英语单词以及多种编程语言 API 等词库。 尽可能满足大部分用户对背单词的需求。</span></p><h3 id='项目-20生命周期管理'><span>项目 20：生命周期管理</span></h3><p><strong><span>网址：</span></strong><span> services.xiaoqy.com/lifecycle</span></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-21在线审计系统'><span>项目 21：在线审计系统</span></h3><p><strong><span>网址：</span></strong><span> developer.xiaoqy.com/ternimals</span></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-22财产管理'><span>项目 22：财产管理</span></h3><p><strong><span>网址：</span></strong><span> services.xiaoqy.com/finance</span></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-233d-查看器'><span>项目 23：3D 查看器</span></h3><p><strong><span>网址：</span></strong><span> apps.xiaoqy.com/3dviewer</span></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-24光学射线模拟器'><span>项目 24：光学射线模拟器</span></h3><p><strong><span>网址：</span></strong><span> apps.xiaoqy.com/raysimulator</span></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-25爱好猫科技'><span>项目 25：爱好猫科技</span></h3><p><strong><span>网址：</span></strong><span> ihmao.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-26宝库猫应用'><span>项目 26：宝库猫应用</span></h3><p><strong><span>网址：</span></strong><span> bkmao.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-27代码编辑器'><span>项目 27：代码编辑器</span></h3><p><strong><span>网址：</span></strong><span> code.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-28白羽安全聊天'><span>项目 28：白羽安全聊天</span></h3><p><strong><span>网址：</span></strong><span> chat.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><p>&nbsp;</p><h2 id='白小七羽电子开发项目'><span>白小七羽电子开发项目</span></h2><p><img src="./imgs/IMG_1767.JPG" referrerpolicy="no-referrer" alt="IMG_1767"></p><p><img src="./imgs/IMG_1768.JPG" referrerpolicy="no-referrer" alt="IMG_1768"></p><p><span>未来开发电子项目清单（白小七羽电子硬件创客计划）</span>
+<span>电源和电池类：</span>
+<span>220v 高频纯正弦波逆变器移动电源（120ah 宁德时代磷酸铁锂大单体 x16 + 极空电池保护板 + 智能显示屏 + 不锈钢铝合金电池箱等）</span>
+<span>太阳能单晶硅电池板 18v 200w（配备mppt太阳能控制器和220v工频纯正弦波逆变器和300ah 宁德时代磷酸铁锂电池组家用太阳能发电储能方案）</span>
+<span>多功能可调电源（可调的恒压恒流电源，具有电路逆向保护功能）</span>
+<span>多功能电压表（实时远端监控电费状况）</span>
+<span>智能继电器电源开关</span>
+<span>120ah pd 无线快充充电宝（将选用高倍率46160或46650锂电池，带显示屏亚克力板，220v和USB快充以及DC5-24v多口输出，内置COB高亮灯珠，无线充电模块）</span>
+<span>多功能快充充电器</span>
+<span>UPS 不间断电源（服务器应急供电方案）</span></p><p><span>电磁线圈和高压装置类：</span>
+<span>高压包点火器（低压高电流电弧点火器）</span>
+<span>高压发生器（马克思发生器）</span>
+<span>特斯拉发生器（单电线雷电模拟装置）</span>
+<span>法拉电容2.7v3000F液晶显示屏脉冲点焊机</span>
+<span>脉冲电磁炮</span>
+<span>离子飘升机（通过高频电流产生静电驱动力）</span>
+<span>大功率电蚊机</span>
+<span>电磁加热器（以电磁炉原理，感应线圈实现瞬间加热，熔炼铁皮铝合金金属等）</span></p><p><span>显示和照明类：</span>
+<span>迷你便携显示器充电宝（在屏库网采购手机或平板屏幕，加聚合物软包电芯，自行设计原理图和电路开发电路板，组成一台便携多输入显示器，同时也是一台输出充电宝，HDMI也可自身供电）</span>
+<span>电子墨水屏桌面时钟（最佳省电桌面天气时钟方案）</span>
+<span>大屏智能音箱（内置安卓开发版，带有蓝牙投屏和电台播客软件）</span>
+<span>LED 光立方</span>
+<span>LED 立方体镜子</span>
+<span>LED 音乐频率分析器</span>
+<span>迷你手电筒（1000mah聚合物软包电池，3v COB LED 高亮灯板，只要灯珠多，说不定还能反向充电呢）</span>
+<span>手电筒（32700 锂电池 + 12v COB LED 高亮灯板，可对焦光控，SOS 功能等）</span>
+<span>安卓广告工控机（使用 J1900 主机打照廉价的广告展示信息机）</span></p><p><span>音响和声波类：</span>
+<span>可调恒压恒流电源</span>
+<span>可充电式电烙铁</span>
+<span>载物运输无人机（四轴高速电机驱动，高清拍摄，轨道识别，离线返航，人物跟随，OPENCV 人物识别，智能避障等）</span>
+<span>压电陶瓷片（用于模拟鸣笛高音喇叭）</span>
+<span>超声波清洗机（轻松清洗顽固油性污渍）</span>
+<span>声波分析仪（分析声压分贝与声频赫兹）</span>
+<span>超声波加湿器（使用雾化压电陶瓷片加 Arduino 驱动信号发生器，简单做一个家用雾化加湿器）</span>
+<span>骨传导共振音响（使任何介质物体都能传播声音，包括墙壁混泥土钢板）</span></p><p><span>电机和风扇类：</span>
+<span>减速发电机</span>
+<span>12v 风扇空调</span>
+<span>全息风扇</span>
+<span>高速电磨机</span>
+<span>12v 10万转涵道风扇（打造比戴森电吹风机更强劲的手持风扇）</span>
+<span>12v 台达4056服务器风扇</span>
+<span>16v Fms 70涵道飞行器风扇（高达1000g推力）</span></p><p><span>无线电射频类：</span>
+<span>调频收音机</span>
+<span>无线电转发器（能够与卫星无线电波频率通信）</span></p><p><span>高精度数控打印类：</span>
+<span>绘图写字机器人（采用Arduino + cnc shield控制驱动板，所有零件都可纯手工组装，模拟人工写作，填写表格，绘画等）</span>
+<span>3D材料打印机（abs，pla，petg主流材料打印任何塑料外壳，玩具积木零件）</span>
+<span>激光镭雕机（低速低功耗激光只对木质材料，塑料进行烧刻）</span>
+<span>CNC雕刻机（对一定强度金属，铝合金，木头，异性3D实现雕刻切割）</span></p><p><span>电子仪器和驱动器类：</span>
+<span>DDS信号发生器</span>
+<span>红外热成像</span>
+<span>智能示波器</span>
+<span>自平衡车（利用陀螺仪实现自动平衡）</span>
+<span>辐射探测器</span>
+<span>心率检测仪</span>
+<span>金属探测仪（利用电磁线圈感应磁场，金属，喇叭，风扇，磁铁，电机）</span></p><p><span>物联网和传感器类：</span>
+<span>NFC智能标签墨水屏卡片（具有读写模拟NFC RFID加密卡片功能）</span>
+<span>无线充电水泵</span>
+<span>温湿度环境监测传感器</span>
+<span>指尖视觉控制器</span>
+<span>自平衡机器人</span>
+<span>遥控潜水艇</span>
+<span>桌面信息牌</span>
+<span>物联网桌面显示器时钟（采用ESP32开发，具有时钟闹钟，天气预报，网络信息同步，家电物联等功能）</span>
+<span>物联网RGB灯带</span>
+<span>物联网红外线万能遥控（比家用任何红外线遥控器更强，四周多灯珠无死角控制任何家电）</span></p><h2 id='白小七羽作品创作项目'><span>白小七羽作品创作项目</span></h2><h2 id='白小七羽设备运维项目'><span>白小七羽设备运维项目</span></h2><p><img src="./imgs/IMG_1766.JPG" referrerpolicy="no-referrer" alt="IMG_1766"></p><p><img src="./imgs/IMG_1765.JPG" referrerpolicy="no-referrer" alt="IMG_1765"></p><p><img src="./imgs/IMG_1764.JPG" referrerpolicy="no-referrer" alt="IMG_1764"></p><h2 id='白小七羽媒体管理项目'><span>白小七羽媒体管理项目</span></h2><h2 id='白小七羽产品设计项目'><span>白小七羽产品设计项目</span></h2></div></div>
+</div></template>
