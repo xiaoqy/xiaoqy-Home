@@ -8,20 +8,6 @@ import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import viteCompression from "vite-plugin-compression";
 
-import { createRouter, createWebHistory } from 'vue-router';
-import projects from './projects.vue';
-
-const routes = [
-  { path: '/projects', component: projects },
-];
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
-});
-
-export default router;
-
 // https://vitejs.dev/config/
 export default ({ mode }) =>
   defineConfig({
