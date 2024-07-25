@@ -1,15 +1,17 @@
 # 白小七羽服务项目
 
-此站点动态更新，请重点关注：https://www.xiaoqy.com/projects
+主页：https://www.xiaoqy.com
 
-> 目录
+文章动态更新：https://www.xiaoqy.com/projects.html
+
+> 文章目录
 [TOC]
 
 
 
 ## 白小七羽网站开发项目
 
-部分项目是采用的 `Vue3` + `Vite` + `TypeScript` + `JavaScript` + `React` 等框架和 `UI` 组件编程语言快速开发，部分静态站点由自托管平台运行，实现免维护，免受攻击，长期稳定运行，安全性极高。
+部分项目是采用的 `Vue3` + `Vite` + `TypeScript` + `JavaScript` + `React` + `Next.js`  + `Node.js` 等 `UI` 框架和组件等编程语言快速开发，部分静态站点由自托管平台运行，实现免维护，免受攻击，长期稳定运行，安全性极高。
 
 
 
