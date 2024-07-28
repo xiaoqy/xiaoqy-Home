@@ -1,8 +1,14 @@
 # 白小七羽服务项目
 
-主页：https://www.xiaoqy.com
+<a name="top" id="top"></a>
 
-文章动态更新：https://www.xiaoqy.com/projects.html
+> [!NOTE]
+>
+> 主页：https://www.xiaoqy.com
+>
+> 文章动态更新：https://www.xiaoqy.com/projects.html
+>
+> <p id="time-since-published">加载中...</p>
 
 > 文章目录
 [TOC]
@@ -13,7 +19,7 @@
 
 部分项目是采用的 `Vue3` + `Vite` + `TypeScript` + `JavaScript` + `React` + `Next.js`  + `Node.js` 等 `UI` 框架和组件等编程语言快速开发，部分静态站点由自托管平台运行，实现免维护，免受攻击，长期稳定运行，安全性极高。
 
-
+<a href="#top">TOP</a>
 
 ### 项目 1：白小七羽的个人博客
 
@@ -21,11 +27,13 @@
 
 ![IMG_1760](./imgs/IMG_1760.JPG)
 
-**网址：** blog.xiaoqy.com / yublog.me
+**网址：** [blog.xiaoqy.com](https://blog.xiaoqy.com) / [yublog.me](https://yublog.me)
 
 **状态：** 暂停服务，因资金原因。
 
 **描述：** 个人分享，生活指南，购物指南，健康知识，直播知识，人生指南，建筑设计，建筑装修，家庭装修，旅行指南，美食食谱，心理健康，摄影指南，睡眠健康，职业规划，媒体编辑，写作规范，排版规范，笔记知识，行为管理，学术文献，创业知识，插画设计，法律知识，宠物护理，阅读书籍，手绘艺术，社会经历，美妆护理，工作简历，形象形体，产品评测，交通知识，文化知识，食品安全，语言交流，时间管理，效率管理，养生知识。
+
+<a href="#top">TOP</a>
 
 ### 项目 2：白小七羽的技术博客
 
@@ -33,35 +41,43 @@
 
 ![IMG_1760](./imgs/IMG_1760.JPG)
 
-**网址：** geek.xiaoqy.com / yugeek.me
+**网址：** [geek.xiaoqy.com](https://geek.xiaoqy.com) / [yugeek.me](https://yugeek.me)
 
 **状态：** 暂停服务，因资金原因。
 
 **描述：** 软件编程，软件开发，软件编译，网站开发，电子开发，硬件开发，自动化，桌面运维，系统优化，软件汇编，密码破解，视频编辑，音频编辑，网络安全，服务器，通讯系统，广播系统，应用容器，负载均衡，高可用，动画编程，代码压缩，加密解密，数据备份，数据恢复，编码解码，接口测试，网络测试，语言模型，人工智能，工业技术，电子维修，物联网，音乐编程，压力测试，逆向分析，颜色色卡，芯片烧录，产品渲染，远程控制，硬件 DIY，3D 打印，无线电，模型设计，建筑设计，平面设计，虚拟化，模拟器，微观生物，电池电源，传感器，数据存储，硬件刷机。
 
+<a href="#top">TOP</a>
+
 ### 项目 3：白小七羽的知识百科
 
-**网址：** wiki.xiaoqy.com
+**网址：** [wiki.xiaoqy.com](https://wiki.xiaoqy.com)
 
 **状态：** 未开发，因资金原因。
 
-**描述：** 
+**描述：** 编程思想，学习思想，人生知识，健康饮食，购物评价，网购攻略，智能家居，医疗药品，生活窍门，育儿纪录，视力保护，照顾建议，喂养技巧，页面开发，网站部署，部署工具，必备应用，工具笔记，读书方法，读书笔记，思维方式，自我认知，社会认知，市场营销，社会经济，健身计划，仪式清单，自我监控，时间管理，日常习惯，美容仪器，直播手册。
+
+<a href="#top">TOP</a>
 
 ### 项目 4：白小七羽的直播
 
-**网址：** live.xiaoqy.com
+**网址：** [live.xiaoqy.com](https://live.xiaoqy.com)
 
 **状态：** 未开发，因资金原因和时间成本原因。
 
 **描述：** 
+
+<a href="#top">TOP</a>
 
 ### 项目 5：白小七羽的商店
 
-**网址：** shop.xiaoqy.com
+**网址：** [shop.xiaoqy.com](https://shop.xiaoqy.com)
 
 **状态：** 未开发，因资金原因和时间成本原因。
 
 **描述：** 
+
+<a href="#top">TOP</a>
 
 ### 项目 6：白小七羽的相册
 
@@ -69,21 +85,25 @@
 
 （开发前概念图展示）
 
-**网址：** photos.xiaoqy.com
+**网址：** [photos.xiaoqy.com](https://photos.xiaoqy.com)
 
 **状态：** 未开发，因资金原因。
 
 **描述：** 
 
+<a href="#top">TOP</a>
+
 ### 项目 7：白小七羽的音乐
 
 ![](./imgs/2024-07-24-06-59-10-image.png)
 
-**网址：** music.xiaoqy.com
+**网址：** [music.xiaoqy.com](https://music.xiaoqy.com)
 
 **状态：** 服务正常运行
 
 **描述：** 
+
+<a href="#top">TOP</a>
 
 ### 项目 8：白小七羽的社区
 
@@ -91,113 +111,137 @@
 
 （开发前概念图展示）
 
-**网址：** social.xiaoqy.com
+**网址：** [social.xiaoqy.com](https://social.xiaoqy.com)
 
 **状态：** 未开发，因资金原因和时间成本原因。
 
 **描述：** 
 
+<a href="#top">TOP</a>
+
 ### 项目 9：白小七羽的实验室
 
-**网址：** xiaoqy.com/experiment
+**网址：** [xiaoqy.com/experiment](https://xiaoqy.com/experiment)
 
 **状态：** 未开发
 
 **描述：** 
 
+<a href="#top">TOP</a>
+
 ### 项目 10：白羽云音乐
 
 ![](./imgs/2024-07-24-06-55-50-image.png)![](./imgs/2024-07-24-06-57-03-image.png)<img src="./imgs/2024-07-24-06-57-49-image.png" >
 
-**网址：** cmusic.xiaoqy.com
+**网址：** [cmusic.xiaoqy.com](https://cmusic.xiaoqy.com)
 
 **状态：** 服务正常运行
 
 **描述：** 
 
+<a href="#top">TOP</a>
+
 ### 项目 11：白羽书屋
 
-**网址：** books.xiaoqy.com
+![20230915173954](./imgs/20230915173954.webp)
+
+**网址：** [books.xiaoqy.com](https://books.xiaoqy.com)
 
 **状态：** 未开发，因资金原因和时间成本原因。
 
 **描述：** 
 
+<a href="#top">TOP</a>
+
 ### 项目 12：白羽画板
 
 ![Snipaste_2024-07-25_03-45-48](./imgs/Snipaste_2024-07-25_03-45-48.png)
 
-**网址：** draw.xiaoqy.com
+**网址：** [draw.xiaoqy.com](https://draw.xiaoqy.com)
 
 **状态：** 服务正常运行
 
 **描述：** 
+
+<a href="#top">TOP</a>
 
 ### 项目 13：白羽思维导图
 
 ![Snipaste_2024-07-25_04-28-23](./imgs/Snipaste_2024-07-25_04-28-23.png)
 
-**网址：** mindmap.xiaoqy.com
+**网址：** [mindmap.xiaoqy.com](https://mindmap.xiaoqy.com)
 
 **状态：** 服务正常运行
 
 **描述：** 
+
+<a href="#top">TOP</a>
 
 ### 项目 14：白羽今日热榜
 
 ![](./imgs/2024-07-24-07-00-41-image.png)![](./imgs/2024-07-24-07-01-16-image.png)![](./imgs/2024-07-24-07-00-56-image.png)
 
-**网址：** hot.xiaoqy.com
+**网址：** [hot.xiaoqy.com](https://hot.xiaoqy.com)
 
 **状态：** 服务正常运行
 
 **描述：** 
+
+<a href="#top">TOP</a>
 
 ### 项目 15：白羽计算器
 
 ![](./imgs/2024-07-24-07-01-51-image.png)![](./imgs/2024-07-24-07-03-02-image.png)![](./imgs/2024-07-24-07-03-10-image.png)![](./imgs/2024-07-24-07-02-18-image.png)![](./imgs/2024-07-24-07-02-33-image.png)
 
-**网址：** calc.xiaoqy.com
+**网址：** [calc.xiaoqy.com](https://calc.xiaoqy.com)
 
 **状态：** 服务正常运行
 
 **描述：** 
+
+<a href="#top">TOP</a>
 
 ### 项目 16：白羽 AI 聊天
 
 ![](./imgs/2024-07-24-07-03-43-image.png)![](./imgs/2024-07-24-07-04-20-image.png)
 
-**网址：** aichat.xiaoqy.com
+**网址：** [aichat.xiaoqy.com](https://aichat.xiaoqy.com)
 
 **状态：** 服务正常运行
 
 **描述：** 
 
+<a href="#top">TOP</a>
+
 ### 项目 17：完美导航网
 
 ![IMG_1761](./imgs/IMG_1761.JPG)
 
-**网址：** wmnav.com ( 原：24ta.com )
+**网址：** [wmnav.com](https://wmnav.com) ( 原：[24ta.com](https://24ta.com) )
 
 **状态：** 暂停服务，因资金原因。
 
 **描述：** 
+
+<a href="#top">TOP</a>
 
 ### 项目 18：爱好盘
 
 ![IMG_1762](./imgs/IMG_1762.JPG)
 
-**网址：** ihpan.com
+**网址：** [ihpan.com](https://ihpan.com)
 
 **状态：** 暂停服务，因资金原因。
 
 **描述：** 
 
+<a href="#top">TOP</a>
+
 ### 项目 19：白羽单词打字机
 
 ![](./imgs/2024-07-24-06-53-00-image.png)![](./imgs/2024-07-24-06-54-11-image.png)
 
-**网址：** qwerty.xiaoqy.com
+**网址：** [qwerty.xiaoqy.com](https://qwerty.xiaoqy.com)
 
 **状态：** 服务正常运行
 
@@ -229,79 +273,148 @@
 
 内置了常用的大学英语、新概念英语、考研英语、雅思托福、多邻国、专业四级英语、专业八级英语，也有程序员常见英语单词以及多种编程语言 API 等词库。 尽可能满足大部分用户对背单词的需求。
 
+<a href="#top">TOP</a>
+
 ### 项目 20：生命周期管理
 
-**网址：** services.xiaoqy.com/lifecycle
+**网址：** [services.xiaoqy.com/lifecycle](https://services.xiaoqy.com/lifecycle)
 
 **状态：** 未开发
 
 **描述：** 
 
-### 项目 21：在线审计系统
+<a href="#top">TOP</a>
 
-**网址：** developer.xiaoqy.com/ternimals
+### 项目 21：白羽交互审计系统
+
+![Snipaste_2024-07-29_01-16-20](./imgs/Snipaste_2024-07-29_01-16-20.png)
+
+**网址：** [developer.xiaoqy.com/ternimals](https://developer.xiaoqy.com/ternimals)
 
 **状态：** 未开发
 
 **描述：** 
+
+<a href="#top">TOP</a>
 
 ### 项目 22：财产管理
 
-**网址：** services.xiaoqy.com/finance
+**网址：** [services.xiaoqy.com/finance](https://services.xiaoqy.com/finance)
 
 **状态：** 未开发
 
 **描述：** 
+
+<a href="#top">TOP</a>
 
 ### 项目 23：3D 查看器
 
-**网址：** apps.xiaoqy.com/3dviewer
+![Snipaste_2024-07-29_02-09-28](./imgs/Snipaste_2024-07-29_02-09-28.png)
+
+![Snipaste_2024-07-29_02-11-08](./imgs/Snipaste_2024-07-29_02-11-08.png)
+
+**网址：** [apps.xiaoqy.com/3dviewer](https://apps.xiaoqy.com/3dviewer)
 
 **状态：** 未开发
 
 **描述：** 
+
+<a href="#top">TOP</a>
 
 ### 项目 24：光学射线模拟器
 
-**网址：** apps.xiaoqy.com/raysimulator
+![Snipaste_2024-07-29_02-13-26](./imgs/Snipaste_2024-07-29_02-13-26.png)
+
+**网址：** [apps.xiaoqy.com/raysimulator](https://apps.xiaoqy.com/raysimulator)
 
 **状态：** 未开发
 
 **描述：** 
 
+<a href="#top">TOP</a>
+
 ### 项目 25：爱好猫科技
 
-**网址：** ihmao.com
+**网址：** [ihmao.com](https://ihmao.com)
 
 **状态：** 未开发，因资金原因和时间成本原因。
 
 **描述：** 
+
+### 项目 26：爱好猫社区
+
+![Snipaste_2024-07-29_01-05-30](./imgs/Snipaste_2024-07-29_01-05-30.png)
+
+**网址：** [forum.ihmao.com](https://forum.ihmao.com)
+
+**状态：** 未开发，因资金原因和时间成本原因。
+
+**描述：** 
+
+<a href="#top">TOP</a>
 
 ### 项目 26：宝库猫应用
 
-**网址：** bkmao.com
+**网址：** [bkmao.com](https://bkmao.com)
 
 **状态：** 未开发，因资金原因和时间成本原因。
 
 **描述：** 
 
+<a href="#top">TOP</a>
+
 ### 项目 27：代码编辑器
 
-**网址：** code.xiaoqy.com
+![Snipaste_2024-07-29_01-30-15](./imgs/Snipaste_2024-07-29_01-30-15.png)
+
+**网址：** [code.xiaoqy.com](https://code.xiaoqy.com)
 
 **状态：** 暂停服务，因资金原因。
 
 **描述：** 
 
+<a href="#top">TOP</a>
+
 ### 项目 28：白羽安全聊天
 
-**网址：** chat.xiaoqy.com
+![hp-hero-visual-alt_1hp-hero-visual-alt](./imgs/hp-hero-visual-alt_1hp-hero-visual-alt.webp)
+
+<img src="./imgs/IMG_1773.JPG" alt="IMG_1773"  />
+
+<img src="./imgs/IMG_1774.JPG" alt="IMG_1774"  />
+
+![IMG_1775](./imgs/IMG_1775.JPG)
+
+![IMG_1776](./imgs/IMG_1776.JPG)
+
+![IMG_1777](./imgs/IMG_1777.JPG)
+
+![IMG_1778](./imgs/IMG_1778.JPG)
+
+![IMG_1779](./imgs/IMG_1779.JPG)
+
+![IMG_1772](./imgs/IMG_1772.JPG)
+
+**网址：** [chat.xiaoqy.com](https://chat.xiaoqy.com)
 
 **状态：** 服务正常运行
 
-**描述：** 
+**描述：** 白羽安全聊天，这是现在最好的聊天服务，也是最安全的聊天服务，没有之一！支持多个客户端： `Windows/Android/IOS/Web` 等
 
+支持语音通话，视频通话，发文字语音，发表情，发视频图片，投票，位置等，是一款成熟稳定的社交平台。
 
+在航天领域，互联网企业，网络安全领域广泛使用安全的加密软件。
+首先白羽安全聊天是一个去中心化的聊天服务，实现了端对端的加密，这意味着不仅其他人无法查看你的聊天内容，哪怕你更换了一个终端，你也需要私钥才能够查看你的聊天记录。
+
+这是终极的隐私保护方案，因为一旦你丢掉了这个密钥，这些内容就相当于被销毁了。
+
+底层服务基于 `Matrix` 如果你能够访问到 `Matrix` 的服务器那么就可以直接使用 `Matrix` 的主聊天服务。
+
+白羽安全聊天未开发网页服务，目前仅只能使用客户端，未来将开发在线网页服务。
+
+您仍可以使用第三方在线网页平台 `app.element.io` 和 `fluffychat.im/web` 来连接到 `chat.xiaoqy.com` 服务器来使用白羽安全聊天服务平台。
+
+<a href="#top">TOP</a>
 
 ## 白小七羽电子开发项目
 
@@ -391,7 +504,11 @@ NFC智能标签墨水屏卡片（具有读写模拟NFC RFID加密卡片功能）
 物联网RGB灯带
 物联网红外线万能遥控（比家用任何红外线遥控器更强，四周多灯珠无死角控制任何家电）
 
+<a href="#top">TOP</a>
+
 ## 白小七羽作品创作项目
+
+<a href="#top">TOP</a>
 
 ## 白小七羽设备运维项目
 ![IMG_1766](./imgs/IMG_1766.JPG)
@@ -400,6 +517,12 @@ NFC智能标签墨水屏卡片（具有读写模拟NFC RFID加密卡片功能）
 
 ![IMG_1764](./imgs/IMG_1764.JPG)
 
+<a href="#top">TOP</a>
+
 ## 白小七羽媒体管理项目
 
+<a href="#top">TOP</a>
+
 ## 白小七羽产品设计项目
+
+<a href="#top">TOP</a>

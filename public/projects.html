@@ -3,7 +3,7 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
@@ -220,399 +220,1144 @@ mjx-container { break-inside: avoid; }
 
 
 :root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
+    --main-color: rgba(128, 30, 255, 1);
+    --shadow-color : rgb(178, 80, 255);
+    --transplate-color : rgba(128, 30, 255, 0.1);
+    --dark-color : rgb(70, 18, 137);
+    --light-color : rgb(248, 242, 255);
+    --font-color : rgb(12, 12, 12);
+    --base-font : "Glow Sans", "Microsoft YaHei", serif;
+    --title-font: "Roboto Slab", "Times", serif;
+    --blockquote-font : "Times", "Roboto Slab", serif;
+    --blockquote-color : rgba(117, 117, 117, 0.9);
+    --monospace: "Cascadia code", "Courier New", monospace; 
+
+    /* --background : url("https://cdn.jsdelivr.net/gh/LSTM-Kirigaya/KImage/Img/2k.jpg"); */
+
+    --quote-title-font-size : 0.9em;
+    --quote-tag-font-size : 1.1em;
+
+    /* typora GUI config */
+    --sidebar-font-color : black;
+    --main-panel-font-color : black;
 }
 
-@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
-/* open-sans-regular - latin-ext_latin */
-  /* open-sans-italic - latin-ext_latin */
-    /* open-sans-700 - latin-ext_latin */
-    /* open-sans-700italic - latin-ext_latin */
-  html {
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-}
-
+/* global setting */
 body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
+    font-family: "Roboto Slab", "SimHei", serif;
+    /* background-color: rgb(255, 255, 255); */
 }
 
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: initial;
+}
+
+
+/* write is a wrapper of writable region */
 #write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
+    position: static;
+    /* width: 90%; */
+    max-width: 1000px;
+    min-height: calc(100vh - 6rem);
+	min-width: calc(100vw - 45rem);
+    line-height: 1.6;
+    transform: none;
+    height: auto;
+    caret-color: var(--main-color);
 }
 
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
+h1, h2, h3,
+#write h1, h2, h3, h4, h5, h6 {
+    color: var(--font-color);
+    font-family: var(--title-font);
+    font-weight: 800;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
 }
 
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
+h1,
+#write h1 {
+    font-size: 40px;
+    margin: 0 0 1.0em 0;
+    line-height: 1.3; 
+    border-bottom: solid 3px var(--main-color);
+    width: fit-content;
 }
 
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
+h2,
+#write h2 {
+    font-size: 28px;
+    border-radius: .5em;
+    width: fit-content;
+}
+
+#write h2::before {
+    content: "H2";
+    border-radius: .3em;
+    font-size: .8em;
+    padding: 3px 7px;
+    margin-right: 15px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+#write h3 {
+    font-size: 24px;
+    border-radius: .3em; 
+    width: fit-content;
+}
+
+#write h3::before {
+    content: "H3";
+    color : white;
+    font-size: 0.8em;
+    background-color: var(--main-color);
+    border-radius: .3em;
+    margin-right: 12px;
+    padding: 4px 7px;
+    float: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    vertical-align: baseline;
+    border-width: 0;
+}
+
+#write h4 {
+    font-size: 20px;
+}
+
+#write h5 {
+    font-size: 16px;
+}
+
+#write hr {
+    width: 60%;
+    text-align:center;
+    border-bottom: solid 1.8px var(--main-color);
+    margin: 4.5em auto;
+}
+
+
+#write img {
+    border-radius: 1.5em !important;
+    box-shadow: 0 0 10px 3px rgba(134, 136, 137, 0.8);
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+}
+
+/* #write img:hover {
+    box-shadow: 0 0 10px 5px var(--shadow-color);
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+} */
+
+blockquote,
+#write blockquote {
+    padding: 10px 10px;
+    font-size: var(--quote-title-font-size);
+    color: var(--blockquote-color);
+    border-left: 6px solid var(--main-color);
+    background: var(--light-color);
+    border-radius : 0.5em;
+    font-family: var(--blockquote-font);
+    line-height: 35px;
+}
+
+#write blockquote span {
+    word-break: break-all;
+}
+
+#write blockquote h1 {
+    font-weight: 200;
+    font-size: var(--quote-tag-font-size);
+    border-bottom: none;
+    font-family: var(--base-font);
+    line-height: 35px;
+}
+
+#write blockquote h1::before {
+    content: "Tips";
+    background-color: var(--main-color);
+    font-family: var(--title-font);
+    color: white;
+    font-size: var(--quote-tag-font-size);
+    border-radius: .3em;
+    padding: 3px 7px;
+    margin-right: 15px;
+}
+
+#write blockquote h2 {
+    font-weight: 200;
+    font-size: var(--quote-tag-font-size);
+    font-family: var(--base-font);
+    line-height: 35px;
+}
+
+#write blockquote h2::before {
+    content: "Warning";
+    background-color: rgb(207, 210, 16);
+    font-family: var(--title-font);
+    color: white;
+    font-size: var(--quote-tag-font-size);
+    border-radius: .3em;
+    padding: 3px 7px;
+    margin-right: 15px;
+}
+
+#write blockquote h3 {
+    font-weight: 200;
+    font-size: var(--quote-tag-font-size);
+    font-family: var(--base-font);
+    line-height: 35px;
+}
+
+#write blockquote h3::before {
+    content: "Error";
+    background-color: rgb(224, 66, 66);
+    font-family: var(--title-font);
+    color: white;
+    font-size: var(--quote-tag-font-size);
+    border-radius: .3em;
+    padding: 3px 7px;
+    margin-right: 15px;
+    float: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    vertical-align: baseline;
+    border-width: 0;
+}
+
+#write blockquote h4 {
+    font-weight: 200;
+    font-size: var(--quote-tag-font-size);
+    font-family: var(--base-font);
+    line-height: 35px;
+}
+
+#write blockquote h4::before {
+    content: "Remind";
+    background-color: var(--shadow-color);
+    font-family: var(--title-font);
+    color: white;
+    font-size: var(--quote-tag-font-size);
+    border-radius: .3em;
+    padding: 3px 7px;
+    margin-right: 15px;
+    float: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    vertical-align: baseline;
+    border-width: 0;
+}
+
+#write blockquote h5 {
+    font-weight: 200;
+    font-size: var(--quote-tag-font-size);
+    font-family: var(--base-font);
+    line-height: 35px;
+}
+
+#write blockquote h5::before {
+    content: "Remind";
+    background-color: var(--shadow-color);
+    font-family: var(--title-font);
+    color: white;
+    font-size: var(--quote-tag-font-size);
+    border-radius: .3em;
+    padding: 3px 7px;
+    margin-right: 15px;
+    float: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    vertical-align: baseline;
+    border-width: 0;
+}
+
+
+/* code block */
+#write pre.md-fences {
+	padding: 1rem 0.5rem 1rem;
+	display: block;
+	-webkit-overflow-scrolling: touch;
+	/* box-shadow: 0 0 6px 2px rgba(151, 151, 151, 0.9); */
+    /* border-top: rgb(51, 51, 51) solid 35px; */
+    border-top: rgb(244, 244, 244) solid 35px;
+    background-color: rgb(244, 244, 244);
+}
+
+
+pre.md-fences::before {
+	content: ' ';
+	background: var(--main-color);
+	box-shadow: 23px 0 rgb(128, 128, 128), 45px 0 gray;
+	border-radius: 50%;
+	margin-top: -2.3rem;
+	position: absolute;
+	left: 15px;
+	height: 12px;
+	width: 12px;
+}
+
+#write pre.md-fences {
+	line-height: 1.5rem;
+	font-size: .9rem;
+	font-weight: 300;
+	border-radius: .7em;
+    font-family: var(--monospace) !important;
+}
+
+/* inline code */
+code {
+    margin: 0 2px;
+    padding: 4px 6px;
+    color: #666363;
+    white-space: pre-wrap;
+    background: var(--light-color);
+    border-radius: 8px;
+}
+
+#write blockquote code {
+    margin: 0 2px;
+    padding: 4px 6px;
+    color: white;
+    white-space: pre-wrap;
+    background: var(--main-color);
+    border-radius: 8px;
+}
+
+kbd,
+samp,
+tt,
+var {
+	font-family: var(--monospace) !important;
+}
+
+
+/* YAML */
+pre.md-meta-block {
+    font-size: .8rem;
+    min-height: .8rem;
+    white-space: pre-wrap;
+    background: var(--main-color);
+    display: block;
+    overflow-x: hidden;
+    padding: 15px;
+    font-family: var(--monospace);
+    border-radius: 1.2em;
+    color: white;
+    caret-color: white;
+}
+
+
+/* Math */
+#math-inline-preview-content .MathJax {
+    color: white !important;
+}
+
+/* table */
+#write table
+{
+    width: 95%;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: var(--monospace);
+    margin: 20px;
+}
+#write table td, table th
+{
+    border: 1px solid transparent;
+    color: rgb(18, 18, 18);
+    height: 30px;
+    padding: 10px;
+    border-radius: .5em;
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+}
+#write table td {
+    font-family: var(--title-font);
+}
+#write table thead th
+{
+    background-color: var(--shadow-color);
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+table tr:nth-child(odd)
+{
+    background: white;
+}
+table tr:nth-child(even)
+{
+    background: var(--light-color);
+}
+table td:hover {
+  background-color: var(--shadow-color) !important;
+  color: white !important;
+  box-shadow: 0 0 10px 5px var(--shadow-color);
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+}
+
+
+/* main element consisting of your text */
+p {
+    color: var(--font-color);
+    margin: 0 0 2em 0;  
+    font-weight: 500;
+    line-height: 1.6;
+    font-family: var(--base-font);
 }
 
 a {
-    color: #4183C4;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-}
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
+    color: var(--main-color);
+    font-weight: 500;
     text-decoration: none;
-}
-h1 tt,
-h1 code {
-    font-size: inherit;
-}
-h2 tt,
-h2 code {
-    font-size: inherit;
-}
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
-}
-h1 {
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
-}
-h2 {
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
+    text-decoration-style: none;
+    cursor: pointer;
+    padding: 0 3px 0 3px;
 }
 
-/*@media print {
-    .typora-export h1,
-    .typora-export h2 {
-        border-bottom: none;
-        padding-bottom: initial;
-    }
 
-    .typora-export h1::after,
-    .typora-export h2::after {
-        content: "";
-        display: block;
-        height: 100px;
-        margin-top: -96px;
-        border-top: 1px solid #eee;
-    }
-}*/
+/* list */
 
-h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-}
-h4 {
-    font-size: 1.25em;
-}
-h5 {
-    font-size: 1em;
-}
-h6 {
-   font-size: 1em;
-    color: #777;
-}
-p,
-blockquote,
-ul,
 ol,
-dl,
-table{
-    margin: 0.8em 0;
-}
-li>ol,
-li>ul {
-    margin: 0 0;
-}
-hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
+ul {
+  padding-left: 2em;
+  line-height: 2;
 }
 
-li p.first {
+ul>li>ul>li {
+    list-style-type: circle;
+  }
+  
+ul>li>ul>li>ul>li {
+    list-style-type: square;
+}
+
+
+iframe {
+    border-radius: 1.2em;
+    box-shadow: 0 0 8px 3px rgba(181, 181, 182, 0.9);
+}
+
+
+/* checkbox */
+.md-task-list-item:hover > input:before,
+input[type='checkbox']:hover:before {
+	opacity: 1;
+	transition: 0.3s;
+	background-color: var(--shadow-color);
+}
+
+.task-list-item input::before {
+    content: "";
     display: inline-block;
-}
-ul,
-ol {
-    padding-left: 30px;
-}
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
-}
-blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
-}
-blockquote blockquote {
-    padding-right: 0;
-}
-table {
-    padding: 0;
-    word-break: initial;
-}
-table tr {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 0;
-}
-table tr:nth-child(2n),
-thead {
-    background-color: #f8f8f8;
-}
-table th {
-    font-weight: bold;
-    border: 1px solid #dfe2e5;
-    border-bottom: 0;
-    margin: 0;
-    padding: 6px 13px;
-}
-table td {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 6px 13px;
-}
-table th:first-child,
-table td:first-child {
-    margin-top: 0;
-}
-table th:last-child,
-table td:last-child {
-    margin-bottom: 0;
+	border-radius: .3em;
+    vertical-align: middle;
+    border: 1.2px solid var(--main-color);
+    background-color: #ffffff;
+	width: 1.1rem;
+    height: 1.1rem;
+	margin-left: -0.1rem;
+    margin-right: 0.1rem;
+    margin-top: -0.68rem; 
 }
 
-.CodeMirror-lines {
-    padding-left: 4px;
-}
-
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
-}
-
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-}
-
-code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
-}
-
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
+.task-list-item input:checked::before {
+    padding-left: 0.125em;
+    content: '✔';
+    color:white;
+	background-color: var(--main-color);
+    font-size: 0.8rem;
+    line-height: 0.95rem;
+    margin-top: -0.68rem;
+	transition: background-color 200ms ease-in-out;
 }
 
 
-.md-task-list-item > input {
-  margin-left: -1.3em;
+
+
+
+#footer-word-count-label {
+    font-family: var(--title-font) !important;
+    color: white;
+    padding: 1px 8px;
+    border-radius: 1.0em;
+    background-color: var(--main-color);
 }
 
-@media print {
-    html {
-        font-size: 13px;
-    }
-    pre {
-        page-break-inside: avoid;
-        word-wrap: break-word;
-    }
+/* bg color when text is selected */
+div::selection {
+background: var(--main-color);
+color: white;
+}
+  
+div::-moz-selection {
+background: var(--main-color);
+color: white;
 }
 
-.md-fences {
-	background-color: #f8f8f8;
-}
-#write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
+div::-webkit-selection {
+background: var(--main-color);
+color: white;
 }
 
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
+blockquote::selection {
+background: var(--main-color);
+color: white;
 }
 
-.md-mathjax-midline {
-    background: #fafafa;
+blockquote::-moz-selection {
+background: var(--main-color);
+color: white;
 }
 
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
-    border-radius: 3px;
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
+blockquote::-webkit-selection {
+background: var(--main-color);
+color: white;
 }
 
-.md-tag {
-    color: #a7a7a7;
-    opacity: 1;
+p::selection {
+background: var(--main-color);
+color: white;
 }
 
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
+p::-moz-selection {
+background: var(--main-color);
+color: white;
 }
 
-.sidebar-tabs {
-    border-bottom: none;
+p::-webkit-selection {
+background: var(--main-color);
+color: white;
 }
 
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
+label::selection {
+background: var(--main-color);
+color: white;
 }
 
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
+label::-moz-selection {
+background: var(--main-color);
+color: white;
 }
 
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
+label::-webkit-selection {
+background: var(--main-color);
+color: white;
 }
 
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
+span::selection {
+background: var(--main-color);
+color: white;
 }
 
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
-    visibility: visible;
+span::-moz-selection {
+background: var(--main-color);
+color: white;
 }
 
-.mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
+span::-webkit-selection {
+background: var(--main-color);
+color: white;
 }
 
-.mac-os #write{
-    caret-color: AccentColor;
+h1::selection {
+background: var(--main-color);
+color: white;
 }
 
-.md-lang {
-    color: #b4654d;
+h1::-moz-selection {
+background: var(--main-color);
+color: white;
 }
 
-/*.html-for-mac {
-    --item-hover-bg-color: #E6F0FE;
-}*/
+h1::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
 
-#md-notification .btn {
-    border: 0;
+h2::selection {
+background: var(--main-color);
+color: white;
+}
+
+h2::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+h2::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+h3::selection {
+background: var(--main-color);
+color: white;
+}
+
+h3::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+h3::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+h4::selection {
+background: var(--main-color);
+color: white;
+}
+
+h4::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+h4::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+h5::selection {
+background: var(--main-color);
+color: white;
+}
+
+h5::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+h5::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+code::selection {
+background: var(--main-color);
+color: white;
+}
+
+code::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+code::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+
+/* outside */
+
+
+#megamenu-content {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#megamenu-menu-panel {
+    font-family: var(--title-font);
+    padding: 10px;
+}
+
+.megamenu-menu-panel {
+    padding: 10px;
+}
+
+
+.megamenu-menu-header-title-menu {
+    color: var(--sidebar-font-color);
+}
+
+.megamenu-menu-header-title-back {
+    color: var(--sidebar-font-color);
+}
+
+
+/* sidebar */
+.megamenu-menu-header {
+    width: 60%;
+    text-align:center;
+    border-bottom: solid 3px var(--main-color);
+}
+#megamenu-menu-sidebar {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--sidebar-font-color);
+    box-shadow: 0 0 8px 4px rgb(100 100 100 / 80%);
+    margin-top: 3%;
+    height: 92%;
+    border-radius: 0 4em 4em 0;
+}
+#megamenu-back-btn {
+    border-radius: 1.2em;
+    color: var(--main-color);
+    transition: all linear .3s;
+    padding: 0 0 10px;
+}
+
+#megamenu-back-btn:hover {
+    background-color: var(--main-color);
+    color: white;
+    border: 2px solid white;
+    transition: all linear .3s;
+}
+
+#megamenu-menu-list > li {
+    transition: all linear .3s;
+}
+
+#megamenu-menu-list > li:hover {
+    transition: all linear .3s;
+    border-top-left-radius: 1.2em;
+    border-bottom-left-radius: 1.2em;
+}
+
+#megamenu-menu-list > li:focus {
+    transition: all linear .3s;
+    color : white;
+    background-color: var(--shadow-color);
+    width: fit-content;
+    border-top-right-radius: 1.2em;
+    border-bottom-right-radius: 1.2em;
 }
 
 .dropdown-menu .divider {
-    border-color: #e5e5e5;
-    opacity: 0.4;
+    width: 30%;
+    color: var(--main-color);
+    background-color: var(--main-color);
+}
+.megamenu-menu-list li a {
+    transition: all linear .3s;
+    width: fit-content;
+    padding-right: 60px;
 }
 
-.ty-preferences .window-content {
-    background-color: #fafafa;
+.megamenu-menu-list li a:hover {
+    transition: all linear .3s;
+    color: white !important;
+    background-color: var(--main-color) !important;
+    border-bottom-right-radius: 2em;
+    border-top-right-radius: 2em;
 }
 
-.ty-preferences .nav-group-item.active {
+.megamenu-menu-list li a.active, .megamenu-menu-list:not(.saved) li a:hover {
+    color: white !important;
+    background-color: var(--main-color) !important;
+    border-bottom-right-radius: 2em;
+    border-top-right-radius: 2em;
+}
+
+
+/* open */
+#m-open-local,
+#m-import-local {
+    border-radius: 1.2em;
+}
+
+#m-open-local:hover,
+#m-import-local:hover {
+    border: 1px solid var(--shadow-color);
+}
+
+#recent-file-panel-search-input {
+    border-radius: 1.2em;
+    transition: all linear .3s;
+    font-family: var(--title-font);
+}
+#recent-file-panel-action-btn {
+    border-radius: 1.2em;  
+}
+
+#recent-file-panel-search-input:hover {
+    transition: all linear .3s;
+    box-shadow: 0 0 10px 3px var(--shadow-color);
+}
+
+#recent-file-panel-search-input:focus {
+    transition: all linear .3s;
     color: white;
-    background: #999;
+    border: none;
+    background-color: var(--shadow-color);
 }
 
-.menu-item-container a.menu-style-btn {
-    background-color: #f5f8fa;
-    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+/* side bar Ctrl Shift 2 */
+/* .typora-node.pin-outline:not(.megamenu-opened):not(.typora-sourceview-on) #typora-sidebar {
+    display: block;
+    left: 0;
+    transition: left .3s;
+    border-radius: 0em 3em 3em 0em;
+    box-shadow: 0 0 8px 3px rgb(100 100 100 / 80%);
+    margin-top: 20px;
+    margin-bottom: 5%;
+    height: 95%;
+    padding-right: 10px;
+} */
+
+.info-panel-tab-border {
+    color: var(--main-color) !important;
+    background-color: var(--main-color) !important;
+}
+
+.outline-content {
+    padding: 3px 18px 3px 0;
+}
+
+.outline-item {
+    margin-left: -20px;
+    margin-right: -20px;
+    border-left: 20px solid transparent;
+    border-right: 16px solid transparent;
+}
+
+.outline-item:hover {
+    background-color: var(--shadow-color);
+    color: white;
+}
+
+.active-tab-files  #info-panel-tab-file .info-panel-tab-title {
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px 5px;
+    border-radius: 1.2em;
+    transition: all linear .3s;
+}
+
+.active-tab-outline #info-panel-tab-outline .info-panel-tab-title {
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px 5px;
+    border-radius: 1.2em;
+    transition: all linear .3s;
+}
+
+.ty-show-search #info-panel-tab-search  .info-panel-tab-title {
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px 5px;
+    border-radius: 1.2em;
+    transition: all linear .3s;
+}
+
+
+#file-library-search-input {
+    border-radius: .5em;
+}
+
+#file-library-search-input:focus {
+    border: 2px solid var(--main-color);
+}
+
+.info-panel-tab-border {
+    display: none;
+}
+div#file-library-list-children {
+    transition: all linear .3s;
+}
+
+.file-list-item.active {
+    border-top-right-radius: 2.2em;
+    border-bottom-right-radius: 2.2em;
+    width: fit-content;
+    background-color: var(--main-color) !important;
+    color: white;
+    transition: all linear .3s;
+}
+
+.outline-item-active {
+    border-top-right-radius: 2.2em;
+    border-bottom-right-radius: 2.2em;
+    width: fit-content;
+    background-color: var(--main-color) !important;
+    color: white;
+    transition: all linear .3s;
+}
+
+
+/* theme */
+.theme-preview-div.active, .theme-preview-div.active:hover {
+    border-color: var(--main-color);
+}
+#theme-preview-grid {
+    max-width: 100% !important;
+}
+#open-theme-folder-btn {
+    transition: all .3s;
+    border-radius: 2em;
+    border: none;
+    color: white !important;
+    background-color: var(--main-color);
+}
+#open-theme-folder-btn:hover {
+    transition: all .3s;
+    color: white !important;
+    background-color: var(--shadow-color);
+}
+
+/* export */
+.long-btn {
+    transition: all .3s;
+    border-radius: 2em;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.long-btn:hover {
+    transition: all .3s;
+    color: white !important;
+    background-color: var(--main-color);
+}
+
+.long-btn-wrap {
+    padding: 10px;
+}
+
+.megamenu-section-export {
+    font-family: var(--title-font) !important;
+}
+
+
+.megamenu-menu-panel h1 {
+    padding-bottom: 10px;
+    width: fit-content !important;
+    border-bottom: var(--main-color) solid 3px;
+}
+
+.megamenu-menu-panel h2::before {
+    content: "H2";
+    border-radius: .3em;
+    font-size: 25px;
+    padding: 3px 7px;
+    margin: 5px 15px 5px 1px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+/* modal exit dialog */
+.btn-primary {
+    transition: all .3 linear;
+    border-radius: 1.2em;
+    background-color: var(--main-color);
+}
+
+.btn-default {
+    transition: all .3 linear;
+    border-radius: 1.2em;
+    border: var(--main-color) 3px solid;
+    color: var(--main-color);
+    background-color: white;
+}   
+
+.btn-primary:hover,
+.btn-default:hover {
+    transition: all .3 linear;
+    color: white;
+    background-color: var(--shadow-color);  
+}
+
+.btn-primary:focus,
+.btn-default:focus {
+    transition: all .3 linear;
+    color: white;
+    background-color: var(--main-color);
+}
+
+.modal-content {
+    border-radius: 1.5em;
+    border: none;
+}
+
+.ImgCaption {
+    padding-top: 0;
+    margin-top: 0;
+    border-bottom: 2px solid var(--shadow-color);
+    width: fit-content;
+  }
+
+/* Perference */
+.nav-group-item-item:hover {
+    transition: all .3s;
+    border: 2px solid var(--main-color);
+}
+.nav-group-item.active {
+    color: white;
+    font-family: var(--title-font);
+    transition: all .3s;
+    border-radius: 1.5em;
+    padding: 6px 11px 6px 11px;
+}
+.nav-group-item {
+    transition: all .3s;
+    border-radius: 1.5em;
+    width: fit-content;
+    cursor: pointer;
+}
+.nav-group-item.active, .nav-group-item:active {
+    background-color: var(--main-color) !important;
+    color: white !important;
+}
+.pane-group {
+    font-family: var(--title-font);
+}
+
+input:not([type=range]):not([type=color]) {
+    outline: none;
+    border: 2px solid var(--main-color);
+    border-radius: .7em;
+    font-size: 16px;
+}
+
+input:not([type=range]):not([type=color]):focus {
+    border-radius: .7em;
+    color: white;
+    background-color: var(--main-color);
+    box-shadow: 0 0 6px 3px var(--shadow-color);
+    transition: all .3s linear;
+}
+
+.pane select,
+.pane .btn {
+    border-radius: 0.7em;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.pane .btn:hover {
+    color: white !important;
+    transition: all .3s linear;
+    background-color: var(--main-color);
+}
+
+.label-input-group td:hover {
+    box-shadow: none;
+}
+
+.label-input-group .row:hover {
+    color: black;
+    background-color: white;
+}
+
+#write.enable-diagrams>[mermaid-type=gantt].md-fences:not(.md-focus) {
+    width: inherit !important;
+    margin-left: inherit !important;
+}
+
+/* TODO fix the bug below */
+#footer-word-count-info table, #footer-word-count-info td, #footer-word-count-info tr {
+    border: none!important;
+    background: inherit !important;
+    font-size: 13.5px!important;
+    text-align: left!important;
+    padding: 0;
+    -webkit-user-select: initial;
+    user-select: initial;
+    margin: 0!important;
+    line-height: 1.8;
+}
+
+.ty-tooltip {
+    border-radius: 0.7em !important;
+}
+
+#recent-file-panel-action-btn {
+    border-radius: 0.7em;
+}
+
+.outline-content li, .outline-content ul {
+    padding-left: 10px;
+}
+
+
+.file-node-content {
+    transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -webkit-transition: all 0.15s linear;
+    color: var(--font-color);
+    padding: 5px;
+}
+
+
+.file-node-content:hover {
+    transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -webkit-transition: all 0.15s linear;
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.file-node-content:focus {
+    transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -webkit-transition: all 0.15s linear;
+    cursor: pointer;
+}
+
+#file-library .active {
+    transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -webkit-transition: all 0.15s linear;
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+.file-tree-node.active>.file-node-background {
+    transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -webkit-transition: all 0.15s linear;
+    background-color: var(--main-color);
+    border-left: var(--small-dark-color);
+    border-color: var(--small-dark-color);
 }
 
 
 
-</style><title>projects</title>
+</style><title>白小七羽服务项目</title>
+<script>
+    function updateTime() {
+      const publishedDate = new Date('2024-07-28T18:00:00'); // 设置文章的发布时间
+      const now = new Date();
+      const timeDiff = now - publishedDate;
+
+      const seconds = Math.floor(timeDiff / 1000);
+      const minutes = Math.floor(seconds / 60);
+      const hours = Math.floor(minutes / 60);
+      const days = Math.floor(hours / 24);
+
+      const displaySeconds = seconds % 60;
+      const displayMinutes = minutes % 60;
+      const displayHours = hours % 24;
+
+      document.getElementById('time-since-published').innerText = 
+        `文章最近更新：${days}天${displayHours}时${displayMinutes}分${displaySeconds}秒前`;
+    }
+
+    setInterval(updateTime, 1000); // 每秒更新一次
+  </script>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='白小七羽服务项目'><span>白小七羽服务项目</span></h1><p><span>主页：</span><a href='https://www.xiaoqy.com' target='_blank' class='url'>https://www.xiaoqy.com</a></p><p><span>文章动态更新：</span><a href='https://www.xiaoqy.com/projects.html' target='_blank' class='url'>https://www.xiaoqy.com/projects.html</a></p><blockquote><p><span>文章目录</span></p></blockquote><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#白小七羽服务项目">白小七羽服务项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n7"><a class="md-toc-inner" href="#白小七羽网站开发项目">白小七羽网站开发项目</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n10"><a class="md-toc-inner" href="#项目-1白小七羽的个人博客">项目 1：白小七羽的个人博客</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n16"><a class="md-toc-inner" href="#项目-2白小七羽的技术博客">项目 2：白小七羽的技术博客</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n22"><a class="md-toc-inner" href="#项目-3白小七羽的知识百科">项目 3：白小七羽的知识百科</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n26"><a class="md-toc-inner" href="#项目-4白小七羽的直播">项目 4：白小七羽的直播</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n30"><a class="md-toc-inner" href="#项目-5白小七羽的商店">项目 5：白小七羽的商店</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n34"><a class="md-toc-inner" href="#项目-6白小七羽的相册">项目 6：白小七羽的相册</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n40"><a class="md-toc-inner" href="#项目-7白小七羽的音乐">项目 7：白小七羽的音乐</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n45"><a class="md-toc-inner" href="#项目-8白小七羽的社区">项目 8：白小七羽的社区</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n51"><a class="md-toc-inner" href="#项目-9白小七羽的实验室">项目 9：白小七羽的实验室</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n55"><a class="md-toc-inner" href="#项目-10白羽云音乐">项目 10：白羽云音乐</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n60"><a class="md-toc-inner" href="#项目-11白羽书屋">项目 11：白羽书屋</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n64"><a class="md-toc-inner" href="#项目-12白羽画板">项目 12：白羽画板</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n69"><a class="md-toc-inner" href="#项目-13白羽思维导图">项目 13：白羽思维导图</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n74"><a class="md-toc-inner" href="#项目-14白羽今日热榜">项目 14：白羽今日热榜</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n79"><a class="md-toc-inner" href="#项目-15白羽计算器">项目 15：白羽计算器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n84"><a class="md-toc-inner" href="#项目-16白羽-ai-聊天">项目 16：白羽 AI 聊天</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n89"><a class="md-toc-inner" href="#项目-17完美导航网">项目 17：完美导航网</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n94"><a class="md-toc-inner" href="#项目-18爱好盘">项目 18：爱好盘</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n99"><a class="md-toc-inner" href="#项目-19白羽单词打字机">项目 19：白羽单词打字机</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n117"><a class="md-toc-inner" href="#项目-20生命周期管理">项目 20：生命周期管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n121"><a class="md-toc-inner" href="#项目-21在线审计系统">项目 21：在线审计系统</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n125"><a class="md-toc-inner" href="#项目-22财产管理">项目 22：财产管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n129"><a class="md-toc-inner" href="#项目-233d-查看器">项目 23：3D 查看器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n133"><a class="md-toc-inner" href="#项目-24光学射线模拟器">项目 24：光学射线模拟器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n137"><a class="md-toc-inner" href="#项目-25爱好猫科技">项目 25：爱好猫科技</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n141"><a class="md-toc-inner" href="#项目-26宝库猫应用">项目 26：宝库猫应用</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n145"><a class="md-toc-inner" href="#项目-27代码编辑器">项目 27：代码编辑器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n149"><a class="md-toc-inner" href="#项目-28白羽安全聊天">项目 28：白羽安全聊天</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n154"><a class="md-toc-inner" href="#白小七羽电子开发项目">白小七羽电子开发项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n166"><a class="md-toc-inner" href="#白小七羽作品创作项目">白小七羽作品创作项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n167"><a class="md-toc-inner" href="#白小七羽设备运维项目">白小七羽设备运维项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n171"><a class="md-toc-inner" href="#白小七羽媒体管理项目">白小七羽媒体管理项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n172"><a class="md-toc-inner" href="#白小七羽产品设计项目">白小七羽产品设计项目</a></span></p></div><p>&nbsp;</p><h2 id='白小七羽网站开发项目'><span>白小七羽网站开发项目</span></h2><p><span>部分项目是采用的 </span><code>Vue3</code><span> + </span><code>Vite</code><span> + </span><code>TypeScript</code><span> + </span><code>JavaScript</code><span> + </span><code>React</code><span> + </span><code>Next.js</code><span>  + </span><code>Node.js</code><span> 等 </span><code>UI</code><span> 框架和组件等编程语言快速开发，部分静态站点由自托管平台运行，实现免维护，免受攻击，长期稳定运行，安全性极高。</span></p><p>&nbsp;</p><h3 id='项目-1白小七羽的个人博客'><span>项目 1：白小七羽的个人博客</span></h3><p><img src="./imgs/IMG_1759.JPG" referrerpolicy="no-referrer" alt="IMG_1759"></p><p><img src="./imgs/IMG_1760.JPG" referrerpolicy="no-referrer" alt="IMG_1760"></p><p><strong><span>网址：</span></strong><span> blog.xiaoqy.com / yublog.me</span></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> 个人分享，生活指南，购物指南，健康知识，直播知识，人生指南，建筑设计，建筑装修，家庭装修，旅行指南，美食食谱，心理健康，摄影指南，睡眠健康，职业规划，媒体编辑，写作规范，排版规范，笔记知识，行为管理，学术文献，创业知识，插画设计，法律知识，宠物护理，阅读书籍，手绘艺术，社会经历，美妆护理，工作简历，形象形体，产品评测，交通知识，文化知识，食品安全，语言交流，时间管理，效率管理，养生知识。</span></p><h3 id='项目-2白小七羽的技术博客'><span>项目 2：白小七羽的技术博客</span></h3><p><img src="./imgs/IMG_1759.JPG" referrerpolicy="no-referrer" alt="IMG_1759"></p><p><img src="./imgs/IMG_1760.JPG" referrerpolicy="no-referrer" alt="IMG_1760"></p><p><strong><span>网址：</span></strong><span> geek.xiaoqy.com / yugeek.me</span></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> 软件编程，软件开发，软件编译，网站开发，电子开发，硬件开发，自动化，桌面运维，系统优化，软件汇编，密码破解，视频编辑，音频编辑，网络安全，服务器，通讯系统，广播系统，应用容器，负载均衡，高可用，动画编程，代码压缩，加密解密，数据备份，数据恢复，编码解码，接口测试，网络测试，语言模型，人工智能，工业技术，电子维修，物联网，音乐编程，压力测试，逆向分析，颜色色卡，芯片烧录，产品渲染，远程控制，硬件 DIY，3D 打印，无线电，模型设计，建筑设计，平面设计，虚拟化，模拟器，微观生物，电池电源，传感器，数据存储，硬件刷机。</span></p><h3 id='项目-3白小七羽的知识百科'><span>项目 3：白小七羽的知识百科</span></h3><p><strong><span>网址：</span></strong><span> wiki.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-4白小七羽的直播'><span>项目 4：白小七羽的直播</span></h3><p><strong><span>网址：</span></strong><span> live.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-5白小七羽的商店'><span>项目 5：白小七羽的商店</span></h3><p><strong><span>网址：</span></strong><span> shop.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-6白小七羽的相册'><span>项目 6：白小七羽的相册</span></h3><p><img src="./imgs/image-20240725021516235.png" referrerpolicy="no-referrer" alt="image-20240725021516235"></p><p><span>（开发前概念图展示）</span></p><p><strong><span>网址：</span></strong><span> photos.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-7白小七羽的音乐'><span>项目 7：白小七羽的音乐</span></h3><p><img src="./imgs/2024-07-24-06-59-10-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> music.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-8白小七羽的社区'><span>项目 8：白小七羽的社区</span></h3><p><img src="./imgs/Snipaste_2024-07-25_02-18-46.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_02-18-46"></p><p><span>（开发前概念图展示）</span></p><p><strong><span>网址：</span></strong><span> social.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-9白小七羽的实验室'><span>项目 9：白小七羽的实验室</span></h3><p><strong><span>网址：</span></strong><span> xiaoqy.com/experiment</span></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-10白羽云音乐'><span>项目 10：白羽云音乐</span></h3><p><img src="./imgs/2024-07-24-06-55-50-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-57-03-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-57-49-image.png" ></p><p><strong><span>网址：</span></strong><span> cmusic.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-11白羽书屋'><span>项目 11：白羽书屋</span></h3><p><strong><span>网址：</span></strong><span> books.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-12白羽画板'><span>项目 12：白羽画板</span></h3><p><img src="./imgs/Snipaste_2024-07-25_03-45-48.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_03-45-48"></p><p><strong><span>网址：</span></strong><span> draw.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-13白羽思维导图'><span>项目 13：白羽思维导图</span></h3><p><img src="./imgs/Snipaste_2024-07-25_04-28-23.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_04-28-23"></p><p><strong><span>网址：</span></strong><span> mindmap.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-14白羽今日热榜'><span>项目 14：白羽今日热榜</span></h3><p><img src="./imgs/2024-07-24-07-00-41-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-01-16-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-00-56-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> hot.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-15白羽计算器'><span>项目 15：白羽计算器</span></h3><p><img src="./imgs/2024-07-24-07-01-51-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-03-02-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-03-10-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-02-18-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-02-33-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> calc.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-16白羽-ai-聊天'><span>项目 16：白羽 AI 聊天</span></h3><p><img src="./imgs/2024-07-24-07-03-43-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-04-20-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> aichat.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-17完美导航网'><span>项目 17：完美导航网</span></h3><p><img src="./imgs/IMG_1761.JPG" referrerpolicy="no-referrer" alt="IMG_1761"></p><p><strong><span>网址：</span></strong><span> wmnav.com ( 原：24ta.com )</span></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-18爱好盘'><span>项目 18：爱好盘</span></h3><p><img src="./imgs/IMG_1762.JPG" referrerpolicy="no-referrer" alt="IMG_1762"></p><p><strong><span>网址：</span></strong><span> ihpan.com</span></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-19白羽单词打字机'><span>项目 19：白羽单词打字机</span></h3><p><img src="./imgs/2024-07-24-06-53-00-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-54-11-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> qwerty.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> 白羽单词打字机：通过打字练习方式来实现肌肉记忆，让大脑更省力。学习时间更碎片化，更灵活！陪你从小到大，不分年龄，人人皆可学。</span></p><p><span>软件设计的目标群体为以英语作为主要工作语言的键盘工作者。部分人会出现输入母语时的打字速度快于英语的情况，因为多年的母语输入练就了非常坚固的肌肉记忆 💪，而英语输入的肌肉记忆相对较弱，易出现输入英语时“提笔忘字”的现象。</span></p><p><span>同时为了巩固英语技能，也需要持续的背诵单词，本软件将英语单词的记忆与英语键盘输入的肌肉记忆的锻炼相结合，可以在背诵单词的同时巩固肌肉记忆。</span></p><p><span>为了避免造成错误的肌肉记忆，设计上如果用户单词输入错误则需要重新输入单词，尽可能确保用户维持正确的肌肉记忆。</span></p><p><span>肌肉记忆是内隐记忆的一种，它指的是人在一段时间内重复做出一个动作后，大脑就会记住这一动作，最终人能在不用多想的情况下就能做出这一动作。许多日常活动中都有肌肉记忆的身影，例如骑自行车、驾驶机动车、玩球类运动、游泳、键盘打字、输入密码、演奏乐器、打扑克、表演武术和跳舞等。</span></p><p><span>软件也对需要机考英语的人群有一定的帮助。</span></p><p style="color:red;">背单词：</p><p><span>可以选择记忆或默写单词，提供了音标显示、发音功能（均可选美音、英音）、错误统计</span></p><p style="color:red;">错词本：</p><p><span>默写单词时输入错误会自动添加到错词本，以便后续复习。</span></p><p style="color:red;">默写模式：</p><p><span>在用户完成一个章节的练习后，如果有错误词，那么会重复练习错误词，直到没有错误词为止。完成之后弹出选项可选择默写本章、重复本章、下一章</span></p><p style="color:red;">词库：</p><p><span>内置了常用的大学英语、新概念英语、考研英语、雅思托福、多邻国、专业四级英语、专业八级英语，也有程序员常见英语单词以及多种编程语言 API 等词库。 尽可能满足大部分用户对背单词的需求。</span></p><h3 id='项目-20生命周期管理'><span>项目 20：生命周期管理</span></h3><p><strong><span>网址：</span></strong><span> services.xiaoqy.com/lifecycle</span></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-21在线审计系统'><span>项目 21：在线审计系统</span></h3><p><strong><span>网址：</span></strong><span> developer.xiaoqy.com/ternimals</span></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-22财产管理'><span>项目 22：财产管理</span></h3><p><strong><span>网址：</span></strong><span> services.xiaoqy.com/finance</span></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-233d-查看器'><span>项目 23：3D 查看器</span></h3><p><strong><span>网址：</span></strong><span> apps.xiaoqy.com/3dviewer</span></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-24光学射线模拟器'><span>项目 24：光学射线模拟器</span></h3><p><strong><span>网址：</span></strong><span> apps.xiaoqy.com/raysimulator</span></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-25爱好猫科技'><span>项目 25：爱好猫科技</span></h3><p><strong><span>网址：</span></strong><span> ihmao.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-26宝库猫应用'><span>项目 26：宝库猫应用</span></h3><p><strong><span>网址：</span></strong><span> bkmao.com</span></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-27代码编辑器'><span>项目 27：代码编辑器</span></h3><p><strong><span>网址：</span></strong><span> code.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-28白羽安全聊天'><span>项目 28：白羽安全聊天</span></h3><p><strong><span>网址：</span></strong><span> chat.xiaoqy.com</span></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><p>&nbsp;</p><h2 id='白小七羽电子开发项目'><span>白小七羽电子开发项目</span></h2><p><img src="./imgs/IMG_1767.JPG" referrerpolicy="no-referrer" alt="IMG_1767"></p><p><img src="./imgs/IMG_1768.JPG" referrerpolicy="no-referrer" alt="IMG_1768"></p><p><span>未来开发电子项目清单（白小七羽电子硬件创客计划）</span>
+<div id='write'  class=''><h1 id='白小七羽服务项目'><span>白小七羽服务项目</span></h1><p><a name="top" id="top"></a></p><div class="md-alert md-alert-note note"><p><span class='md-alert-text md-alert-text-note'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</span><br></p><p><span>主页：</span><a href='https://www.xiaoqy.com' target='_blank' class='url'>https://www.xiaoqy.com</a></p><p><span>文章动态更新：</span><a href='https://www.xiaoqy.com/projects.html' target='_blank' class='url'>https://www.xiaoqy.com/projects.html</a></p><p id="time-since-published">加载中...</p></div><blockquote><p><span>文章目录</span></p></blockquote><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n1730"><a class="md-toc-inner" href="#白小七羽服务项目">白小七羽服务项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1739"><a class="md-toc-inner" href="#白小七羽网站开发项目">白小七羽网站开发项目</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1742"><a class="md-toc-inner" href="#项目-1白小七羽的个人博客">项目 1：白小七羽的个人博客</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1749"><a class="md-toc-inner" href="#项目-2白小七羽的技术博客">项目 2：白小七羽的技术博客</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1756"><a class="md-toc-inner" href="#项目-3白小七羽的知识百科">项目 3：白小七羽的知识百科</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1761"><a class="md-toc-inner" href="#项目-4白小七羽的直播">项目 4：白小七羽的直播</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1766"><a class="md-toc-inner" href="#项目-5白小七羽的商店">项目 5：白小七羽的商店</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1771"><a class="md-toc-inner" href="#项目-6白小七羽的相册">项目 6：白小七羽的相册</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1778"><a class="md-toc-inner" href="#项目-7白小七羽的音乐">项目 7：白小七羽的音乐</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1784"><a class="md-toc-inner" href="#项目-8白小七羽的社区">项目 8：白小七羽的社区</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1791"><a class="md-toc-inner" href="#项目-9白小七羽的实验室">项目 9：白小七羽的实验室</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1796"><a class="md-toc-inner" href="#项目-10白羽云音乐">项目 10：白羽云音乐</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1802"><a class="md-toc-inner" href="#项目-11白羽书屋">项目 11：白羽书屋</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1807"><a class="md-toc-inner" href="#项目-12白羽画板">项目 12：白羽画板</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1813"><a class="md-toc-inner" href="#项目-13白羽思维导图">项目 13：白羽思维导图</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1819"><a class="md-toc-inner" href="#项目-14白羽今日热榜">项目 14：白羽今日热榜</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1825"><a class="md-toc-inner" href="#项目-15白羽计算器">项目 15：白羽计算器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1831"><a class="md-toc-inner" href="#项目-16白羽-ai-聊天">项目 16：白羽 AI 聊天</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1837"><a class="md-toc-inner" href="#项目-17完美导航网">项目 17：完美导航网</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1843"><a class="md-toc-inner" href="#项目-18爱好盘">项目 18：爱好盘</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1849"><a class="md-toc-inner" href="#项目-19白羽单词打字机">项目 19：白羽单词打字机</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1868"><a class="md-toc-inner" href="#项目-20生命周期管理">项目 20：生命周期管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1873"><a class="md-toc-inner" href="#项目-21白羽交互审计系统">项目 21：白羽交互审计系统</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1878"><a class="md-toc-inner" href="#项目-22财产管理">项目 22：财产管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1883"><a class="md-toc-inner" href="#项目-233d-查看器">项目 23：3D 查看器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1888"><a class="md-toc-inner" href="#项目-24光学射线模拟器">项目 24：光学射线模拟器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1893"><a class="md-toc-inner" href="#项目-25爱好猫科技">项目 25：爱好猫科技</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1956"><a class="md-toc-inner" href="#项目-26爱好猫社区">项目 26：爱好猫社区</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1898"><a class="md-toc-inner" href="#项目-26宝库猫应用">项目 26：宝库猫应用</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1903"><a class="md-toc-inner" href="#项目-27代码编辑器">项目 27：代码编辑器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1908"><a class="md-toc-inner" href="#项目-28白羽安全聊天">项目 28：白羽安全聊天</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1913"><a class="md-toc-inner" href="#白小七羽电子开发项目">白小七羽电子开发项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1926"><a class="md-toc-inner" href="#白小七羽作品创作项目">白小七羽作品创作项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1928"><a class="md-toc-inner" href="#白小七羽设备运维项目">白小七羽设备运维项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1933"><a class="md-toc-inner" href="#白小七羽媒体管理项目">白小七羽媒体管理项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1935"><a class="md-toc-inner" href="#白小七羽产品设计项目">白小七羽产品设计项目</a></span></p></div><p>&nbsp;</p><h2 id='白小七羽网站开发项目'><span>白小七羽网站开发项目</span></h2><p><span>部分项目是采用的 </span><code>Vue3</code><span> + </span><code>Vite</code><span> + </span><code>TypeScript</code><span> + </span><code>JavaScript</code><span> + </span><code>React</code><span> + </span><code>Next.js</code><span>  + </span><code>Node.js</code><span> 等 </span><code>UI</code><span> 框架和组件等编程语言快速开发，部分静态站点由自托管平台运行，实现免维护，免受攻击，长期稳定运行，安全性极高。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-1白小七羽的个人博客'><span>项目 1：白小七羽的个人博客</span></h3><p><img src="./imgs/IMG_1759.JPG" referrerpolicy="no-referrer" alt="IMG_1759"></p><p><img src="./imgs/IMG_1760.JPG" referrerpolicy="no-referrer" alt="IMG_1760"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://blog.xiaoqy.com'><span>blog.xiaoqy.com</span></a><span> / </span><a href='https://yublog.me'><span>yublog.me</span></a></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> 个人分享，生活指南，购物指南，健康知识，直播知识，人生指南，建筑设计，建筑装修，家庭装修，旅行指南，美食食谱，心理健康，摄影指南，睡眠健康，职业规划，媒体编辑，写作规范，排版规范，笔记知识，行为管理，学术文献，创业知识，插画设计，法律知识，宠物护理，阅读书籍，手绘艺术，社会经历，美妆护理，工作简历，形象形体，产品评测，交通知识，文化知识，食品安全，语言交流，时间管理，效率管理，养生知识。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-2白小七羽的技术博客'><span>项目 2：白小七羽的技术博客</span></h3><p><img src="./imgs/IMG_1759.JPG" referrerpolicy="no-referrer" alt="IMG_1759"></p><p><img src="./imgs/IMG_1760.JPG" referrerpolicy="no-referrer" alt="IMG_1760"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://geek.xiaoqy.com'><span>geek.xiaoqy.com</span></a><span> / </span><a href='https://yugeek.me'><span>yugeek.me</span></a></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> 软件编程，软件开发，软件编译，网站开发，电子开发，硬件开发，自动化，桌面运维，系统优化，软件汇编，密码破解，视频编辑，音频编辑，网络安全，服务器，通讯系统，广播系统，应用容器，负载均衡，高可用，动画编程，代码压缩，加密解密，数据备份，数据恢复，编码解码，接口测试，网络测试，语言模型，人工智能，工业技术，电子维修，物联网，音乐编程，压力测试，逆向分析，颜色色卡，芯片烧录，产品渲染，远程控制，硬件 DIY，3D 打印，无线电，模型设计，建筑设计，平面设计，虚拟化，模拟器，微观生物，电池电源，传感器，数据存储，硬件刷机。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-3白小七羽的知识百科'><span>项目 3：白小七羽的知识百科</span></h3><p><strong><span>网址：</span></strong><span> </span><a href='https://wiki.xiaoqy.com'><span>wiki.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> 编程思想，学习思想，人生知识，健康饮食，购物评价，网购攻略，智能家居，医疗药品，生活窍门，育儿纪录，视力保护，照顾建议，喂养技巧，页面开发，网站部署，部署工具，必备应用，工具笔记，读书方法，读书笔记，思维方式，自我认知，社会认知，市场营销，社会经济，健身计划，仪式清单，自我监控，时间管理，日常习惯，美容仪器，直播手册。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-4白小七羽的直播'><span>项目 4：白小七羽的直播</span></h3><p><strong><span>网址：</span></strong><span> </span><a href='https://live.xiaoqy.com'><span>live.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-5白小七羽的商店'><span>项目 5：白小七羽的商店</span></h3><p><strong><span>网址：</span></strong><span> </span><a href='https://shop.xiaoqy.com'><span>shop.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-6白小七羽的相册'><span>项目 6：白小七羽的相册</span></h3><p><img src="./imgs/image-20240725021516235.png" referrerpolicy="no-referrer" alt="image-20240725021516235"></p><p><span>（开发前概念图展示）</span></p><p><strong><span>网址：</span></strong><span> </span><a href='https://photos.xiaoqy.com'><span>photos.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-7白小七羽的音乐'><span>项目 7：白小七羽的音乐</span></h3><p><img src="./imgs/2024-07-24-06-59-10-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://music.xiaoqy.com'><span>music.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-8白小七羽的社区'><span>项目 8：白小七羽的社区</span></h3><p><img src="./imgs/Snipaste_2024-07-25_02-18-46.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_02-18-46"></p><p><span>（开发前概念图展示）</span></p><p><strong><span>网址：</span></strong><span> </span><a href='https://social.xiaoqy.com'><span>social.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-9白小七羽的实验室'><span>项目 9：白小七羽的实验室</span></h3><p><strong><span>网址：</span></strong><span> </span><a href='https://xiaoqy.com/experiment'><span>xiaoqy.com/experiment</span></a></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-10白羽云音乐'><span>项目 10：白羽云音乐</span></h3><p><img src="./imgs/2024-07-24-06-55-50-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-57-03-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-57-49-image.png" ></p><p><strong><span>网址：</span></strong><span> </span><a href='https://cmusic.xiaoqy.com'><span>cmusic.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-11白羽书屋'><span>项目 11：白羽书屋</span></h3><p><img src="./imgs/20230915173954.webp" referrerpolicy="no-referrer" alt="20230915173954"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://books.xiaoqy.com'><span>books.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-12白羽画板'><span>项目 12：白羽画板</span></h3><p><img src="./imgs/Snipaste_2024-07-25_03-45-48.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_03-45-48"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://draw.xiaoqy.com'><span>draw.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-13白羽思维导图'><span>项目 13：白羽思维导图</span></h3><p><img src="./imgs/Snipaste_2024-07-25_04-28-23.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_04-28-23"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://mindmap.xiaoqy.com'><span>mindmap.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-14白羽今日热榜'><span>项目 14：白羽今日热榜</span></h3><p><img src="./imgs/2024-07-24-07-00-41-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-01-16-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-00-56-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://hot.xiaoqy.com'><span>hot.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-15白羽计算器'><span>项目 15：白羽计算器</span></h3><p><img src="./imgs/2024-07-24-07-01-51-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-03-02-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-03-10-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-02-18-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-02-33-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://calc.xiaoqy.com'><span>calc.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-16白羽-ai-聊天'><span>项目 16：白羽 AI 聊天</span></h3><p><img src="./imgs/2024-07-24-07-03-43-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-04-20-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://aichat.xiaoqy.com'><span>aichat.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-17完美导航网'><span>项目 17：完美导航网</span></h3><p><img src="./imgs/IMG_1761.JPG" referrerpolicy="no-referrer" alt="IMG_1761"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://wmnav.com'><span>wmnav.com</span></a><span> ( 原：</span><a href='https://24ta.com'><span>24ta.com</span></a><span> )</span></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-18爱好盘'><span>项目 18：爱好盘</span></h3><p><img src="./imgs/IMG_1762.JPG" referrerpolicy="no-referrer" alt="IMG_1762"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://ihpan.com'><span>ihpan.com</span></a></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-19白羽单词打字机'><span>项目 19：白羽单词打字机</span></h3><p><img src="./imgs/2024-07-24-06-53-00-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-54-11-image.png" referrerpolicy="no-referrer"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://qwerty.xiaoqy.com'><span>qwerty.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> 白羽单词打字机：通过打字练习方式来实现肌肉记忆，让大脑更省力。学习时间更碎片化，更灵活！陪你从小到大，不分年龄，人人皆可学。</span></p><p><span>软件设计的目标群体为以英语作为主要工作语言的键盘工作者。部分人会出现输入母语时的打字速度快于英语的情况，因为多年的母语输入练就了非常坚固的肌肉记忆 💪，而英语输入的肌肉记忆相对较弱，易出现输入英语时“提笔忘字”的现象。</span></p><p><span>同时为了巩固英语技能，也需要持续的背诵单词，本软件将英语单词的记忆与英语键盘输入的肌肉记忆的锻炼相结合，可以在背诵单词的同时巩固肌肉记忆。</span></p><p><span>为了避免造成错误的肌肉记忆，设计上如果用户单词输入错误则需要重新输入单词，尽可能确保用户维持正确的肌肉记忆。</span></p><p><span>肌肉记忆是内隐记忆的一种，它指的是人在一段时间内重复做出一个动作后，大脑就会记住这一动作，最终人能在不用多想的情况下就能做出这一动作。许多日常活动中都有肌肉记忆的身影，例如骑自行车、驾驶机动车、玩球类运动、游泳、键盘打字、输入密码、演奏乐器、打扑克、表演武术和跳舞等。</span></p><p><span>软件也对需要机考英语的人群有一定的帮助。</span></p><p style="color:red;">背单词：</p><p><span>可以选择记忆或默写单词，提供了音标显示、发音功能（均可选美音、英音）、错误统计</span></p><p style="color:red;">错词本：</p><p><span>默写单词时输入错误会自动添加到错词本，以便后续复习。</span></p><p style="color:red;">默写模式：</p><p><span>在用户完成一个章节的练习后，如果有错误词，那么会重复练习错误词，直到没有错误词为止。完成之后弹出选项可选择默写本章、重复本章、下一章</span></p><p style="color:red;">词库：</p><p><span>内置了常用的大学英语、新概念英语、考研英语、雅思托福、多邻国、专业四级英语、专业八级英语，也有程序员常见英语单词以及多种编程语言 API 等词库。 尽可能满足大部分用户对背单词的需求。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-20生命周期管理'><span>项目 20：生命周期管理</span></h3><p><strong><span>网址：</span></strong><span> </span><a href='https://services.xiaoqy.com/lifecycle'><span>services.xiaoqy.com/lifecycle</span></a></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-21白羽交互审计系统'><span>项目 21：白羽交互审计系统</span></h3><p><img src="./imgs/Snipaste_2024-07-29_01-16-20.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_01-16-20"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://developer.xiaoqy.com/ternimals'><span>developer.xiaoqy.com/ternimals</span></a></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-22财产管理'><span>项目 22：财产管理</span></h3><p><strong><span>网址：</span></strong><span> </span><a href='https://services.xiaoqy.com/finance'><span>services.xiaoqy.com/finance</span></a></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-233d-查看器'><span>项目 23：3D 查看器</span></h3><p><img src="./imgs/Snipaste_2024-07-29_02-09-28.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_02-09-28"></p><p><img src="./imgs/Snipaste_2024-07-29_02-11-08.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_02-11-08"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://apps.xiaoqy.com/3dviewer'><span>apps.xiaoqy.com/3dviewer</span></a></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-24光学射线模拟器'><span>项目 24：光学射线模拟器</span></h3><p><img src="./imgs/Snipaste_2024-07-29_02-13-26.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_02-13-26"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://apps.xiaoqy.com/raysimulator'><span>apps.xiaoqy.com/raysimulator</span></a></p><p><strong><span>状态：</span></strong><span> 未开发</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-25爱好猫科技'><span>项目 25：爱好猫科技</span></h3><p><strong><span>网址：</span></strong><span> </span><a href='https://ihmao.com'><span>ihmao.com</span></a></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-26爱好猫社区'><span>项目 26：爱好猫社区</span></h3><p><img src="./imgs/Snipaste_2024-07-29_01-05-30.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_01-05-30"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://forum.ihmao.com'><span>forum.ihmao.com</span></a></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-26宝库猫应用'><span>项目 26：宝库猫应用</span></h3><p><strong><span>网址：</span></strong><span> </span><a href='https://bkmao.com'><span>bkmao.com</span></a></p><p><strong><span>状态：</span></strong><span> 未开发，因资金原因和时间成本原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-27代码编辑器'><span>项目 27：代码编辑器</span></h3><p><img src="./imgs/Snipaste_2024-07-29_01-30-15.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_01-30-15"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://code.xiaoqy.com'><span>code.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 暂停服务，因资金原因。</span></p><p><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-28白羽安全聊天'><span>项目 28：白羽安全聊天</span></h3><p><img src="./imgs/hp-hero-visual-alt_1hp-hero-visual-alt.webp" referrerpolicy="no-referrer" alt="hp-hero-visual-alt_1hp-hero-visual-alt"></p><p><img src="./imgs/IMG_1773.JPG" alt="IMG_1773"  /></p><p><img src="./imgs/IMG_1774.JPG" alt="IMG_1774"  /></p><p><img src="./imgs/IMG_1775.JPG" referrerpolicy="no-referrer" alt="IMG_1775"></p><p><img src="./imgs/IMG_1776.JPG" referrerpolicy="no-referrer" alt="IMG_1776"></p><p><img src="./imgs/IMG_1777.JPG" referrerpolicy="no-referrer" alt="IMG_1777"></p><p><img src="./imgs/IMG_1778.JPG" referrerpolicy="no-referrer" alt="IMG_1778"></p><p><img src="./imgs/IMG_1779.JPG" referrerpolicy="no-referrer" alt="IMG_1779"></p><p><img src="./imgs/IMG_1772.JPG" referrerpolicy="no-referrer" alt="IMG_1772"></p><p><strong><span>网址：</span></strong><span> </span><a href='https://chat.xiaoqy.com'><span>chat.xiaoqy.com</span></a></p><p><strong><span>状态：</span></strong><span> 服务正常运行</span></p><p><strong><span>描述：</span></strong><span> 白羽安全聊天，这是现在最好的聊天服务，也是最安全的聊天服务，没有之一！支持多个客户端： </span><code>Windows/Android/IOS/Web</code><span> 等</span></p><p><span>支持语音通话，视频通话，发文字语音，发表情，发视频图片，投票，位置等，是一款成熟稳定的社交平台。</span></p><p><span>在航天领域，互联网企业，网络安全领域广泛使用安全的加密软件。</span>
+<span>首先白羽安全聊天是一个去中心化的聊天服务，实现了端对端的加密，这意味着不仅其他人无法查看你的聊天内容，哪怕你更换了一个终端，你也需要私钥才能够查看你的聊天记录。</span></p><p><span>这是终极的隐私保护方案，因为一旦你丢掉了这个密钥，这些内容就相当于被销毁了。</span></p><p><span>底层服务基于 </span><code>Matrix</code><span> 如果你能够访问到 </span><code>Matrix</code><span> 的服务器那么就可以直接使用 </span><code>Matrix</code><span> 的主聊天服务。</span></p><p><span>白羽安全聊天未开发网页服务，目前仅只能使用客户端，未来将开发在线网页服务。</span></p><p><span>您仍可以使用第三方在线网页平台 </span><code>app.element.io</code><span> 和 </span><code>fluffychat.im/web</code><span> 来连接到 </span><code>chat.xiaoqy.com</code><span> 服务器来使用白羽安全聊天服务平台。</span></p><p><a href="#top"><span>TOP</span></a></p><h2 id='白小七羽电子开发项目'><span>白小七羽电子开发项目</span></h2><p><img src="./imgs/IMG_1767.JPG" referrerpolicy="no-referrer" alt="IMG_1767"></p><p><img src="./imgs/IMG_1768.JPG" referrerpolicy="no-referrer" alt="IMG_1768"></p><p><span>未来开发电子项目清单（白小七羽电子硬件创客计划）</span>
 <span>电源和电池类：</span>
 <span>220v 高频纯正弦波逆变器移动电源（120ah 宁德时代磷酸铁锂大单体 x16 + 极空电池保护板 + 智能显示屏 + 不锈钢铝合金电池箱等）</span>
 <span>太阳能单晶硅电池板 18v 200w（配备mppt太阳能控制器和220v工频纯正弦波逆变器和300ah 宁德时代磷酸铁锂电池组家用太阳能发电储能方案）</span>
@@ -676,6 +1421,6 @@ header, .context-menu, .megamenu-content, footer{
 <span>桌面信息牌</span>
 <span>物联网桌面显示器时钟（采用ESP32开发，具有时钟闹钟，天气预报，网络信息同步，家电物联等功能）</span>
 <span>物联网RGB灯带</span>
-<span>物联网红外线万能遥控（比家用任何红外线遥控器更强，四周多灯珠无死角控制任何家电）</span></p><h2 id='白小七羽作品创作项目'><span>白小七羽作品创作项目</span></h2><h2 id='白小七羽设备运维项目'><span>白小七羽设备运维项目</span></h2><p><img src="./imgs/IMG_1766.JPG" referrerpolicy="no-referrer" alt="IMG_1766"></p><p><img src="./imgs/IMG_1765.JPG" referrerpolicy="no-referrer" alt="IMG_1765"></p><p><img src="./imgs/IMG_1764.JPG" referrerpolicy="no-referrer" alt="IMG_1764"></p><h2 id='白小七羽媒体管理项目'><span>白小七羽媒体管理项目</span></h2><h2 id='白小七羽产品设计项目'><span>白小七羽产品设计项目</span></h2></div></div>
+<span>物联网红外线万能遥控（比家用任何红外线遥控器更强，四周多灯珠无死角控制任何家电）</span></p><p><a href="#top"><span>TOP</span></a></p><h2 id='白小七羽作品创作项目'><span>白小七羽作品创作项目</span></h2><p><a href="#top"><span>TOP</span></a></p><h2 id='白小七羽设备运维项目'><span>白小七羽设备运维项目</span></h2><p><img src="./imgs/IMG_1766.JPG" referrerpolicy="no-referrer" alt="IMG_1766"></p><p><img src="./imgs/IMG_1765.JPG" referrerpolicy="no-referrer" alt="IMG_1765"></p><p><img src="./imgs/IMG_1764.JPG" referrerpolicy="no-referrer" alt="IMG_1764"></p><p><a href="#top"><span>TOP</span></a></p><h2 id='白小七羽媒体管理项目'><span>白小七羽媒体管理项目</span></h2><p><a href="#top"><span>TOP</span></a></p><h2 id='白小七羽产品设计项目'><span>白小七羽产品设计项目</span></h2><p><a href="#top"><span>TOP</span></a></p></div></div>
 </body>
 </html>
