@@ -1,1 +1,1 @@
-{"routes": [{"source": "/(.*)", "destination": "/404/index.html"}]}
+{"routes": [{"source": "/(.*)", "destination": "/404.html"}]}
