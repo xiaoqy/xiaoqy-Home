@@ -1,23 +1,21 @@
-# 白小七羽服务项目
-
 <a name="top" id="top"></a>
+
+# 白小七羽服务项目
 
 > [!NOTE]
 >
-> 主页：https://www.xiaoqy.com
+> [:house: 主页](https://www.xiaoqy.com) | ​[:heart: 捐赠](https://ko-fi.com/xiaoqy) ​ | ​[:e-mail: E-Mail​](mailto://ixiaoqy@outlook.com) | [:smiley: 关于我](https://about.xiaoqy.com)
 >
-> 文章动态更新：https://www.xiaoqy.com/projects.html
->
-> <p id="time-since-published">加载中...</p>
+> <div id="time-since-published">加载中...</div>
 
-> 文章目录
+> :book: 文章目录
 [TOC]
 
 
 
 ## 白小七羽网站开发项目
 
-部分项目是采用的 `Vue3` + `Vite` + `TypeScript` + `JavaScript` + `React` + `Next.js`  + `Node.js` 等 `UI` 框架和组件等编程语言快速开发，部分静态站点由自托管平台运行，实现免维护，免受攻击，长期稳定运行，安全性极高。
+部分项目是采用的 `Vue3` + `Vite` + `TypeScript` + `JavaScript` + `React` + `Next.js`  + `Node.js` 等 `UI` 框架和组件等编程语言快速开发，部分静态站点由自托管平台运行，实现免维护，免受攻击，长期稳定运行，安全性极高。​
 
 <a href="#top">TOP</a>
 
@@ -27,11 +25,11 @@
 
 ![IMG_1760](./imgs/IMG_1760.JPG)
 
-**网址：** [blog.xiaoqy.com](https://blog.xiaoqy.com) / [yublog.me](https://yublog.me)
+:link: **网址：** [blog.xiaoqy.com](https://blog.xiaoqy.com) / [yublog.me](https://yublog.me)
 
-**状态：** 暂停服务，因资金原因。
+:bar_chart: **状态：** <font style="color:pink">**暂停服务，因资金原因**</font>
 
-**描述：** 个人分享，生活指南，购物指南，健康知识，直播知识，人生指南，建筑设计，建筑装修，家庭装修，旅行指南，美食食谱，心理健康，摄影指南，睡眠健康，职业规划，媒体编辑，写作规范，排版规范，笔记知识，行为管理，学术文献，创业知识，插画设计，法律知识，宠物护理，阅读书籍，手绘艺术，社会经历，美妆护理，工作简历，形象形体，产品评测，交通知识，文化知识，食品安全，语言交流，时间管理，效率管理，养生知识。
+:speech_balloon: **描述：** 个人分享，生活指南，购物指南，健康知识，直播知识，人生指南，建筑设计，建筑装修，家庭装修，旅行指南，美食食谱，心理健康，摄影指南，睡眠健康，职业规划，媒体编辑，写作规范，排版规范，笔记知识，行为管理，学术文献，创业知识，插画设计，法律知识，宠物护理，阅读书籍，手绘艺术，社会经历，美妆护理，工作简历，形象形体，产品评测，交通知识，文化知识，食品安全，语言交流，时间管理，效率管理，养生知识。
 
 <a href="#top">TOP</a>
 
@@ -41,41 +39,45 @@
 
 ![IMG_1760](./imgs/IMG_1760.JPG)
 
-**网址：** [geek.xiaoqy.com](https://geek.xiaoqy.com) / [yugeek.me](https://yugeek.me)
+:link: **网址：** [geek.xiaoqy.com](https://geek.xiaoqy.com) / [yugeek.me](https://yugeek.me)
 
-**状态：** 暂停服务，因资金原因。
+:bar_chart: **状态：** <font style="color:pink">**暂停服务，因资金原因**</font>
 
-**描述：** 软件编程，软件开发，软件编译，网站开发，电子开发，硬件开发，自动化，桌面运维，系统优化，软件汇编，密码破解，视频编辑，音频编辑，网络安全，服务器，通讯系统，广播系统，应用容器，负载均衡，高可用，动画编程，代码压缩，加密解密，数据备份，数据恢复，编码解码，接口测试，网络测试，语言模型，人工智能，工业技术，电子维修，物联网，音乐编程，压力测试，逆向分析，颜色色卡，芯片烧录，产品渲染，远程控制，硬件 DIY，3D 打印，无线电，模型设计，建筑设计，平面设计，虚拟化，模拟器，微观生物，电池电源，传感器，数据存储，硬件刷机。
+:speech_balloon: **描述：** 软件编程，软件开发，软件编译，网站开发，电子开发，硬件开发，自动化，桌面运维，系统优化，软件汇编，密码破解，视频编辑，音频编辑，网络安全，服务器，通讯系统，广播系统，应用容器，负载均衡，高可用，动画编程，代码压缩，加密解密，数据备份，数据恢复，编码解码，接口测试，网络测试，语言模型，人工智能，工业技术，电子维修，物联网，音乐编程，压力测试，逆向分析，颜色色卡，芯片烧录，产品渲染，远程控制，硬件 DIY，3D 打印，无线电，模型设计，建筑设计，平面设计，虚拟化，模拟器，微观生物，电池电源，传感器，数据存储，硬件刷机。
 
 <a href="#top">TOP</a>
 
 ### 项目 3：白小七羽的知识百科
 
-**网址：** [wiki.xiaoqy.com](https://wiki.xiaoqy.com)
+![Snipaste_2024-07-29_10-10-50](./imgs/Snipaste_2024-07-29_10-10-50.png)
 
-**状态：** 未开发，因资金原因。
+(概念图仅供参考)
 
-**描述：** 编程思想，学习思想，人生知识，健康饮食，购物评价，网购攻略，智能家居，医疗药品，生活窍门，育儿纪录，视力保护，照顾建议，喂养技巧，页面开发，网站部署，部署工具，必备应用，工具笔记，读书方法，读书笔记，思维方式，自我认知，社会认知，市场营销，社会经济，健身计划，仪式清单，自我监控，时间管理，日常习惯，美容仪器，直播手册。
+:link: **网址：** [wiki.xiaoqy.com](https://wiki.xiaoqy.com) / [knowledge.xiaoqy.com](https://knowledge.xiaoqy.com)
+
+:bar_chart: **状态：** <font style="color:red">**未开发，因资金原因**</font>
+
+:speech_balloon: **描述：** 编程思想，学习思想，人生知识，健康饮食，购物评价，网购攻略，智能家居，医疗药品，生活窍门，育儿纪录，视力保护，照顾建议，喂养技巧，页面开发，网站部署，部署工具，必备应用，工具笔记，读书方法，读书笔记，思维方式，自我认知，社会认知，市场营销，社会经济，健身计划，仪式清单，自我监控，时间管理，日常习惯，美容仪器，直播手册，星座知识，股票行情，求生知识，租房流程，优质播客，美食烹饪，清洗知识，网络知识，个人形象，个人提升，人脉关系，爱情婚姻，法律知识，电影学习，音乐学习，书法知识，乐器知识。
 
 <a href="#top">TOP</a>
 
 ### 项目 4：白小七羽的直播
 
-**网址：** [live.xiaoqy.com](https://live.xiaoqy.com)
+:link: **网址：** [live.xiaoqy.com](https://live.xiaoqy.com) / [livestream.xiaoqy.com](https://livestream.xiaoqy.com) / [xiaoqy.tv](https://xiaoqy.tv)
 
-**状态：** 未开发，因资金原因和时间成本原因。
+:bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
 ### 项目 5：白小七羽的商店
 
-**网址：** [shop.xiaoqy.com](https://shop.xiaoqy.com)
+:link: **网址：** [shop.xiaoqy.com](https://shop.xiaoqy.com) / [store.xiaoqy.com](https://store.xiaoqy.com) / [buy.xiaoqy.com](https://buy.xiaoqy.com)
 
-**状态：** 未开发，因资金原因和时间成本原因。
+:bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -83,13 +85,13 @@
 
 ![image-20240725021516235](./imgs/image-20240725021516235.png)
 
-（开发前概念图展示）
+(概念图仅供参考)
 
-**网址：** [photos.xiaoqy.com](https://photos.xiaoqy.com)
+:link: **网址：** [photos.xiaoqy.com](https://photos.xiaoqy.com) / [photo.xiaoqy.com](https://photo.xiaoqy.com) / [pictures.xiaoqy.com](https://pictures.xiaoqy.com) / [picture.xiaoqy.com](https://picture.xiaoqy.com) / [albums.xiaoqy.com](https://albums.xiaoqy.com) / [album.xiaoqy.com](https://album.xiaoqy.com) / [images.xiaoqy.com](https://images.xiaoqy.com) / [image.xiaoqy.com](https://image.xiaoqy.com)
 
-**状态：** 未开发，因资金原因。
+:bar_chart: **状态：** <font style="color:red">**未开发，因资金原因**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -97,11 +99,11 @@
 
 ![](./imgs/2024-07-24-06-59-10-image.png)
 
-**网址：** [music.xiaoqy.com](https://music.xiaoqy.com)
+:link: **网址：** [music.xiaoqy.com](https://music.xiaoqy.com)
 
-**状态：** 服务正常运行
+:bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -109,23 +111,23 @@
 
 ![Snipaste_2024-07-25_02-18-46](./imgs/Snipaste_2024-07-25_02-18-46.png)
 
-（开发前概念图展示）
+(概念图仅供参考)
 
-**网址：** [social.xiaoqy.com](https://social.xiaoqy.com)
+:link: **网址：** [social.xiaoqy.com](https://social.xiaoqy.com) / [community.xiaoqy.com](https://community.xiaoqy.com)
 
-**状态：** 未开发，因资金原因和时间成本原因。
+:bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
 ### 项目 9：白小七羽的实验室
 
-**网址：** [xiaoqy.com/experiment](https://xiaoqy.com/experiment)
+:link: **网址：** [xiaoqy.com/experiment](https://xiaoqy.com/experiment) / [xiaoqy.com/lab](https://xiaoqy.com/lab)
 
-**状态：** 未开发
+:bar_chart: **状态：** <font style="color:red">**未开发**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -133,11 +135,11 @@
 
 ![](./imgs/2024-07-24-06-55-50-image.png)![](./imgs/2024-07-24-06-57-03-image.png)<img src="./imgs/2024-07-24-06-57-49-image.png" >
 
-**网址：** [cmusic.xiaoqy.com](https://cmusic.xiaoqy.com)
+:link: **网址：** [cmusic.xiaoqy.com](https://cmusic.xiaoqy.com) / [cloudmusic.xiaoqy.com](https://cloudmusic.xiaoqy.com)
 
-**状态：** 服务正常运行
+:bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -145,11 +147,11 @@
 
 ![20230915173954](./imgs/20230915173954.webp)
 
-**网址：** [books.xiaoqy.com](https://books.xiaoqy.com)
+:link: **网址：** [books.xiaoqy.com](https://books.xiaoqy.com) / [book.xiaoqy.com](https://book.xiaoqy.com)
 
-**状态：** 未开发，因资金原因和时间成本原因。
+:bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -157,11 +159,11 @@
 
 ![Snipaste_2024-07-25_03-45-48](./imgs/Snipaste_2024-07-25_03-45-48.png)
 
-**网址：** [draw.xiaoqy.com](https://draw.xiaoqy.com)
+:link: **网址：** [draw.xiaoqy.com](https://draw.xiaoqy.com) / [paint.xiaoqy.com](https://paint.xiaoqy.com)
 
-**状态：** 服务正常运行
+:bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -169,11 +171,11 @@
 
 ![Snipaste_2024-07-25_04-28-23](./imgs/Snipaste_2024-07-25_04-28-23.png)
 
-**网址：** [mindmap.xiaoqy.com](https://mindmap.xiaoqy.com)
+:link: **网址：** [mindmap.xiaoqy.com](https://mindmap.xiaoqy.com)
 
-**状态：** 服务正常运行
+:bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -181,11 +183,11 @@
 
 ![](./imgs/2024-07-24-07-00-41-image.png)![](./imgs/2024-07-24-07-01-16-image.png)![](./imgs/2024-07-24-07-00-56-image.png)
 
-**网址：** [hot.xiaoqy.com](https://hot.xiaoqy.com)
+:link: **网址：** [hot.xiaoqy.com](https://hot.xiaoqy.com) / [news.xiaoqy.com](https://news.xiaoqy.com) / [today.xiaoqy.com](https://today.xiaoqy.com)
 
-**状态：** 服务正常运行
+:bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -193,11 +195,11 @@
 
 ![](./imgs/2024-07-24-07-01-51-image.png)![](./imgs/2024-07-24-07-03-02-image.png)![](./imgs/2024-07-24-07-03-10-image.png)![](./imgs/2024-07-24-07-02-18-image.png)![](./imgs/2024-07-24-07-02-33-image.png)
 
-**网址：** [calc.xiaoqy.com](https://calc.xiaoqy.com)
+:link: **网址：** [calc.xiaoqy.com](https://calc.xiaoqy.com) / [calculator.xiaoqy.com](https://calculator.xiaoqy.com)
 
-**状态：** 服务正常运行
+:bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -205,11 +207,11 @@
 
 ![](./imgs/2024-07-24-07-03-43-image.png)![](./imgs/2024-07-24-07-04-20-image.png)
 
-**网址：** [aichat.xiaoqy.com](https://aichat.xiaoqy.com)
+:link: **网址：** [aichat.xiaoqy.com](https://aichat.xiaoqy.com) / [gpt.xiaoqy.com](https://gpt.xiaoqy.com)
 
-**状态：** 服务正常运行
+:bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -217,11 +219,11 @@
 
 ![IMG_1761](./imgs/IMG_1761.JPG)
 
-**网址：** [wmnav.com](https://wmnav.com) ( 原：[24ta.com](https://24ta.com) )
+:link: **网址：** [wmnav.com](https://wmnav.com) ( 原：[24ta.com](https://24ta.com) )
 
-**状态：** 暂停服务，因资金原因。
+:bar_chart: **状态：** <font style="color:pink">**暂停服务，因资金原因**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -229,11 +231,11 @@
 
 ![IMG_1762](./imgs/IMG_1762.JPG)
 
-**网址：** [ihpan.com](https://ihpan.com)
+:link: **网址：** [ihpan.com](https://ihpan.com)
 
-**状态：** 暂停服务，因资金原因。
+:bar_chart: **状态：** <font style="color:pink">**暂停服务，因资金原因**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -241,11 +243,11 @@
 
 ![](./imgs/2024-07-24-06-53-00-image.png)![](./imgs/2024-07-24-06-54-11-image.png)
 
-**网址：** [qwerty.xiaoqy.com](https://qwerty.xiaoqy.com)
+:link: **网址：** [qwerty.xiaoqy.com](https://qwerty.xiaoqy.com)
 
-**状态：** 服务正常运行
+:bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
-**描述：** 白羽单词打字机：通过打字练习方式来实现肌肉记忆，让大脑更省力。学习时间更碎片化，更灵活！陪你从小到大，不分年龄，人人皆可学。
+:speech_balloon: **描述：** 白羽单词打字机：通过打字练习方式来实现肌肉记忆，让大脑更省力。学习时间更碎片化，更灵活！陪你从小到大，不分年龄，人人皆可学。
 
 软件设计的目标群体为以英语作为主要工作语言的键盘工作者。部分人会出现输入母语时的打字速度快于英语的情况，因为多年的母语输入练就了非常坚固的肌肉记忆 💪，而英语输入的肌肉记忆相对较弱，易出现输入英语时“提笔忘字”的现象。
 
@@ -277,11 +279,11 @@
 
 ### 项目 20：生命周期管理
 
-**网址：** [services.xiaoqy.com/lifecycle](https://services.xiaoqy.com/lifecycle)
+:link: **网址：** [services.xiaoqy.com/lifecycle](https://services.xiaoqy.com/lifecycle)
 
-**状态：** 未开发
+:bar_chart: **状态：** <font style="color:red">**未开发**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -289,21 +291,23 @@
 
 ![Snipaste_2024-07-29_01-16-20](./imgs/Snipaste_2024-07-29_01-16-20.png)
 
-**网址：** [developer.xiaoqy.com/ternimals](https://developer.xiaoqy.com/ternimals)
+(概念图仅供参考)
 
-**状态：** 未开发
+:link: **网址：** [developer.xiaoqy.com/ternimals](https://developer.xiaoqy.com/ternimals)
 
-**描述：** 
+:bar_chart: **状态：** <font style="color:red">**未开发**</font>
+
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
 ### 项目 22：财产管理
 
-**网址：** [services.xiaoqy.com/finance](https://services.xiaoqy.com/finance)
+:link: **网址：** [services.xiaoqy.com/finance](https://services.xiaoqy.com/finance)
 
-**状态：** 未开发
+:bar_chart: **状态：** <font style="color:red">**未开发**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -313,11 +317,13 @@
 
 ![Snipaste_2024-07-29_02-11-08](./imgs/Snipaste_2024-07-29_02-11-08.png)
 
-**网址：** [apps.xiaoqy.com/3dviewer](https://apps.xiaoqy.com/3dviewer)
+(概念图仅供参考)
 
-**状态：** 未开发
+:link: **网址：** [apps.xiaoqy.com/3dviewer](https://apps.xiaoqy.com/3dviewer)
 
-**描述：** 
+:bar_chart: **状态：** <font style="color:red">**未开发**</font>
+
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -325,53 +331,59 @@
 
 ![Snipaste_2024-07-29_02-13-26](./imgs/Snipaste_2024-07-29_02-13-26.png)
 
-**网址：** [apps.xiaoqy.com/raysimulator](https://apps.xiaoqy.com/raysimulator)
+(概念图仅供参考)
 
-**状态：** 未开发
+:link: **网址：** [apps.xiaoqy.com/raysimulator](https://apps.xiaoqy.com/raysimulator)
 
-**描述：** 
+:bar_chart: **状态：** <font style="color:red">**未开发**</font>
+
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
 ### 项目 25：爱好猫科技
 
-**网址：** [ihmao.com](https://ihmao.com)
+:link: **网址：** [ihmao.com](https://ihmao.com)
 
-**状态：** 未开发，因资金原因和时间成本原因。
+:bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 ### 项目 26：爱好猫社区
 
 ![Snipaste_2024-07-29_01-05-30](./imgs/Snipaste_2024-07-29_01-05-30.png)
 
-**网址：** [forum.ihmao.com](https://forum.ihmao.com)
+(概念图仅供参考)
 
-**状态：** 未开发，因资金原因和时间成本原因。
+:link: **网址：** [forum.ihmao.com](https://forum.ihmao.com) / [social.xiaoqy.com](https://social.xiaoqy.com) / [community.ihmao.com](https://community.ihmao.com) / [bbs.ihmao.com](https://bbs.ihmao.com)
 
-**描述：** 
+:bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
+
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
 ### 项目 27：宝库猫应用
 
-**网址：** [bkmao.com](https://bkmao.com)
+:link: **网址：** [bkmao.com](https://bkmao.com)
 
-**状态：** 未开发，因资金原因和时间成本原因。
+:bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
 ### 项目 28：代码编辑器
 
+![Snipaste_2024-07-29_09-15-50](./imgs/Snipaste_2024-07-29_09-15-50.png)
+
 ![Snipaste_2024-07-29_01-30-15](./imgs/Snipaste_2024-07-29_01-30-15.png)
 
-**网址：** [code.xiaoqy.com](https://code.xiaoqy.com)
+:link: **网址：** [code.xiaoqy.com](https://code.xiaoqy.com) / [editor.xiaoqy.com](https://editor.xiaoqy.com)
 
-**状态：** 暂停服务，因资金原因。
+:bar_chart: **状态：** <font style="color:pink">**暂停服务，因资金原因**</font>
 
-**描述：** 
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
@@ -395,11 +407,11 @@
 
 ![IMG_1772](./imgs/IMG_1772.JPG)
 
-**网址：** [chat.xiaoqy.com](https://chat.xiaoqy.com)
+:link: **网址：** [chat.xiaoqy.com](https://chat.xiaoqy.com) / [message.xiaoqy.com](https://message.xiaoqy.com) / [talk.xiaoqy.com](https://talk.xiaoqy.com)
 
-**状态：** 服务正常运行
+:bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
-**描述：** 白羽安全聊天，这是现在最好的聊天服务，也是最安全的聊天服务，没有之一！支持多个客户端： `Windows/Android/IOS/Web` 等
+:speech_balloon: **描述：** 白羽安全聊天，这是现在最好的聊天服务，也是最安全的聊天服务，没有之一！支持多个客户端： `Windows/Android/IOS/Web` 等
 
 支持语音通话，视频通话，发文字语音，发表情，发视频图片，投票，位置等，是一款成熟稳定的社交平台。
 
@@ -413,6 +425,22 @@
 白羽安全聊天未开发网页服务，目前仅只能使用客户端，未来将开发在线网页服务。
 
 您仍可以使用第三方在线网页平台 `app.element.io` 和 `fluffychat.im/web` 来连接到 `chat.xiaoqy.com` 服务器来使用白羽安全聊天服务平台。
+
+<a href="#top">TOP</a>
+
+## 白小七羽软件开发项目
+
+<a href="#top">TOP</a>
+
+### 白羽时间计算器
+
+<a href="#top">TOP</a>
+
+### 白羽身份生成器
+
+<a href="#top">TOP</a>
+
+### 白羽随机数生成器
 
 <a href="#top">TOP</a>
 
