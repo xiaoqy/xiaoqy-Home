@@ -4,7 +4,7 @@
 
 > [!NOTE]
 >
-> [:house: 主页](https://www.xiaoqy.com) | ​[:heart: 捐赠](https://ko-fi.com/xiaoqy) ​ | ​[:e-mail: E-Mail​](mailto://ixiaoqy@outlook.com) | [:smiley: 关于我](https://about.xiaoqy.com)
+> [:house: 主页](https://www.xiaoqy.com) | ​[:heart: 捐赠](https://ko-fi.com/xiaoqy) ​ | ​[:e-mail: E-Mail​](mailto:ixiaoqy@outlook.com) | [:smiley: 关于我](https://about.xiaoqy.com)
 >
 > <div id="time-since-published">加载中...</div>
 
@@ -25,7 +25,7 @@
 
 ![IMG_1760](./imgs/IMG_1760.JPG)
 
-:link: **网址：** [blog.xiaoqy.com](https://blog.xiaoqy.com) / [yublog.me](https://yublog.me)
+:link: **网址：** [blog.xiaoqy.com](https://blog.xiaoqy.com) | [yublog.me](https://yublog.me)
 
 :bar_chart: **状态：** <font style="color:pink">**暂停服务，因资金原因**</font>
 
@@ -39,7 +39,7 @@
 
 ![IMG_1760](./imgs/IMG_1760.JPG)
 
-:link: **网址：** [geek.xiaoqy.com](https://geek.xiaoqy.com) / [yugeek.me](https://yugeek.me)
+:link: **网址：** [geek.xiaoqy.com](https://geek.xiaoqy.com) | [yugeek.me](https://yugeek.me)
 
 :bar_chart: **状态：** <font style="color:pink">**暂停服务，因资金原因**</font>
 
@@ -53,7 +53,7 @@
 
 (概念图仅供参考)
 
-:link: **网址：** [wiki.xiaoqy.com](https://wiki.xiaoqy.com) / [knowledge.xiaoqy.com](https://knowledge.xiaoqy.com)
+:link: **网址：** [wiki.xiaoqy.com](https://wiki.xiaoqy.com) | [knowledge.xiaoqy.com](https://knowledge.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发，因资金原因**</font>
 
@@ -63,17 +63,21 @@
 
 ### 项目 4：白小七羽的直播
 
-:link: **网址：** [live.xiaoqy.com](https://live.xiaoqy.com) / [livestream.xiaoqy.com](https://livestream.xiaoqy.com) / [xiaoqy.tv](https://xiaoqy.tv)
+![Snipaste_2024-07-31_04-00-14](./imgs/Snipaste_2024-07-31_04-00-14.png)
 
-:bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
+![Snipaste_2024-08-01_01-21-33](./imgs/Snipaste_2024-08-01_01-21-33.png)
 
-:speech_balloon: **描述：** 
+:link: **网址：** [live.xiaoqy.com](https://live.xiaoqy.com) | [livestream.xiaoqy.com](https://livestream.xiaoqy.com) / [xiaoqy.tv](https://xiaoqy.tv)
+
+:bar_chart: **状态：** <font style="color:green">**服务试运行**</font>
+
+:speech_balloon: **描述：** 在很早前就想出过直播，通过直播可以和观众一起互动交流，互动点播听音乐和看影片却一直没有实现，现在可以实现 `7 X 24` 小时多视频分流给多平台同步直播（联播多播）来观看了。
 
 <a href="#top">TOP</a>
 
 ### 项目 5：白小七羽的商店
 
-:link: **网址：** [shop.xiaoqy.com](https://shop.xiaoqy.com) / [store.xiaoqy.com](https://store.xiaoqy.com) / [buy.xiaoqy.com](https://buy.xiaoqy.com)
+:link: **网址：** [shop.xiaoqy.com](https://shop.xiaoqy.com) | [store.xiaoqy.com](https://store.xiaoqy.com) / [buy.xiaoqy.com](https://buy.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
@@ -87,7 +91,7 @@
 
 (概念图仅供参考)
 
-:link: **网址：** [photos.xiaoqy.com](https://photos.xiaoqy.com) / [photo.xiaoqy.com](https://photo.xiaoqy.com) / [pictures.xiaoqy.com](https://pictures.xiaoqy.com) / [picture.xiaoqy.com](https://picture.xiaoqy.com) / [albums.xiaoqy.com](https://albums.xiaoqy.com) / [album.xiaoqy.com](https://album.xiaoqy.com) / [images.xiaoqy.com](https://images.xiaoqy.com) / [image.xiaoqy.com](https://image.xiaoqy.com)
+:link: **网址：** [photos.xiaoqy.com](https://photos.xiaoqy.com) | [photo.xiaoqy.com](https://photo.xiaoqy.com) / [pictures.xiaoqy.com](https://pictures.xiaoqy.com) / [picture.xiaoqy.com](https://picture.xiaoqy.com) / [albums.xiaoqy.com](https://albums.xiaoqy.com) / [album.xiaoqy.com](https://album.xiaoqy.com) / [images.xiaoqy.com](https://images.xiaoqy.com) / [image.xiaoqy.com](https://image.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发，因资金原因**</font>
 
@@ -113,7 +117,7 @@
 
 (概念图仅供参考)
 
-:link: **网址：** [social.xiaoqy.com](https://social.xiaoqy.com) / [community.xiaoqy.com](https://community.xiaoqy.com)
+:link: **网址：** [social.xiaoqy.com](https://social.xiaoqy.com) | [community.xiaoqy.com](https://community.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
@@ -123,7 +127,7 @@
 
 ### 项目 9：白小七羽的实验室
 
-:link: **网址：** [xiaoqy.com/experiment](https://xiaoqy.com/experiment) / [xiaoqy.com/lab](https://xiaoqy.com/lab)
+:link: **网址：** [xiaoqy.com/experiment](https://xiaoqy.com/experiment) | [xiaoqy.com/lab](https://xiaoqy.com/lab)
 
 :bar_chart: **状态：** <font style="color:red">**未开发**</font>
 
@@ -135,7 +139,7 @@
 
 ![](./imgs/2024-07-24-06-55-50-image.png)![](./imgs/2024-07-24-06-57-03-image.png)<img src="./imgs/2024-07-24-06-57-49-image.png" >
 
-:link: **网址：** [cmusic.xiaoqy.com](https://cmusic.xiaoqy.com) / [cloudmusic.xiaoqy.com](https://cloudmusic.xiaoqy.com)
+:link: **网址：** [cmusic.xiaoqy.com](https://cmusic.xiaoqy.com) | [cloudmusic.xiaoqy.com](https://cloudmusic.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -147,7 +151,7 @@
 
 ![20230915173954](./imgs/20230915173954.webp)
 
-:link: **网址：** [books.xiaoqy.com](https://books.xiaoqy.com) / [book.xiaoqy.com](https://book.xiaoqy.com)
+:link: **网址：** [books.xiaoqy.com](https://books.xiaoqy.com) | [book.xiaoqy.com](https://book.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
@@ -159,7 +163,7 @@
 
 ![Snipaste_2024-07-25_03-45-48](./imgs/Snipaste_2024-07-25_03-45-48.png)
 
-:link: **网址：** [draw.xiaoqy.com](https://draw.xiaoqy.com) / [paint.xiaoqy.com](https://paint.xiaoqy.com)
+:link: **网址：** [draw.xiaoqy.com](https://draw.xiaoqy.com) | [paint.xiaoqy.com](https://paint.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -183,7 +187,7 @@
 
 ![](./imgs/2024-07-24-07-00-41-image.png)![](./imgs/2024-07-24-07-01-16-image.png)![](./imgs/2024-07-24-07-00-56-image.png)
 
-:link: **网址：** [hot.xiaoqy.com](https://hot.xiaoqy.com) / [news.xiaoqy.com](https://news.xiaoqy.com) / [today.xiaoqy.com](https://today.xiaoqy.com)
+:link: **网址：** [hot.xiaoqy.com](https://hot.xiaoqy.com) | [news.xiaoqy.com](https://news.xiaoqy.com) / [today.xiaoqy.com](https://today.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -195,7 +199,7 @@
 
 ![](./imgs/2024-07-24-07-01-51-image.png)![](./imgs/2024-07-24-07-03-02-image.png)![](./imgs/2024-07-24-07-03-10-image.png)![](./imgs/2024-07-24-07-02-18-image.png)![](./imgs/2024-07-24-07-02-33-image.png)
 
-:link: **网址：** [calc.xiaoqy.com](https://calc.xiaoqy.com) / [calculator.xiaoqy.com](https://calculator.xiaoqy.com)
+:link: **网址：** [calc.xiaoqy.com](https://calc.xiaoqy.com) | [calculator.xiaoqy.com](https://calculator.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -207,7 +211,7 @@
 
 ![](./imgs/2024-07-24-07-03-43-image.png)![](./imgs/2024-07-24-07-04-20-image.png)
 
-:link: **网址：** [aichat.xiaoqy.com](https://aichat.xiaoqy.com) / [gpt.xiaoqy.com](https://gpt.xiaoqy.com)
+:link: **网址：** [aichat.xiaoqy.com](https://aichat.xiaoqy.com) | [gpt.xiaoqy.com](https://gpt.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -355,7 +359,7 @@
 
 (概念图仅供参考)
 
-:link: **网址：** [forum.ihmao.com](https://forum.ihmao.com) / [social.xiaoqy.com](https://social.xiaoqy.com) / [community.ihmao.com](https://community.ihmao.com) / [bbs.ihmao.com](https://bbs.ihmao.com)
+:link: **网址：** [forum.ihmao.com](https://forum.ihmao.com) | [social.xiaoqy.com](https://social.xiaoqy.com) / [community.ihmao.com](https://community.ihmao.com) / [bbs.ihmao.com](https://bbs.ihmao.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
@@ -379,7 +383,7 @@
 
 ![Snipaste_2024-07-29_01-30-15](./imgs/Snipaste_2024-07-29_01-30-15.png)
 
-:link: **网址：** [code.xiaoqy.com](https://code.xiaoqy.com) / [editor.xiaoqy.com](https://editor.xiaoqy.com)
+:link: **网址：** [code.xiaoqy.com](https://code.xiaoqy.com) | [editor.xiaoqy.com](https://editor.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:pink">**暂停服务，因资金原因**</font>
 
@@ -407,7 +411,7 @@
 
 ![IMG_1772](./imgs/IMG_1772.JPG)
 
-:link: **网址：** [chat.xiaoqy.com](https://chat.xiaoqy.com) / [message.xiaoqy.com](https://message.xiaoqy.com) / [talk.xiaoqy.com](https://talk.xiaoqy.com)
+:link: **网址：** [chat.xiaoqy.com](https://chat.xiaoqy.com) | [message.xiaoqy.com](https://message.xiaoqy.com) / [talk.xiaoqy.com](https://talk.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -425,6 +429,46 @@
 白羽安全聊天未开发网页服务，目前仅只能使用客户端，未来将开发在线网页服务。
 
 您仍可以使用第三方在线网页平台 `app.element.io` 和 `fluffychat.im/web` 来连接到 `chat.xiaoqy.com` 服务器来使用白羽安全聊天服务平台。
+
+<a href="#top">TOP</a>
+
+### 项目 30：白羽文件快传
+
+![Snipaste_2024-07-31_03-44-03](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\Snipaste_2024-07-31_03-44-03.png)
+
+![Snipaste_2024-07-31_03-44-14](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\Snipaste_2024-07-31_03-44-14.png)
+
+:link: **网址：** [transfer.xiaoqy.com](https://transfer.xiaoqy.com) | [files.xiaoqy.com](https://files.xiaoqy.com)
+
+:bar_chart: **状态：** <font style="color:pink">**暂停服务，将进行二次开发**</font>
+
+:speech_balloon: **描述：** 
+
+<a href="#top">TOP</a>
+
+### 项目 31：白羽 Markdown 编辑器
+
+![Snipaste_2024-08-01_02-06-49](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\Snipaste_2024-08-01_02-06-49.png)
+
+:link: **网址：** [md.xiaoqy.com](https://md.xiaoqy.com) | [markdown.xiaoqy.com](https://markdown.xiaoqy.com)
+
+:bar_chart: **状态：** <font style="color:red">**未开发**</font>
+
+:speech_balloon: **描述：** 
+
+<a href="#top">TOP</a>
+
+### 项目 32：白羽聚合阅读器
+
+![Snipaste_2024-08-01_03-02-41](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\Snipaste_2024-08-01_03-02-41.png)
+
+![Snipaste_2024-08-01_03-03-28](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\Snipaste_2024-08-01_03-03-28.png)
+
+:link: **网址：** [rss.xiaoqy.com](https://rss.xiaoqy.com)
+
+:bar_chart: **状态：** <font style="color:red">**未开发**</font>
+
+:speech_balloon: **描述：** 
 
 <a href="#top">TOP</a>
 
