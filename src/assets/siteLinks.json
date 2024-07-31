@@ -14,35 +14,35 @@
     "name": "知识百科|Undev",
     "link": "https://wiki.xiaoqy.com"
   },
+    {
+    "icon": "Video",
+    "name": "直播",
+    "link": "https://live.xiaoqy.com"
+  },
+  {
+    "icon": "PhotoVideo",
+    "name": "相册|Undev",
+    "link": "https://photos.xiaoqy.com"
+  },
+    {
+    "icon": "Fire",
+    "name": "今日热榜",
+    "link": "https://hot.xiaoqy.com"
+  },
   {
     "icon": "Compass",
     "name": "导航|Paused",
     "link": "https://www.wmnav.com"
   },
   {
-    "icon": "Tools",
-    "name": "工具",
-    "link": "https://tools.xiaoqy.com"
-  },
-  {
-    "icon": "Fire",
-    "name": "今日热榜",
-    "link": "https://hot.xiaoqy.com"
-  },
-  {
-    "icon": "Video",
-    "name": "直播|Undev",
-    "link": "https://live.xiaoqy.com"
-  },
-  {
     "icon": "ShoppingCart",
     "name": "店铺|Undev",
     "link": "https://shop.xiaoqy.com"
   },
-  {
-    "icon": "PhotoVideo",
-    "name": "相册|Undev",
-    "link": "https://photos.xiaoqy.com"
+    {
+    "icon": "Tools",
+    "name": "工具",
+    "link": "https://tools.xiaoqy.com"
   },
   {
     "icon": "Cloud",
