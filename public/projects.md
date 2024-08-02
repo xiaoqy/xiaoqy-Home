@@ -456,9 +456,9 @@
 
 ### 项目 30：白羽文件快传
 
-![Snipaste_2024-07-31_03-44-03](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\Snipaste_2024-07-31_03-44-03.png)
+![Snipaste_2024-07-31_03-44-03](./imgs/Snipaste_2024-07-31_03-44-03.png)
 
-![Snipaste_2024-07-31_03-44-14](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\Snipaste_2024-07-31_03-44-14.png)
+![Snipaste_2024-07-31_03-44-14](./imgs/Snipaste_2024-07-31_03-44-14.png)
 
 :link: **网址：** [transfer.xiaoqy.com](https://transfer.xiaoqy.com) | [files.xiaoqy.com](https://files.xiaoqy.com)
 
@@ -470,7 +470,7 @@
 
 ### 项目 31：白羽 Markdown 编辑器
 
-![Snipaste_2024-08-01_02-06-49](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\Snipaste_2024-08-01_02-06-49.png)
+![Snipaste_2024-08-01_02-06-49](./imgs/Snipaste_2024-08-01_02-06-49.png)
 
 :link: **网址：** [md.xiaoqy.com](https://md.xiaoqy.com) | [markdown.xiaoqy.com](https://markdown.xiaoqy.com)
 
@@ -482,9 +482,9 @@
 
 ### 项目 32：白羽聚合阅读器
 
-![Snipaste_2024-08-01_03-02-41](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\Snipaste_2024-08-01_03-02-41.png)
+![Snipaste_2024-08-01_03-02-41](./imgs/Snipaste_2024-08-01_03-02-41.png)
 
-![Snipaste_2024-08-01_03-03-28](C:\Users\Administrator\Documents\GitHub\xiaoqy-Home\public\imgs\Snipaste_2024-08-01_03-03-28.png)
+![Snipaste_2024-08-01_03-03-28](./imgs/Snipaste_2024-08-01_03-03-28.png)
 
 :link: **网址：** [rss.xiaoqy.com](https://rss.xiaoqy.com)
 
