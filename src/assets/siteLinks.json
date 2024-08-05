@@ -14,20 +14,10 @@
     "name": "知识百科|Undev",
     "link": "https://wiki.xiaoqy.com"
   },
-    {
+  {
     "icon": "Video",
     "name": "直播",
     "link": "https://live.xiaoqy.com"
-  },
-  {
-    "icon": "PhotoVideo",
-    "name": "相册|Undev",
-    "link": "https://photos.xiaoqy.com"
-  },
-    {
-    "icon": "Fire",
-    "name": "今日热榜",
-    "link": "https://hot.xiaoqy.com"
   },
   {
     "icon": "Compass",
@@ -35,19 +25,29 @@
     "link": "https://www.wmnav.com"
   },
   {
+    "icon": "Fire",
+    "name": "今日热榜",
+    "link": "https://hot.xiaoqy.com"
+  },
+  {
+    "icon": "PhotoVideo",
+    "name": "相册|Undev",
+    "link": "https://photos.xiaoqy.com"
+  },
+  {
     "icon": "ShoppingCart",
     "name": "店铺|Undev",
     "link": "https://shop.xiaoqy.com"
-  },
-    {
-    "icon": "Tools",
-    "name": "工具",
-    "link": "https://tools.xiaoqy.com"
   },
   {
     "icon": "Cloud",
     "name": "网盘|Paused",
     "link": "https://www.ihpan.com"
+  },
+  {
+    "icon": "Tools",
+    "name": "工具",
+    "link": "https://tools.xiaoqy.com"
   },
   {
     "icon": "CompactDisc",
@@ -85,9 +85,9 @@
     "link": "https://qwerty.xiaoqy.com"
   },
   {
-    "icon": "Book",
-    "name": "网址集|Undev",
-    "link": "https://web.xiaoqy.com"
+    "icon": "FacebookMessenger",
+    "name": "聊天",
+    "link": "https://chat.xiaoqy.com"
   },
   {
     "icon": "LaptopCode",
@@ -99,10 +99,10 @@
     "name": "实验室|Undev",
     "link": "https://lab.xiaoqy.com"
   },
-  {
-    "icon": "FacebookMessenger",
-    "name": "聊天",
-    "link": "https://chat.xiaoqy.com"
+    {
+    "icon": "Book",
+    "name": "网址集|Undev",
+    "link": "https://web.xiaoqy.com"
   },
   {
     "icon": "ProductHunt",
