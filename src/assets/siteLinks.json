@@ -2,22 +2,22 @@
   {
     "icon": "Blog",
     "name": "个人博客|Paused",
-    "link": "https://blog.xiaoqy.com"
+    "link": "https://blog.xiaoww.com"
   },
   {
     "icon": "Blog",
     "name": "技术博客|Paused",
-    "link": "https://geek.xiaoqy.com"
+    "link": "https://geek.xiaoww.com"
   },
   {
     "icon": "BookOpen",
     "name": "知识百科|Undev",
-    "link": "https://wiki.xiaoqy.com"
+    "link": "https://wiki.xiaoww.com"
   },
   {
     "icon": "Video",
     "name": "直播",
-    "link": "https://live.xiaoqy.com"
+    "link": "https://live.xiaoww.com"
   },
   {
     "icon": "Compass",
@@ -27,17 +27,17 @@
   {
     "icon": "Fire",
     "name": "今日热榜",
-    "link": "https://hot.xiaoqy.com"
+    "link": "https://hot.xiaoww.com"
   },
   {
     "icon": "PhotoVideo",
     "name": "相册|Undev",
-    "link": "https://photos.xiaoqy.com"
+    "link": "https://photos.xiaoww.com"
   },
   {
     "icon": "ShoppingCart",
     "name": "店铺|Undev",
-    "link": "https://shop.xiaoqy.com"
+    "link": "https://shop.xiaoww.com"
   },
   {
     "icon": "Cloud",
@@ -47,66 +47,66 @@
   {
     "icon": "Tools",
     "name": "工具",
-    "link": "https://tools.xiaoqy.com"
+    "link": "https://tools.xiaoww.com"
   },
   {
     "icon": "CompactDisc",
     "name": "音乐",
-    "link": "https://music.xiaoqy.com"
+    "link": "https://music.xiaoww.com"
   },
   {
     "icon": "CompactDisc",
     "name": "云音乐",
-    "link": "https://cmusic.xiaoqy.com"
+    "link": "https://cmusic.xiaoww.com"
   },
   {
     "icon": "Robot",
     "name": "AI 聊天",
-    "link": "https://aichat.xiaoqy.com"
+    "link": "https://aichat.xiaoww.com"
   },
   {
     "icon": "PaintBrush",
     "name": "画板",
-    "link": "https://draw.xiaoqy.com"
+    "link": "https://draw.xiaoww.com"
   },
   {
     "icon": "Sitemap",
     "name": "思维导图",
-    "link": "https://mindmap.xiaoqy.com"
+    "link": "https://mindmap.xiaoww.com"
   },
   {
     "icon": "Calculator",
     "name": "计算器",
-    "link": "https://calc.xiaoqy.com"
+    "link": "https://calc.xiaoww.com"
   },
   {
     "icon": "FileWord",
     "name": "单词打字",
-    "link": "https://qwerty.xiaoqy.com"
+    "link": "https://qwerty.xiaoww.com"
   },
   {
     "icon": "FacebookMessenger",
     "name": "聊天",
-    "link": "https://chat.xiaoqy.com"
+    "link": "https://chat.xiaoww.com"
   },
   {
     "icon": "LaptopCode",
     "name": "状态|Dev",
-    "link": "https://status.xiaoqy.com"
+    "link": "https://status.xiaoww.com"
   },
   {
     "icon": "Atom",
     "name": "实验室|Undev",
-    "link": "https://lab.xiaoqy.com"
+    "link": "https://lab.xiaoww.com"
   },
     {
     "icon": "Book",
     "name": "网址集|Undev",
-    "link": "https://web.xiaoqy.com"
+    "link": "https://web.xiaoww.com"
   },
   {
     "icon": "ProductHunt",
     "name": "服务项目",
-    "link": "https://www.xiaoqy.com/projects.html"
+    "link": "https://www.xiaoww.com/projects.html"
   }
 ]
