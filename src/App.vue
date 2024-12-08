@@ -109,7 +109,7 @@ onMounted(() => {
   const styleTitle1 = "font-size: 20px;font-weight: 600;color: rgb(244,167,89);";
   const styleTitle2 = "font-size:12px;color: rgb(244,167,89);";
   const styleContent = "color: rgb(30,152,255);";
-  const title1 = "白小七羽的个人主页";
+  const title1 = "思远文文的个人主页";
   const title2 = `\n`;
   const content = `\n\n主页: https://www.xiaoww.com`;
   console.info(`%c${title1} %c${title2} %c${content}`, styleTitle1, styleTitle2, styleContent);
