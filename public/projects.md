@@ -17,7 +17,7 @@
 
 
 
-<video src="./videos/xiaoww.com.mp4"></video>
+<video src="./videos/xiaoww.com.mp4" controls="controls" width="800" height="800"></video>
 
 ## 思远文文网站开发项目
 
