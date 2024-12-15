@@ -1,7 +1,5 @@
 <a name="top" id="top"></a>
 
-<script type="text/javascript" src="./script.js"></script>
-
 # 思远文文服务项目
 
 > [!NOTE]
