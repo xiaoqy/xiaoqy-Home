@@ -1,10 +1,8 @@
 <a name="top" id="top"></a>
 
-# 思远文文服务项目
-
-<title>思远文文服务项目</title>
-
 <script type="text/javascript" src="./script.js"></script>
+
+# 思远文文服务项目
 
 > [!NOTE]
 >
@@ -17,7 +15,7 @@
 
 
 
-<video src="./videos/xiaoww.com.mp4" controls="controls" width="800" height="800"></video>
+<video src="./videos/xiaoww.com.mp4" controls="controls" width="800" height="800" autoplay="autoplay" loop></video>
 
 ## 思远文文网站开发项目
 
