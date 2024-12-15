@@ -219,1149 +219,1016 @@ mjx-container { break-inside: avoid; }
 .md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
-:root {
-    --main-color: rgba(128, 30, 255, 1);
-    --shadow-color : rgb(178, 80, 255);
-    --transplate-color : rgba(128, 30, 255, 0.1);
-    --dark-color : rgb(70, 18, 137);
-    --light-color : rgb(248, 242, 255);
-    --font-color : rgb(12, 12, 12);
-    --base-font : "Glow Sans", "Microsoft YaHei", serif;
-    --title-font: "Roboto Slab", "Times", serif;
-    --blockquote-font : "Times", "Roboto Slab", serif;
-    --blockquote-color : rgba(117, 117, 117, 0.9);
-    --monospace: "Cascadia code", "Courier New", monospace; 
 
-    /* --background : url("https://cdn.jsdelivr.net/gh/LSTM-Kirigaya/KImage/Img/2k.jpg"); */
-
-    --quote-title-font-size : 0.9em;
-    --quote-tag-font-size : 1.1em;
-
-    /* typora GUI config */
-    --sidebar-font-color : black;
-    --main-panel-font-color : black;
+/* 暗色主题界面UI颜色重写 */
+.dropdown-menu{
+  background: #222222;
+}
+#recent-file-panel {
+  color: var(--dark-text-color);
+}
+#recent-file-panel-action-btn {
+  background-color: var(--dark-background-color);
+}
+#recent-file-panel-action-btn-container {
+  color: rgba(146, 146, 146, 0.56);
+}
+#recent-file-panel tbody tr:nth-child(2n-1) {
+  background-color: var(--dark-background-color--deep);
+}
+.megamenu-menu-panel .btn {
+  border: 1px solid #9292928f;
 }
 
-/* global setting */
-body {
-    font-family: "Roboto Slab", "SimHei", serif;
-    /* background-color: rgb(255, 255, 255); */
-}
+
+
+/* 字体引入：鸿蒙字体 */
 
 html {
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	text-rendering: optimizelegibility;
-	-webkit-font-smoothing: initial;
+  font-size: 16px;
+  font-family: "HarmonyOS_Sans_SC";
 }
 
+/* 打印页面设置 */
 
-/* write is a wrapper of writable region */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact; /*确保打印颜色一致*/
+    print-color-adjust: exact;
+  }
+  body {
+    width: 21cm; /* 设置页面宽度为A4宽度 */
+    height: 29.7cm; /* 设置页面高度为A4高度 */
+    margin: 1cm; /* 设置页面边距 */
+  }
+  p {
+    line-height: 1.5rem; /*设置打印内容的行高*/
+  }
+  ol,ul,figure,pre {  /*设置一些元素不会被分页截断对应有序列表、无序列表、图片(表格)、代码块*/
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
+content {
+  background: var(--dark-background-color);
+  color: var(--dark-text-color);
+}
+/* 软件内部Markdown样式 */
 #write {
-    position: static;
-    /* width: 90%; */
-    max-width: 1000px;
-    min-height: calc(100vh - 6rem);
-	min-width: calc(100vw - 45rem);
-    line-height: 1.6;
-    transform: none;
-    height: auto;
-    caret-color: var(--main-color);
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 15px;
+  line-height: 2.25;
+  color: var(--dark-text-color);
+  letter-spacing: 1.1px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
 }
 
-h1, h2, h3,
-#write h1, h2, h3, h4, h5, h6 {
-    color: var(--font-color);
-    font-family: var(--title-font);
-    font-weight: 800;
-    line-height: 1.5;
-    margin: 0 0 1em 0;
+#write p {
+  color: var(--dark-text-color);
+  margin: 10px 10px;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light,
+    "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+  font-size: 1rem;
+  word-spacing: 2px;
+}
+#write h3:after,
+h4:after,
+h5:after,
+h6:after {
+  content: "";
+  display: inline-block;
+  margin-left: 0.2em;
+  height: 2em;
+  width: 1.2em;
+  vertical-align: top;
 }
 
-h1,
+#write h3:after {
+  background: var(--h3-r-graphic);
+}
+#write h4:after {
+  background: var(--h4-r-graphic);
+}
+#write h5:after {
+  background: var(--h5-r-graphic);
+}
+#write h6:after {
+  background: var(--h6-r-graphic);
+}
+
+/* 一级标题 */
+#write h1:after {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--dark-text-color);
+  border-bottom: none;
+}
+
 #write h1 {
-    font-size: 40px;
-    margin: 0 0 1.0em 0;
-    line-height: 1.3; 
-    border-bottom: solid 3px var(--main-color);
-    width: fit-content;
+  text-align: center;
 }
 
-h2,
+/* 二级标题 */
 #write h2 {
-    font-size: 28px;
-    border-radius: .5em;
-    width: fit-content;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  width: fit-content;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 1px 12.5px;
+  border-radius: 4px;
+  background: var(--head-title-h2-background);
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  transition: all ease-in-out 0.1s;
+}
+#write h2.md-heading a {
+  text-decoration: underline;
+  border-bottom: 0;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 2px;
+}
+#write h2:hover {
+  background-position: -100% -100%;
+  transition: all ease-in-out 0.1s;
 }
 
-#write h2::before {
-    content: "H2";
-    border-radius: .3em;
-    font-size: .8em;
-    padding: 3px 7px;
-    margin-right: 15px;
-    background-color: var(--main-color);
-    color: white;
-}
-
+/* 三级标题 */
 #write h3 {
-    font-size: 24px;
-    border-radius: .3em; 
-    width: fit-content;
+  width: fit-content;
+  margin: 20px 0;
+  font-size: 1.3rem;
+  text-align: left;
+  padding-left: 10px;
+  border-left: 5px solid var(--head-title-color);
 }
 
-#write h3::before {
-    content: "H3";
-    color : white;
-    font-size: 0.8em;
-    background-color: var(--main-color);
-    border-radius: .3em;
-    margin-right: 12px;
-    padding: 4px 7px;
-    float: none;
-    position: relative;
-    top: 0;
-    left: 0;
-    vertical-align: baseline;
-    border-width: 0;
+/* 三级标题内容 */
+#write h3 span {
+  border-bottom: 2px hidden var(--head-title-color);
 }
 
+#write h3 span:hover {
+  border-bottom: 2px solid var(--head-title-color);
+  transition: all linear 0.1s;
+}
 #write h4 {
-    font-size: 20px;
+  margin: 20px 0;
+  font-size: 1.15rem;
+  text-align: left;
+}
+
+#write h4::before {
+  content: "";
+  margin-right: 7px;
+  display: inline-block;
+  background-color: var(--head-title-color);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: var(--head-title-color) 1px solid;
+  vertical-align: inherit;
 }
 
 #write h5 {
-    font-size: 16px;
+  margin: 23px 0;
+  font-size: 1.1rem;
+  text-align: left;
 }
 
-#write hr {
-    width: 60%;
-    text-align:center;
-    border-bottom: solid 1.8px var(--main-color);
-    margin: 4.5em auto;
+#write h5::before {
+  content: "";
+  margin-right: 7px;
+  display: inline-block;
+  background-color: #ffffff;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: var(--head-title-color) 2px solid;
+  vertical-align: inherit;
 }
 
-
-#write img {
-    border-radius: 1.5em !important;
-    box-shadow: 0 0 10px 3px rgba(134, 136, 137, 0.8);
-    transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
+#write h6 {
+  margin: 23px 0;
+  font-size: 1.1rem;
+  text-align: left;
 }
 
-/* #write img:hover {
-    box-shadow: 0 0 10px 5px var(--shadow-color);
-    transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
-} */
+#write h6::before {
+  content: "-";
+  color: var(--head-title-color);
+  margin-right: 7px;
+  display: inline-block;
+  vertical-align: inherit;
+}
 
-blockquote,
+/* 列表 */
+::marker {
+  color: var(--dark-text-color);
+  font-weight: bold;
+}
+
+li.md-list-item {
+  margin: 0.4rem 0;
+}
+
+#write ul,
+#write ol {
+  margin-top: 0px;
+  margin-left: 16px;
+  margin-bottom: 8px;
+  padding-left: 13px;
+}
+
+#write em {
+  padding: 0 3px 0 0;
+}
+
+#write ul {
+  list-style-type: disc;
+}
+
+#write ul ul {
+  list-style-type: circle;
+}
+
+#write ul ul ul {
+  list-style-type: square;
+}
+
+#write ol {
+  list-style-type: decimal;
+}
+#write ol ol {
+  list-style-type: lower-alpha;
+}
+#write ol ol ol {
+  list-style-type: lower-roman;
+}
+
+#write li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 1.7rem;
+  text-align: justify;
+  color: var(--dark-text-color);
+  font-weight: 500;
+}
+
+#write li:before {
+  content: "";
+  height: calc(100% - 50px);
+  top: 35px;
+  position: absolute;
+  border-left: 0.5px solid #d6d6d6;
+  left: -14.5px;
+}
+
+/* 任务列表样式 */
+#write .md-task-list-item:before {
+  content: none;
+}
+
+#write .md-task-list-item > input {
+  margin: 0px;
+  padding: 0px;
+  width: 0px;
+  height: 0px;
+  line-height: 1.2rem;
+}
+#write .md-task-list-item > input:before {
+  display: inline-block;
+  content: "";
+  width: 1.1rem;
+  height: 1.1rem;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid var(--element-color);
+  border-radius: 30%;
+}
+
+#write .md-task-list-item > input[checked]:before {
+  content: "✔";
+  color: var(--element-color-deep);
+  -webkit-text-stroke: 1px var(--element-color-deep);
+  width: 1.1rem;
+  height: 1.1rem;
+  background-color: #ffffff;
+  border: 2px solid var(--element-color);
+  border-radius: 30%;
+  font-size: 0.75rem;
+  line-height: 0.8rem;
+}
+
+#write input[type="checkbox"] {
+  position: absolute;
+  top: 7px;
+  left: -3px;
+}
+
+#write .md-task-list-item p {
+  margin: 0px 1.8rem;
+}
+
+/* 引用 */
+
 #write blockquote {
-    padding: 10px 10px;
-    font-size: var(--quote-title-font-size);
-    color: var(--blockquote-color);
-    border-left: 6px solid var(--main-color);
-    background: var(--light-color);
-    border-radius : 0.5em;
-    font-family: var(--blockquote-font);
-    line-height: 35px;
+  margin-left: 12px;
+  padding: 12px;
+  border: 1px solid var(--element-color);
+  border-left-color: var(--element-color);
+  border-left-width: 4px;
+  border-radius: 4px;
+  line-height: 26px;
 }
 
-#write blockquote span {
-    word-break: break-all;
+#write blockquote p {
+  color: var(--dark-text-color);
 }
 
-#write blockquote h1 {
-    font-weight: 200;
-    font-size: var(--quote-tag-font-size);
-    border-bottom: none;
-    font-family: var(--base-font);
-    line-height: 35px;
+/* 超链接 */
+#write a {
+  color: var(--dark-text-color);
 }
 
-#write blockquote h1::before {
-    content: "Tips";
-    background-color: var(--main-color);
-    font-family: var(--title-font);
-    color: white;
-    font-size: var(--quote-tag-font-size);
-    border-radius: .3em;
-    padding: 3px 7px;
-    margin-right: 15px;
+#write a:visited {
+  color: var(--element-color-deep);
 }
 
-#write blockquote h2 {
-    font-weight: 200;
-    font-size: var(--quote-tag-font-size);
-    font-family: var(--base-font);
-    line-height: 35px;
+#write a:not(.md-toc-inner) {
+  font-weight: bolder;
+  text-decoration: none;
+  transform: all linear 0.1s;
 }
 
-#write blockquote h2::before {
-    content: "Warning";
-    background-color: rgb(207, 210, 16);
-    font-family: var(--title-font);
-    color: white;
-    font-size: var(--quote-tag-font-size);
-    border-radius: .3em;
-    padding: 3px 7px;
-    margin-right: 15px;
+#write a:hover:not(.md-toc-inner) {
+  font-weight: bold;
+  color: var(--element-color-deep);
+  border-bottom: 1px solid var(--element-color-deep);
+  transform: all linear 0.1s;
 }
 
-#write blockquote h3 {
-    font-weight: 200;
-    font-size: var(--quote-tag-font-size);
-    font-family: var(--base-font);
-    line-height: 35px;
+#write p a:not(.md-toc-inner)::before {
+  content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath  d='M477.934459 330.486594A50.844091 50.844091 0 0 1 406.752731 258.796425L512 152.532274a254.220457 254.220457 0 0 1 359.467726 359.467726L762.66137 618.772592a50.844091 50.844091 0 1 1-71.690168-71.690169l106.772591-106.772592a152.532274 152.532274 0 0 0-215.578947-215.578947z m70.164846 361.501489A50.844091 50.844091 0 1 1 619.789474 762.66137l-107.281033 107.281033A254.220457 254.220457 0 0 1 152.532274 512L259.813307 406.752731a50.844091 50.844091 0 1 1 72.19861 69.656405l-107.789474 107.281033a152.532274 152.532274 0 0 0 215.578947 215.578947z m-126.601788-16.77855a50.844091 50.844091 0 1 1-71.690168-71.690169l251.678252-251.678252a50.844091 50.844091 0 0 1 71.690169 71.690169z'/%3E%3C/svg%3E");
+  color: #f68800;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.2em;
+  vertical-align: sub;
 }
 
-#write blockquote h3::before {
-    content: "Error";
-    background-color: rgb(224, 66, 66);
-    font-family: var(--title-font);
-    color: white;
-    font-size: var(--quote-tag-font-size);
-    border-radius: .3em;
-    padding: 3px 7px;
-    margin-right: 15px;
-    float: none;
-    position: relative;
-    top: 0;
-    left: 0;
-    vertical-align: baseline;
-    border-width: 0;
+#write a.md-toc-inner:hover {
+  color: var(--element-color-deep);
+  font-weight: 700;
+  text-decoration: none;
 }
 
-#write blockquote h4 {
-    font-weight: 200;
-    font-size: var(--quote-tag-font-size);
-    font-family: var(--base-font);
-    line-height: 35px;
+#write sup a::before {
+  content: none;
 }
 
-#write blockquote h4::before {
-    content: "Remind";
-    background-color: var(--shadow-color);
-    font-family: var(--title-font);
-    color: white;
-    font-size: var(--quote-tag-font-size);
-    border-radius: .3em;
-    padding: 3px 7px;
-    margin-right: 15px;
-    float: none;
-    position: relative;
-    top: 0;
-    left: 0;
-    vertical-align: baseline;
-    border-width: 0;
+/* 加粗 */
+#write strong {
+  color: var(--dark-text-color);
+  font-weight: bold;
 }
 
-#write blockquote h5 {
-    font-weight: 200;
-    font-size: var(--quote-tag-font-size);
-    font-family: var(--base-font);
-    line-height: 35px;
+/* 斜体 */
+#write em {
+  font-style: italic;
+  color: var(--dark-text-color);
+}
+/* 高亮 */
+#write mark {
+  font-weight: bolder;
+  color: var(--dark-text-color);
+  background: var(--element-color-so-shallow);
 }
 
-#write blockquote h5::before {
-    content: "Remind";
-    background-color: var(--shadow-color);
-    font-family: var(--title-font);
-    color: white;
-    font-size: var(--quote-tag-font-size);
-    border-radius: .3em;
-    padding: 3px 7px;
-    margin-right: 15px;
-    float: none;
-    position: relative;
-    top: 0;
-    left: 0;
-    vertical-align: baseline;
-    border-width: 0;
+/* 删除线 */
+#write del {
+  text-decoration-color: var(--element-color-deep);
 }
 
-
-/* code block */
-#write pre.md-fences {
-	padding: 1rem 0.5rem 1rem;
-	display: block;
-	-webkit-overflow-scrolling: touch;
-	/* box-shadow: 0 0 6px 2px rgba(151, 151, 151, 0.9); */
-    /* border-top: rgb(51, 51, 51) solid 35px; */
-    border-top: rgb(244, 244, 244) solid 35px;
-    background-color: rgb(244, 244, 244);
+/* 分隔线*/
+#write hr {
+  height: 1px;
+  padding: 0;
+  border: none;
+  border-top: 2px solid var(--head-title-color);
 }
 
-
-pre.md-fences::before {
-	content: ' ';
-	background: var(--main-color);
-	box-shadow: 23px 0 rgb(128, 128, 128), 45px 0 gray;
-	border-radius: 50%;
-	margin-top: -2.3rem;
-	position: absolute;
-	left: 15px;
-	height: 12px;
-	width: 12px;
+/* 图片*/
+#write img {
+  border-radius: 6px;
+  display: block;
+  margin: 20px auto;
+  object-fit: contain;
 }
 
-#write pre.md-fences {
-	line-height: 1.5rem;
-	font-size: .9rem;
-	font-weight: 300;
-	border-radius: .7em;
-    font-family: var(--monospace) !important;
+/* 图片描述文字 */
+#write figcaption {
+  display: block;
+  font-size: 13px;
+  color: #595959;
 }
 
-/* inline code */
-code {
-    margin: 0 2px;
-    padding: 4px 6px;
-    color: #666363;
-    white-space: pre-wrap;
-    background: var(--light-color);
-    border-radius: 8px;
-}
-
-#write blockquote code {
-    margin: 0 2px;
-    padding: 4px 6px;
-    color: white;
-    white-space: pre-wrap;
-    background: var(--main-color);
-    border-radius: 8px;
-}
-
-kbd,
-samp,
-tt,
-var {
-	font-family: var(--monospace) !important;
-}
-
-
-/* YAML */
+/* Yaml */
 pre.md-meta-block {
-    font-size: .8rem;
-    min-height: .8rem;
-    white-space: pre-wrap;
-    background: var(--main-color);
-    display: block;
-    overflow-x: hidden;
-    padding: 15px;
-    font-family: var(--monospace);
-    border-radius: 1.2em;
-    color: white;
-    caret-color: white;
-}
-
-
-/* Math */
-#math-inline-preview-content .MathJax {
-    color: white !important;
-}
-
-/* table */
-#write table
-{
-    width: 95%;
-    border-collapse: collapse;
-    text-align: center;
-    font-family: var(--monospace);
-    margin: 20px;
-}
-#write table td, table th
-{
-    border: 1px solid transparent;
-    color: rgb(18, 18, 18);
-    height: 30px;
-    padding: 10px;
-    border-radius: .5em;
-    transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
-}
-#write table td {
-    font-family: var(--title-font);
-}
-#write table thead th
-{
-    background-color: var(--shadow-color);
-    font-size: 20px;
-    color: white;
-    font-weight: bolder;
-    width: 100px;
-    text-align: center;
-    vertical-align: middle;
-    padding: 10px;
+  padding: 8px 15px;
+  border: 2px dotted var(--element-color);
+  background-color: var(--element-color-soo-shallow);
 }
-table tr:nth-child(odd)
-{
-    background: white;
-}
-table tr:nth-child(even)
-{
-    background: var(--light-color);
-}
-table td:hover {
-  background-color: var(--shadow-color) !important;
-  color: white !important;
-  box-shadow: 0 0 10px 5px var(--shadow-color);
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-}
-
-
-/* main element consisting of your text */
-p {
-    color: var(--font-color);
-    margin: 0 0 2em 0;  
-    font-weight: 500;
-    line-height: 1.6;
-    font-family: var(--base-font);
-}
-
-a {
-    color: var(--main-color);
-    font-weight: 500;
-    text-decoration: none;
-    text-decoration-style: none;
-    cursor: pointer;
-    padding: 0 3px 0 3px;
-}
-
-
-/* list */
-
-ol,
-ul {
-  padding-left: 2em;
-  line-height: 2;
-}
-
-ul>li>ul>li {
-    list-style-type: circle;
-  }
-  
-ul>li>ul>li>ul>li {
-    list-style-type: square;
-}
-
-
-iframe {
-    border-radius: 1.2em;
-    box-shadow: 0 0 8px 3px rgba(181, 181, 182, 0.9);
-}
-
-
-/* checkbox */
-.md-task-list-item:hover > input:before,
-input[type='checkbox']:hover:before {
-	opacity: 1;
-	transition: 0.3s;
-	background-color: var(--shadow-color);
-}
-
-.task-list-item input::before {
-    content: "";
-    display: inline-block;
-	border-radius: .3em;
-    vertical-align: middle;
-    border: 1.2px solid var(--main-color);
-    background-color: #ffffff;
-	width: 1.1rem;
-    height: 1.1rem;
-	margin-left: -0.1rem;
-    margin-right: 0.1rem;
-    margin-top: -0.68rem; 
-}
-
-.task-list-item input:checked::before {
-    padding-left: 0.125em;
-    content: '✔';
-    color:white;
-	background-color: var(--main-color);
-    font-size: 0.8rem;
-    line-height: 0.95rem;
-    margin-top: -0.68rem;
-	transition: background-color 200ms ease-in-out;
-}
-
-
-
-
-
-#footer-word-count-label {
-    font-family: var(--title-font) !important;
-    color: white;
-    padding: 1px 8px;
-    border-radius: 1.0em;
-    background-color: var(--main-color);
-}
-
-/* bg color when text is selected */
-div::selection {
-background: var(--main-color);
-color: white;
-}
-  
-div::-moz-selection {
-background: var(--main-color);
-color: white;
-}
-
-div::-webkit-selection {
-background: var(--main-color);
-color: white;
-}
-
-blockquote::selection {
-background: var(--main-color);
-color: white;
-}
-
-blockquote::-moz-selection {
-background: var(--main-color);
-color: white;
-}
-
-blockquote::-webkit-selection {
-background: var(--main-color);
-color: white;
-}
-
-p::selection {
-background: var(--main-color);
-color: white;
-}
-
-p::-moz-selection {
-background: var(--main-color);
-color: white;
-}
-
-p::-webkit-selection {
-background: var(--main-color);
-color: white;
-}
-
-label::selection {
-background: var(--main-color);
-color: white;
-}
-
-label::-moz-selection {
-background: var(--main-color);
-color: white;
-}
-
-label::-webkit-selection {
-background: var(--main-color);
-color: white;
-}
-
-span::selection {
-background: var(--main-color);
-color: white;
-}
-
-span::-moz-selection {
-background: var(--main-color);
-color: white;
-}
-
-span::-webkit-selection {
-background: var(--main-color);
-color: white;
-}
-
-h1::selection {
-background: var(--main-color);
-color: white;
-}
-
-h1::-moz-selection {
-background: var(--main-color);
-color: white;
-}
-
-h1::-webkit-selection {
-background: var(--main-color);
-color: white;
-}
-
-h2::selection {
-background: var(--main-color);
-color: white;
-}
 
-h2::-moz-selection {
-background: var(--main-color);
-color: white;
+/* 行内代码 */
+#write p code {
+  padding: 0px 3px 0px 7px;
+  color: var(--element-color-linecode);
+  background: var(--element-color-linecode-background);
+  border-radius: 3px;
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  letter-spacing: 0.5px;
 }
 
-h2::-webkit-selection {
-background: var(--main-color);
-color: white;
+#write li code {
+  color: var(--element-color-linecode);
 }
 
-h3::selection {
-background: var(--main-color);
-color: white;
+/* 代码块 */
+.md-fences:not([lang="mermaid"])::before {
+  content: attr(lang);
+  text-align: right;
+  padding-right: 15px;
+  color: #7e7e7e;
+  display: block;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUwcHgiIGhlaWdodD0iMTMwcHgiPgogIDxlbGxpcHNlIGN4PSI2NSIgY3k9IjY1IiByeD0iNTAiIHJ5PSI1MiIgc3Ryb2tlPSJyZ2IoMjIwLDYwLDU0KSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJyZ2IoMjM3LDEwOCw5NikiLz4KICA8ZWxsaXBzZSBjeD0iMjI1IiBjeT0iNjUiIHJ4PSI1MCIgcnk9IjUyIiAgc3Ryb2tlPSJyZ2IoMjE4LDE1MSwzMykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0icmdiKDI0NywxOTMsODEpIi8+CiAgPGVsbGlwc2UgY3g9IjM4NSIgY3k9IjY1IiByeD0iNTAiIHJ5PSI1MiIgIHN0cm9rZT0icmdiKDI3LDE2MSwzNykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0icmdiKDEwMCwyMDAsODYpIi8+Cjwvc3ZnPg==);
+  height: 30px;
+  width: 100%;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-color: #222222;
+  border-radius: 5px 5px 0 0;
+  background-position: 6px 10px;
 }
 
-h3::-moz-selection {
-background: var(--main-color);
-color: white;
+.CodeMirror-wrap .CodeMirror-scroll {
+  overflow-x: auto;
 }
 
-h3::-webkit-selection {
-background: var(--main-color);
-color: white;
+.md-fences .cm-s-inner.CodeMirror {
+  margin-top: -0.5rem;
 }
 
-h4::selection {
-background: var(--main-color);
-color: white;
+.cm-s-inner.CodeMirror {
+  padding: 1.2rem 0.8rem;
+  color: #4f5467;
+  font-family: "JetBrainsMono";
+  border-radius: 10px;
+  background-color: #fa0303;
+  /* border: 1px solid #eef2f5;*/
+  line-height: 1.6rem;
 }
 
-h4::-moz-selection {
-background: var(--main-color);
-color: white;
+.CodeMirror-gutters {
+  border-right: 1px solid #9d9d9d52;
+  background: inherit;
+  white-space: nowrap;
 }
 
-h4::-webkit-selection {
-background: var(--main-color);
-color: white;
+pre.CodeMirror-line {
+  padding: 0 1.2rem;
 }
 
-h5::selection {
-background: var(--main-color);
-color: white;
+.CodeMirror-linenumber {
+  padding: 0 3px 0 5px;
+  text-align: right;
+  color: #a3a3a3;
 }
 
-h5::-moz-selection {
-background: var(--main-color);
-color: white;
+.cm-s-inner.CodeMirror {
+  background: #222222;
+  border-radius: 0 0 5px 5px;
+  padding: 20px 10px 20px 10px;
+  page-break-before: auto;
+  line-height: 1.8rem;
 }
 
-h5::-webkit-selection {
-background: var(--main-color);
-color: white;
+.md-rawblock .md-rawblock-tooltip {
+  inset: auto 0.3rem auto auto;
+  transform: translateY(-120%);
 }
 
-code::selection {
-background: var(--main-color);
-color: white;
+/* 代码块颜色 */
+.cm-keyword {
+  color: #48CFE9 !important;
+  font-weight: 700 !important;
 }
 
-code::-moz-selection {
-background: var(--main-color);
-color: white;
+.cm-variable {
+  color: #C2EAFF !important;
 }
 
-code::-webkit-selection {
-background: var(--main-color);
-color: white;
+.cm-tag {
+  color: var(--color-cm-keyword) !important;
+  font-weight: 700 !important;
 }
 
-
-/* outside */
-
-
-#megamenu-content {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-#megamenu-menu-panel {
-    font-family: var(--title-font);
-    padding: 10px;
-}
-
-.megamenu-menu-panel {
-    padding: 10px;
-}
-
-
-.megamenu-menu-header-title-menu {
-    color: var(--sidebar-font-color);
-}
-
-.megamenu-menu-header-title-back {
-    color: var(--sidebar-font-color);
-}
-
-
-/* sidebar */
-.megamenu-menu-header {
-    width: 60%;
-    text-align:center;
-    border-bottom: solid 3px var(--main-color);
-}
-#megamenu-menu-sidebar {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--sidebar-font-color);
-    box-shadow: 0 0 8px 4px rgb(100 100 100 / 80%);
-    margin-top: 3%;
-    height: 92%;
-    border-radius: 0 4em 4em 0;
-}
-#megamenu-back-btn {
-    border-radius: 1.2em;
-    color: var(--main-color);
-    transition: all linear .3s;
-    padding: 0 0 10px;
-}
-
-#megamenu-back-btn:hover {
-    background-color: var(--main-color);
-    color: white;
-    border: 2px solid white;
-    transition: all linear .3s;
-}
-
-#megamenu-menu-list > li {
-    transition: all linear .3s;
-}
-
-#megamenu-menu-list > li:hover {
-    transition: all linear .3s;
-    border-top-left-radius: 1.2em;
-    border-bottom-left-radius: 1.2em;
-}
-
-#megamenu-menu-list > li:focus {
-    transition: all linear .3s;
-    color : white;
-    background-color: var(--shadow-color);
-    width: fit-content;
-    border-top-right-radius: 1.2em;
-    border-bottom-right-radius: 1.2em;
-}
-
-.dropdown-menu .divider {
-    width: 30%;
-    color: var(--main-color);
-    background-color: var(--main-color);
-}
-.megamenu-menu-list li a {
-    transition: all linear .3s;
-    width: fit-content;
-    padding-right: 60px;
-}
-
-.megamenu-menu-list li a:hover {
-    transition: all linear .3s;
-    color: white !important;
-    background-color: var(--main-color) !important;
-    border-bottom-right-radius: 2em;
-    border-top-right-radius: 2em;
-}
-
-.megamenu-menu-list li a.active, .megamenu-menu-list:not(.saved) li a:hover {
-    color: white !important;
-    background-color: var(--main-color) !important;
-    border-bottom-right-radius: 2em;
-    border-top-right-radius: 2em;
-}
-
-
-/* open */
-#m-open-local,
-#m-import-local {
-    border-radius: 1.2em;
-}
-
-#m-open-local:hover,
-#m-import-local:hover {
-    border: 1px solid var(--shadow-color);
+.cm-variable-3,
+.cm-variable-2 {
+  color: #DEBBFB !important;
+  font-weight: 700 !important;
 }
 
-#recent-file-panel-search-input {
-    border-radius: 1.2em;
-    transition: all linear .3s;
-    font-family: var(--title-font);
+.cm-def {
+  color: #ffffff !important;
 }
-#recent-file-panel-action-btn {
-    border-radius: 1.2em;  
-}
-
-#recent-file-panel-search-input:hover {
-    transition: all linear .3s;
-    box-shadow: 0 0 10px 3px var(--shadow-color);
-}
 
-#recent-file-panel-search-input:focus {
-    transition: all linear .3s;
-    color: white;
-    border: none;
-    background-color: var(--shadow-color);
+.cm-attribute {
+  color: #8f6aa8 !important;
 }
-
-/* side bar Ctrl Shift 2 */
-/* .typora-node.pin-outline:not(.megamenu-opened):not(.typora-sourceview-on) #typora-sidebar {
-    display: block;
-    left: 0;
-    transition: left .3s;
-    border-radius: 0em 3em 3em 0em;
-    box-shadow: 0 0 8px 3px rgb(100 100 100 / 80%);
-    margin-top: 20px;
-    margin-bottom: 5%;
-    height: 95%;
-    padding-right: 10px;
-} */
 
-.info-panel-tab-border {
-    color: var(--main-color) !important;
-    background-color: var(--main-color) !important;
+.cm-comment,
+.md-comment,
+.md-meta {
+  color: #9a9a9a !important;
 }
 
-.outline-content {
-    padding: 3px 18px 3px 0;
+.cm-string {
+  color: #50a14f !important;
+  font-variant-ligatures: common-ligatures !important;
 }
 
-.outline-item {
-    margin-left: -20px;
-    margin-right: -20px;
-    border-left: 20px solid transparent;
-    border-right: 16px solid transparent;
+.cm-link {
+  color: #e46918 !important;
 }
 
-.outline-item:hover {
-    background-color: var(--shadow-color);
-    color: white;
+.cm-type {
+  color: #626161;
 }
 
-.active-tab-files  #info-panel-tab-file .info-panel-tab-title {
-    background-color: var(--main-color);
-    color: white;
-    padding: 5px 5px;
-    border-radius: 1.2em;
-    transition: all linear .3s;
+.cm-property {
+  color: #800a84 !important;
 }
 
-.active-tab-outline #info-panel-tab-outline .info-panel-tab-title {
-    background-color: var(--main-color);
-    color: white;
-    padding: 5px 5px;
-    border-radius: 1.2em;
-    transition: all linear .3s;
+.cm-tag:not(.cm-bracket) {
+  font-weight: 700;
 }
 
-.ty-show-search #info-panel-tab-search  .info-panel-tab-title {
-    background-color: var(--main-color);
-    color: white;
-    padding: 5px 5px;
-    border-radius: 1.2em;
-    transition: all linear .3s;
+.cm-operator {
+  color: #0abe00 !important;
 }
 
-
-#file-library-search-input {
-    border-radius: .5em;
+.cm-number {
+  color: #1694b6 !important;
 }
 
-#file-library-search-input:focus {
-    border: 2px solid var(--main-color);
+.cm-meta {
+  color: #4078f2 !important;
+  font-weight: 700 !important;
 }
 
-.info-panel-tab-border {
-    display: none;
-}
-div#file-library-list-children {
-    transition: all linear .3s;
+.cm-builtin {
+  color: #fa6060 !important;
 }
 
-.file-list-item.active {
-    border-top-right-radius: 2.2em;
-    border-bottom-right-radius: 2.2em;
-    width: fit-content;
-    background-color: var(--main-color) !important;
-    color: white;
-    transition: all linear .3s;
+/** 表格内的单元格*/
+#write table tr th,
+#write table tr td {
+  font-size: 14px;
+  color: var(--dark-text-color);
 }
 
-.outline-item-active {
-    border-top-right-radius: 2.2em;
-    border-bottom-right-radius: 2.2em;
-    width: fit-content;
-    background-color: var(--main-color) !important;
-    color: white;
-    transition: all linear .3s;
+#write .footnotes {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 0.8px solid var(--element-color-deep);
 }
 
-
-/* theme */
-.theme-preview-div.active, .theme-preview-div.active:hover {
-    border-color: var(--main-color);
-}
-#theme-preview-grid {
-    max-width: 100% !important;
+#write table.md-table {
+  overflow: hidden;
 }
-#open-theme-folder-btn {
-    transition: all .3s;
-    border-radius: 2em;
-    border: none;
-    color: white !important;
-    background-color: var(--main-color);
+#write table thead {
+  border-top: 1px solid #dedddd;
+  border-bottom: 1px solid #dedddd;
 }
-#open-theme-folder-btn:hover {
-    transition: all .3s;
-    color: white !important;
-    background-color: var(--shadow-color);
+#write table tbody {
+  border-bottom: 1px solid #dedddd;
 }
 
-/* export */
-.long-btn {
-    transition: all .3s;
-    border-radius: 2em;
-    border: 2px solid var(--main-color);
-    color: var(--main-color);
+/* 脚注文字 */
+#write .footnote-word {
+  font-weight: normal;
+  color: #595959;
 }
 
-.long-btn:hover {
-    transition: all .3s;
-    color: white !important;
-    background-color: var(--main-color);
+/* 脚注上标 */
+#write .footnote-ref {
+  font-weight: normal;
+  color: #595959;
 }
 
-.long-btn-wrap {
-    padding: 10px;
+/*脚注链接样式*/
+#write .footnote-item em {
+  font-size: 14px;
+  color: #595959;
+  display: block;
+  background: none;
 }
 
-.megamenu-section-export {
-    font-family: var(--title-font) !important;
-}
-
-
-.megamenu-menu-panel h1 {
-    padding-bottom: 10px;
-    width: fit-content !important;
-    border-bottom: var(--main-color) solid 3px;
-}
+/* 目录 */
 
-.megamenu-menu-panel h2::before {
-    content: "H2";
-    border-radius: .3em;
-    font-size: 25px;
-    padding: 3px 7px;
-    margin: 5px 15px 5px 1px;
-    background-color: var(--main-color);
-    color: white;
+.md-toc * {
+  font-family: "HarmonyOS_Sans_SC";
 }
-
-
-/* modal exit dialog */
-.btn-primary {
-    transition: all .3 linear;
-    border-radius: 1.2em;
-    background-color: var(--main-color);
+.md-tooltip-hide > span {
+  display: none;
 }
-
-.btn-default {
-    transition: all .3 linear;
-    border-radius: 1.2em;
-    border: var(--main-color) 3px solid;
-    color: var(--main-color);
-    background-color: white;
-}   
-
-.btn-primary:hover,
-.btn-default:hover {
-    transition: all .3 linear;
-    color: white;
-    background-color: var(--shadow-color);  
+.md-toc:before {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  content: "目录";
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-text-color);
 }
-
-.btn-primary:focus,
-.btn-default:focus {
-    transition: all .3 linear;
-    color: white;
-    background-color: var(--main-color);
+.md-toc {
+  padding: 20px 0;
+  margin: 0 20px;
+  background-color: var(--element-color-soo-shallow);
+  border: 2px solid var(--element-color);
+  border-radius: 5px;
 }
-
-.modal-content {
-    border-radius: 1.5em;
-    border: none;
+.md-toc-item {
+  line-height: 1.8em;
+  display: block;
+  color: #333;
 }
 
-.ImgCaption {
-    padding-top: 0;
-    margin-top: 0;
-    border-bottom: 2px solid var(--shadow-color);
-    width: fit-content;
-  }
-
-/* Perference */
-.nav-group-item-item:hover {
-    transition: all .3s;
-    border: 2px solid var(--main-color);
-}
-.nav-group-item.active {
-    color: white;
-    font-family: var(--title-font);
-    transition: all .3s;
-    border-radius: 1.5em;
-    padding: 6px 11px 6px 11px;
-}
-.nav-group-item {
-    transition: all .3s;
-    border-radius: 1.5em;
-    width: fit-content;
-    cursor: pointer;
-}
-.nav-group-item.active, .nav-group-item:active {
-    background-color: var(--main-color) !important;
-    color: white !important;
-}
-.pane-group {
-    font-family: var(--title-font);
-}
+/* 程序UI */
 
-input:not([type=range]):not([type=color]) {
-    outline: none;
-    border: 2px solid var(--main-color);
-    border-radius: .7em;
-    font-size: 16px;
-}
+/* 侧边栏 */
 
-input:not([type=range]):not([type=color]):focus {
-    border-radius: .7em;
-    color: white;
-    background-color: var(--main-color);
-    box-shadow: 0 0 6px 3px var(--shadow-color);
-    transition: all .3s linear;
+#typora-sidebar {
+  height: 100%;
+  color: var(--appui-color-text);
+  font-size: 0.92rem;
+  background-color: var(--dark-background-color);
 }
-
-.pane select,
-.pane .btn {
-    border-radius: 0.7em;
-    cursor: pointer;
-    margin-right: 10px;
+.file-tree-node.active>.file-node-background{
+  background-color: #222222;
 }
 
-.pane .btn:hover {
-    color: white !important;
-    transition: all .3s linear;
-    background-color: var(--main-color);
-}
+/* 滑块 */
 
-.label-input-group td:hover {
-    box-shadow: none;
+#outline-content::-webkit-scrollbar {
+  width: 5px;
 }
 
-.label-input-group .row:hover {
-    color: black;
-    background-color: white;
+#file-library::-webkit-scrollbar {
+  width: 5px;
 }
 
-#write.enable-diagrams>[mermaid-type=gantt].md-fences:not(.md-focus) {
-    width: inherit !important;
-    margin-left: inherit !important;
+::-webkit-scrollbar-track {
+  border-radius: 10px;
 }
 
-/* TODO fix the bug below */
-#footer-word-count-info table, #footer-word-count-info td, #footer-word-count-info tr {
-    border: none!important;
-    background: inherit !important;
-    font-size: 13.5px!important;
-    text-align: left!important;
-    padding: 0;
-    -webkit-user-select: initial;
-    user-select: initial;
-    margin: 0!important;
-    line-height: 1.8;
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(179, 179, 179, 0.425);
 }
 
-.ty-tooltip {
-    border-radius: 0.7em !important;
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-#recent-file-panel-action-btn {
-    border-radius: 0.7em;
-}
+/* 侧边栏 文件 */
 
-.outline-content li, .outline-content ul {
-    padding-left: 10px;
+.active-tab-files #info-panel-tab-file .info-panel-tab-border,
+.active-tab-outline #info-panel-tab-outline .info-panel-tab-border,
+.ty-show-search #info-panel-tab-search .info-panel-tab-border {
+  border-radius: 10px;
+  height: 4px;
+  background-color: var(--appui-color);
 }
-
 
 .file-node-content {
-    transition: all 0.15s linear;
-    -moz-transition: all 0.15s linear;
-    -webkit-transition: all 0.15s linear;
-    color: var(--font-color);
-    padding: 5px;
+  line-height: 1.2rem;
 }
 
-
-.file-node-content:hover {
-    transition: all 0.15s linear;
-    -moz-transition: all 0.15s linear;
-    -webkit-transition: all 0.15s linear;
-    color: var(--font-color);
-    cursor: pointer;
+.file-tree-node.active > .file-node-content {
+  color: var(--appui-color);
 }
 
-.file-node-content:focus {
-    transition: all 0.15s linear;
-    -moz-transition: all 0.15s linear;
-    -webkit-transition: all 0.15s linear;
-    cursor: pointer;
+span.file-node-title {
+  color: var(--appui-color-text);
 }
 
-#file-library .active {
-    transition: all 0.15s linear;
-    -moz-transition: all 0.15s linear;
-    -webkit-transition: all 0.15s linear;
-    color: var(--light-color);
-    cursor: pointer;
+.file-node-icon {
+  color: var(--appui-color-icon);
+  padding-right: 0.2rem;
 }
 
-.file-tree-node.active>.file-node-background {
-    transition: all 0.15s linear;
-    -moz-transition: all 0.15s linear;
-    -webkit-transition: all 0.15s linear;
-    background-color: var(--main-color);
-    border-left: var(--small-dark-color);
-    border-color: var(--small-dark-color);
+.file-tree-node.active > .file-node-background {
+  font-weight: bolder;
+  border-left: 4px solid var(--appui-color);
+  border-color: var(--appui-color);
 }
+
+.info-panel-tab-title {
+  font-weight: bolder;
+  color: var(--appui-color-text);
+}
+
+/* 侧边栏 搜索 */
+
+#file-library-search-panel {
+  background-color: var(--dark-background-color);
+}
+
+#file-library-search-input {
+  border-radius: 3px;
+  border-color: var(--appui-color);
+}
+#file-library-search-input:focus {
+  border-width: 2px;
+}
+
+/* 侧边栏 大纲 */
+#outline-content .outline-h1 > .outline-item {
+  font-size: larger;
+  font-weight: bold;
+  color: var(--dark-text-color);
+}
+
+#outline-content .outline-h1:not(:first-of-type) > .outline-item {
+  margin-top: 10px;
+}
+
+#outline-content .outline-h2 > .outline-item::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: var(--element-color);
+  vertical-align: middle;
+  float: left;
+  margin-top: -2px;
+  margin-right: 11px;
+  margin-left: -24px;
+  border-radius: 100%;
+  border: 3px solid #fff;
+  z-index: 100;
+  position: relative;
+  top: 8px;
+  left: 8px;
+}
+
+#outline-content .outline-h2::after {
+  content: "";
+  height: calc(100% - 24px);
+  width: 1px;
+  background: var(--element-color);
+  position: absolute;
+  left: 3px;
+  top: 21px;
+}
+
+#outline-content .outline-h2 > .outline-item:last-child:after {
+  display: none;
+}
+
+#outline-content .outline-h2 > .outline-item > .outline-label {
+  line-height: 1.65rem;
+  margin: 0;
+}
+#outline-content .outline-h2 > .outline-item {
+  margin-bottom: -3px;
+}
+
+#outline-content .outline-h3 > .outline-item > .outline-label {
+  border-left: 2px solid var(--element-color);
+  padding-left: 8px;
+}
+
+.outline-item-active:not(.outline-item-wrapper)::after {
+  content: "";
+  position: relative;
+  width: 11px;
+  height: 8px;
+  background: var(--element-color-deep);
+  float: right;
+  top: -12px;
+  z-index: 100;
+  border-radius: 40% 20% 20% 40%;
+}
+
+/* 导出HTML的样式 */
+.typora-export-content{
+  background: var(--dark-background-color);
+  color: var(--dark-text-color);
+}
+body.typora-export {
+  padding-left: 0px;
+}
+.typora-export-content .outline-content::before {
+  content: "目录";
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 22px;
+  left: 15px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+.typora-export-sidebar .outline-content {
+  height: 100%;
+  padding-left: 15px;
+  border-right: 1px solid #d2d2d2;
+}
+
+.typora-export-content .typora-export-content {
+  padding-left: 0px;
+}
+
+.typora-export-content .outline-expander {
+  width: 0;
+}
+
+.typora-export-content .outline-item-active > .outline-item::after {
+  content: "";
+  position: relative;
+  width: 11px;
+  height: 8px;
+  background: var(--element-color-deep);
+  float: right;
+  right: 5px;
+  top: -14px;
+  z-index: 100;
+  border-radius: 40% 20% 20% 40%;
+}
+.typora-export-content .outline-label {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.outline-content .outline-h1 > .outline-item {
+  font-size: larger;
+  font-weight: bold;
+  color: var(--dark-text-color);
+}
+
+.outline-content .outline-h1:not(:first-of-type) > .outline-item {
+  margin-top: 10px;
+}
+
+.outline-content .outline-h2 > .outline-item::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: var(--element-color-deep);
+  vertical-align: middle;
+  float: left;
+  margin-top: -2px;
+  margin-right: 11px;
+  margin-left: -24px;
+  border-radius: 100%;
+  border: 3px solid #fff;
+  z-index: 100;
+  position: relative;
+  top: 8px;
+  left: 8px;
+}
+
+.outline-content .outline-h2::after {
+  content: "";
+  height: calc(100% - 24px);
+  width: 1px;
+  background: var(--element-color);
+  position: absolute;
+  left: 3px;
+  top: 21px;
+}
+
+.outline-content .outline-h2 > .outline-item:last-child:after {
+  display: none;
+}
+
+.outline-content .outline-h2 > .outline-item > .outline-label {
+  line-height: 1.65rem;
+  margin: 0;
+}
+.outline-content .outline-h2 > .outline-item {
+  margin-bottom: -3px;
+}
+
+.outline-content .outline-h3 > .outline-item > .outline-label {
+  border-left: 2px solid var(--element-color);
+  padding-left: 8px;
+}
+@import url();
+
+:root {
+  /* 标题后小图标，借鉴自思源笔记主题——Savor */
+  --h1-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(235, 131, 131, 0.4)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.8 29.714v0c-1.371 0-2.514-1.143-2.514-2.514v0c0-1.371 1.143-2.514 2.514-2.514v0c1.371 0 2.514 1.143 2.514 2.514v0c0.114 1.371-1.029 2.514-2.514 2.514z'/></svg>")
+    no-repeat center;
+  --h2-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(174, 154, 203, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286z'/></svg>")
+    no-repeat center;
+  --h3-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(125, 181, 205, 0.5)' height='28' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286z'/></svg>")
+    no-repeat center;
+  --h4-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(113, 167, 150, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 22.857c1.257 0 2.286-1.029 2.286-2.286s-1.029-2.286-2.286-2.286-2.286 1.029-2.286 2.286 1.029 2.286 2.286 2.286z'/></svg>")
+    no-repeat center;
+  --h5-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(103, 133, 180, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 22.857c1.257 0 2.286-1.029 2.286-2.286s-1.029-2.286-2.286-2.286-2.286 1.029-2.286 2.286 1.029 2.286 2.286 2.286zM4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 11.429c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286z'/></svg>")
+    no-repeat center;
+  --h6-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(93, 93, 150, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 11.429c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 16c1.257 0 2.286-1.029 2.286-2.286s-1.029-2.286-2.286-2.286-2.286 1.029-2.286 2.286 1.029 2.286 2.286 2.286z'/></svg>")
+    no-repeat center;
+
+  /* 暗色主题 必须 */
+  --bg-color:#222222;
+  --text-color:#c5c5c5;
+  --dark-background-color: #25272E;
+  --dark-background-color-deep: #222222;
+  --dark-text-color: #c5c5c5;
+
+
+  --img-shadow-color: var(--dark-background-color);
+  --md-char-color: var(--dark-text-color);
+  --heading-char-color: var(--dark-text-color);
+  --select-text-bg-color: var(--dark-text-color);
+  --search-select-bg-color: var(--dark-background-color);
+  --item-hover-bg-color: var(--dark-background-color);
+  --window-border: 1px solid var(--dark-background-color-deep);
+  --control-text-hover-color: var(--dark-text-color);
+  --rawblock-edit-panel-bd: var(--dark-background-color);
+
+  
+
+  /* 主题颜色 */
+
+  --head-title-color: #5c7aaa; /* 标题主色 */
+  --head-title-h2-background: #6785b4; /* 二级标题主色，因为二级标题是背景色的，所以单独设置 */
+
+  --element-color: #546f99; /* 元素主色 */
+  --element-color-deep: #374966; /* 元素深色 */
+  --element-color-shallow: #7893bf; /* 元素浅色 */
+  --element-color-so-shallow: #b9c3d376; /* 元素很浅色 */
+  --element-color-soo-shallow: #25272E; /* 元素非常浅色 */
+
+  --element-color-linecode: #c5c5c5; /* 行内代码文字色 */
+  --element-color-linecode-background: #708ab3; /* 行内代码背景色 */
+
+  /* 程序本体UI */
+  --appui-color: #546f99; /* 程序UI主题色 */
+  --appui-color-icon: #374966; /* 程序UI图标颜色 */
+  --appui-color-text: #c5c5c5; /* 程序UI文字色 */
+}
+
 
 
 
 </style><title>思远文文服务项目</title>
 <script>
-    function updateTime() {
-      const publishedDate = new Date('2024-08-01T02:00:00'); // 设置文章的发布时间
-      const now = new Date();
-      const timeDiff = now - publishedDate;
+  function updateTime() {
+    const publishedDate = new Date('2024-12-15T17:00:00'); // 设置文章的发布时间
+    const now = new Date();
+    const timeDiff = now - publishedDate;
 
-      const seconds = Math.floor(timeDiff / 1000);
-      const minutes = Math.floor(seconds / 60);
-      const hours = Math.floor(minutes / 60);
-      const days = Math.floor(hours / 24);
+    const seconds = Math.floor(timeDiff / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
 
-      const displaySeconds = seconds % 60;
-      const displayMinutes = minutes % 60;
-      const displayHours = hours % 24;
+    const displaySeconds = seconds % 60;
+    const displayMinutes = minutes % 60;
+    const displayHours = hours % 24;
 
-      document.getElementById('time-since-published').innerText = 
-        `文章最近更新：${days}天${displayHours}时${displayMinutes}分${displaySeconds}秒前`;
-    }
+    document.getElementById('time-since-published').innerText = 
+      `文章最近更新：${days}天${displayHours}时${displayMinutes}分${displaySeconds}秒前`;
+  }
 
-    setInterval(updateTime, 1000); // 每秒更新一次
-  </script>
+  setInterval(updateTime, 1000); // 每秒更新一次
+</script>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><p><a name="top" id="top"></a></p><h1 id='思远文文服务项目'><span>思远文文服务项目</span></h1><div class="md-alert md-alert-note note"><p><span class='md-alert-text md-alert-text-note'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</span><br></p><p><a href='https://www.xiaoww.com'>🏠<span> 主页</span></a><span> | ​</span><a href='https://ko-fi.com/xiaoqy'>❤️<span> 捐赠</span></a><span> ​ | ​</span><a href='mailto:ixiaoqy@outlook.com'>📧<span> E-Mail​</span></a><span> | </span><a href='https://about.xiaoww.com'>😃<span> 关于我</span></a></p><div id="time-since-published">加载中...</div></div><blockquote><p>📖<span> 文章目录</span></p></blockquote><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n2"><a class="md-toc-inner" href="#思远文文服务项目">思远文文服务项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n11"><a class="md-toc-inner" href="#思远文文网站开发项目">思远文文网站开发项目</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n14"><a class="md-toc-inner" href="#项目-1思远文文的个人博客">项目 1：思远文文的个人博客</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n21"><a class="md-toc-inner" href="#项目-2思远文文的技术博客">项目 2：思远文文的技术博客</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n28"><a class="md-toc-inner" href="#项目-3思远文文的知识百科">项目 3：思远文文的知识百科</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n35"><a class="md-toc-inner" href="#项目-4思远文文的直播">项目 4：思远文文的直播</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n51"><a class="md-toc-inner" href="#项目-5思远文文的商店">项目 5：思远文文的商店</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n56"><a class="md-toc-inner" href="#项目-6思远文文的相册">项目 6：思远文文的相册</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n63"><a class="md-toc-inner" href="#项目-7思远文文的音乐">项目 7：思远文文的音乐</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n69"><a class="md-toc-inner" href="#项目-8思远文文的社区">项目 8：思远文文的社区</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n76"><a class="md-toc-inner" href="#项目-9思远文文的实验室">项目 9：思远文文的实验室</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n81"><a class="md-toc-inner" href="#项目-10文文云音乐">项目 10：文文云音乐</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n87"><a class="md-toc-inner" href="#项目-11文文书屋">项目 11：文文书屋</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n93"><a class="md-toc-inner" href="#项目-12文文画板">项目 12：文文画板</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n99"><a class="md-toc-inner" href="#项目-13文文思维导图">项目 13：文文思维导图</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n105"><a class="md-toc-inner" href="#项目-14文文今日热榜">项目 14：文文今日热榜</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n111"><a class="md-toc-inner" href="#项目-15文文计算器">项目 15：文文计算器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n117"><a class="md-toc-inner" href="#项目-16文文-ai-聊天">项目 16：文文 AI 聊天</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n123"><a class="md-toc-inner" href="#项目-17完美导航网">项目 17：完美导航网</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n129"><a class="md-toc-inner" href="#项目-18爱好盘">项目 18：爱好盘</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n135"><a class="md-toc-inner" href="#项目-19文文单词打字机">项目 19：文文单词打字机</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n154"><a class="md-toc-inner" href="#项目-20生命周期管理">项目 20：生命周期管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n159"><a class="md-toc-inner" href="#项目-21文文交互审计系统">项目 21：文文交互审计系统</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n166"><a class="md-toc-inner" href="#项目-22资产管理">项目 22：资产管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n171"><a class="md-toc-inner" href="#项目-233d-查看器">项目 23：3D 查看器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n179"><a class="md-toc-inner" href="#项目-24光学射线模拟器">项目 24：光学射线模拟器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n186"><a class="md-toc-inner" href="#项目-25爱好猫科技">项目 25：爱好猫科技</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n190"><a class="md-toc-inner" href="#项目-26爱好猫社区">项目 26：爱好猫社区</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n197"><a class="md-toc-inner" href="#项目-27宝库猫应用">项目 27：宝库猫应用</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n202"><a class="md-toc-inner" href="#项目-28代码编辑器">项目 28：代码编辑器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n209"><a class="md-toc-inner" href="#项目-29文文安全聊天">项目 29：文文安全聊天</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n229"><a class="md-toc-inner" href="#项目-30文文文件快传">项目 30：文文文件快传</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n236"><a class="md-toc-inner" href="#项目-31文文-markdown-编辑器">项目 31：文文 Markdown 编辑器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n242"><a class="md-toc-inner" href="#项目-32文文聚合阅读器">项目 32：文文聚合阅读器</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n249"><a class="md-toc-inner" href="#思远文文软件开发项目">思远文文软件开发项目</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n251"><a class="md-toc-inner" href="#文文时间计算器">文文时间计算器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n253"><a class="md-toc-inner" href="#文文身份生成器">文文身份生成器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n255"><a class="md-toc-inner" href="#文文随机数生成器">文文随机数生成器</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n257"><a class="md-toc-inner" href="#思远文文电子开发项目">思远文文电子开发项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n270"><a class="md-toc-inner" href="#思远文文作品创作项目">思远文文作品创作项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n272"><a class="md-toc-inner" href="#思远文文设备运维项目">思远文文设备运维项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n277"><a class="md-toc-inner" href="#思远文文媒体管理项目">思远文文媒体管理项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n279"><a class="md-toc-inner" href="#思远文文产品设计项目">思远文文产品设计项目</a></span></p></div><p>&nbsp;</p><h2 id='思远文文网站开发项目'><span>思远文文网站开发项目</span></h2><p><span>部分项目是采用的 </span><code>Vue3</code><span> + </span><code>Vite</code><span> + </span><code>TypeScript</code><span> + </span><code>JavaScript</code><span> + </span><code>React</code><span> + </span><code>Next.js</code><span>  + </span><code>Node.js</code><span> 等 </span><code>UI</code><span> 框架和组件等编程语言快速开发，部分静态站点由自托管平台运行，实现免维护，免受攻击，长期稳定运行，安全性极高。​</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-1思远文文的个人博客'><span>项目 1：思远文文的个人博客</span></h3><p><img src="./imgs/IMG_1759.JPG" referrerpolicy="no-referrer" alt="IMG_1759"></p><p><img src="./imgs/IMG_1760.JPG" referrerpolicy="no-referrer" alt="IMG_1760"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://blog.xiaoww.com'><span>blog.xiaoww.com</span></a><span> | </span><a href='https://yublog.me'><span>yublog.me</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:pink"><strong><span>暂停服务，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> 个人分享，生活指南，购物指南，健康知识，直播知识，人生指南，建筑设计，建筑装修，家庭装修，旅行指南，美食食谱，心理健康，摄影指南，睡眠健康，职业规划，媒体编辑，写作规范，排版规范，笔记知识，行为管理，学术文献，创业知识，插画设计，法律知识，宠物护理，阅读书籍，手绘艺术，社会经历，美妆护理，工作简历，形象形体，产品评测，交通知识，文化知识，食品安全，语言交流，时间管理，效率管理，养生知识。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-2思远文文的技术博客'><span>项目 2：思远文文的技术博客</span></h3><p><img src="./imgs/IMG_1759.JPG" referrerpolicy="no-referrer" alt="IMG_1759"></p><p><img src="./imgs/IMG_1760.JPG" referrerpolicy="no-referrer" alt="IMG_1760"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://geek.xiaoww.com'><span>geek.xiaoww.com</span></a><span> | </span><a href='https://yugeek.me'><span>yugeek.me</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:pink"><strong><span>暂停服务，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> 软件编程，软件开发，软件编译，网站开发，电子开发，硬件开发，自动化，桌面运维，系统优化，软件汇编，密码破解，视频编辑，音频编辑，网络安全，服务器，通讯系统，广播系统，应用容器，负载均衡，高可用，动画编程，代码压缩，加密解密，数据备份，数据恢复，编码解码，接口测试，网络测试，语言模型，人工智能，工业技术，电子维修，物联网，音乐编程，压力测试，逆向分析，颜色色卡，芯片烧录，产品渲染，远程控制，硬件 DIY，3D 打印，无线电，模型设计，建筑设计，平面设计，虚拟化，模拟器，微观生物，电池电源，传感器，数据存储，硬件刷机。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-3思远文文的知识百科'><span>项目 3：思远文文的知识百科</span></h3><p><img src="./imgs/Snipaste_2024-07-29_10-10-50.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_10-10-50"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://wiki.xiaoww.com'><span>wiki.xiaoww.com</span></a><span> | </span><a href='https://knowledge.xiaoww.com'><span>knowledge.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> 编程思想，学习思想，人生知识，健康饮食，购物评价，网购攻略，智能家居，医疗药品，生活窍门，育儿纪录，视力保护，照顾建议，喂养技巧，页面开发，网站部署，部署工具，必备应用，工具笔记，读书方法，读书笔记，思维方式，自我认知，社会认知，市场营销，社会经济，健身计划，仪式清单，自我监控，时间管理，日常习惯，美容仪器，直播手册，星座知识，股票行情，求生知识，租房流程，优质播客，美食烹饪，清洗知识，网络知识，个人形象，个人提升，人脉关系，爱情婚姻，法律知识，电影学习，音乐学习，书法知识，乐器知识。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-4思远文文的直播'><span>项目 4：思远文文的直播</span></h3><p><img src="./imgs/Snipaste_2024-07-31_04-00-14.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-31_04-00-14"></p><p><img src="./imgs/Snipaste_2024-08-01_01-21-33.png" referrerpolicy="no-referrer" alt="Snipaste_2024-08-01_01-21-33"></p><p><img src="./imgs/Snipaste_2024-07-31_03-59-06.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-31_03-59-06"></p><p><img src="./imgs/Snipaste_2024-07-31_03-59-42.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-31_03-59-42"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://live.xiaoww.com'><span>live.xiaoww.com</span></a><span> | </span><a href='https://livestream.xiaoww.com'><span>livestream.xiaoww.com</span></a><span> / </span><a href='https://xiaoqy.tv'><span>xiaoqy.tv</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务试运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong></p><p><span>很早之前，我就有了开直播的想法。网络直播提供了一个即时互动的平台，让观众能够实时与主播交流，提出问题、分享意见。这种互动性增强了用户的参与感和体验，使内容更具吸引力。同时也可以和观众一起互动交流和观看影片。</span></p><p><span>通过直播，主播可以与观众互动交流，一起观看影片。此外，还可以实现多平台同步直播（联播多播），扩大受众群体。这一项目目前处于试运行阶段，正在进行各项测试，包括应用压力测试、网络连通稳定性、流媒体编解码负载、实时画面渲染优化、网络推拉流优化、视频采样率优化、全球网络内容分发、网络转播优化、反向代理调度、缓存机制优化等。</span></p><p><span>直播相比点播的最大优势在于，它能够减少单点对多点的回源访问压力，通过实时内容分发优化网络资源的使用。</span>
+<div id='write'  class=''><p><a name="top" id="top"></a></p><h1 id='思远文文服务项目'><span>思远文文服务项目</span></h1><div class="md-alert md-alert-note note"><p><span class='md-alert-text md-alert-text-note'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</span><br></p><p><a href='https://www.xiaoqy.com'>🏠<span> 主页</span></a><span> | ​</span><a href='https://ko-fi.com/xiaoqy'>❤️<span> 捐赠</span></a><span> ​ | ​</span><a href='mailto:ixiaoqy@outlook.com'>📧<span> E-Mail​</span></a><span> | </span><a href='https://about.xiaoqy.com'>😃<span> 关于我</span></a></p><div id="time-since-published">加载中...</div></div><blockquote><p>📖<span> 文章目录</span></p></blockquote><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n2"><a class="md-toc-inner" href="#思远文文服务项目">思远文文服务项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n281"><a class="md-toc-inner" href="#思远文文网站开发项目">思远文文网站开发项目</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n14"><a class="md-toc-inner" href="#项目-1思远文文的个人博客">项目 1：思远文文的个人博客</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n21"><a class="md-toc-inner" href="#项目-2思远文文的技术博客">项目 2：思远文文的技术博客</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n28"><a class="md-toc-inner" href="#项目-3思远文文的知识百科">项目 3：思远文文的知识百科</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n35"><a class="md-toc-inner" href="#项目-4思远文文的直播">项目 4：思远文文的直播</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n51"><a class="md-toc-inner" href="#项目-5思远文文的商店">项目 5：思远文文的商店</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n56"><a class="md-toc-inner" href="#项目-6思远文文的相册">项目 6：思远文文的相册</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n63"><a class="md-toc-inner" href="#项目-7思远文文的音乐">项目 7：思远文文的音乐</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n69"><a class="md-toc-inner" href="#项目-8思远文文的社区">项目 8：思远文文的社区</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n76"><a class="md-toc-inner" href="#项目-9思远文文的实验室">项目 9：思远文文的实验室</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n81"><a class="md-toc-inner" href="#项目-10文文云音乐">项目 10：文文云音乐</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n87"><a class="md-toc-inner" href="#项目-11文文书屋">项目 11：文文书屋</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n93"><a class="md-toc-inner" href="#项目-12文文画板">项目 12：文文画板</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n99"><a class="md-toc-inner" href="#项目-13文文思维导图">项目 13：文文思维导图</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n105"><a class="md-toc-inner" href="#项目-14文文今日热榜">项目 14：文文今日热榜</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n111"><a class="md-toc-inner" href="#项目-15文文计算器">项目 15：文文计算器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n117"><a class="md-toc-inner" href="#项目-16文文-ai-聊天">项目 16：文文 AI 聊天</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n123"><a class="md-toc-inner" href="#项目-17完美导航网">项目 17：完美导航网</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n129"><a class="md-toc-inner" href="#项目-18爱好盘">项目 18：爱好盘</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n135"><a class="md-toc-inner" href="#项目-19文文单词打字机">项目 19：文文单词打字机</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n154"><a class="md-toc-inner" href="#项目-20生命周期管理">项目 20：生命周期管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n159"><a class="md-toc-inner" href="#项目-21文文交互审计系统">项目 21：文文交互审计系统</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n166"><a class="md-toc-inner" href="#项目-22资产管理">项目 22：资产管理</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n171"><a class="md-toc-inner" href="#项目-233d-查看器">项目 23：3D 查看器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n179"><a class="md-toc-inner" href="#项目-24光学射线模拟器">项目 24：光学射线模拟器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n186"><a class="md-toc-inner" href="#项目-25爱好猫科技">项目 25：爱好猫科技</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n190"><a class="md-toc-inner" href="#项目-26爱好猫社区">项目 26：爱好猫社区</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n197"><a class="md-toc-inner" href="#项目-27宝库猫应用">项目 27：宝库猫应用</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n202"><a class="md-toc-inner" href="#项目-28代码编辑器">项目 28：代码编辑器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n209"><a class="md-toc-inner" href="#项目-29文文安全聊天">项目 29：文文安全聊天</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n229"><a class="md-toc-inner" href="#项目-30文文文件快传">项目 30：文文文件快传</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n236"><a class="md-toc-inner" href="#项目-31文文-markdown-编辑器">项目 31：文文 Markdown 编辑器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n242"><a class="md-toc-inner" href="#项目-32文文聚合阅读器">项目 32：文文聚合阅读器</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n249"><a class="md-toc-inner" href="#思远文文软件开发项目">思远文文软件开发项目</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n251"><a class="md-toc-inner" href="#文文时间计算器">文文时间计算器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n253"><a class="md-toc-inner" href="#文文身份生成器">文文身份生成器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n255"><a class="md-toc-inner" href="#文文随机数生成器">文文随机数生成器</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n257"><a class="md-toc-inner" href="#思远文文电子开发项目">思远文文电子开发项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n270"><a class="md-toc-inner" href="#思远文文作品创作项目">思远文文作品创作项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n272"><a class="md-toc-inner" href="#思远文文设备运维项目">思远文文设备运维项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n277"><a class="md-toc-inner" href="#个人长短途跑腿万能帮">个人长短途跑腿万能帮</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n288"><a class="md-toc-inner" href="#思远文文媒体管理项目">思远文文媒体管理项目</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n279"><a class="md-toc-inner" href="#思远文文产品设计项目">思远文文产品设计项目</a></span></p></div><p>&nbsp;</p><video src="./videos/xiaoww.com.mp4"></video><h2 id='思远文文网站开发项目'><span>思远文文网站开发项目</span></h2><p><span>部分项目是采用的 </span><code>Vue3</code><span> + </span><code>Vite</code><span> + </span><code>TypeScript</code><span> + </span><code>JavaScript</code><span> + </span><code>React</code><span> + </span><code>Next.js</code><span>  + </span><code>Node.js</code><span> 等 </span><code>UI</code><span> 框架和组件等编程语言快速开发，部分静态站点由自托管平台运行，实现免维护，免受攻击，长期稳定运行，安全性极高。​</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-1思远文文的个人博客'><span>项目 1：思远文文的个人博客</span></h3><p><img src="./imgs/IMG_1759.JPG" referrerpolicy="no-referrer" alt="IMG_1759"></p><p><img src="./imgs/IMG_1760.JPG" referrerpolicy="no-referrer" alt="IMG_1760"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://blog.xiaoww.com'><span>blog.xiaoww.com</span></a><span> | </span><a href='https://yublog.me'><span>yublog.me</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:pink"><strong><span>暂停服务，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> 个人分享，生活指南，购物指南，健康知识，直播知识，人生指南，建筑设计，建筑装修，家庭装修，旅行指南，美食食谱，心理健康，摄影指南，睡眠健康，职业规划，媒体编辑，写作规范，排版规范，笔记知识，行为管理，学术文献，创业知识，插画设计，法律知识，宠物护理，阅读书籍，手绘艺术，社会经历，美妆护理，工作简历，形象形体，产品评测，交通知识，文化知识，食品安全，语言交流，时间管理，效率管理，养生知识。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-2思远文文的技术博客'><span>项目 2：思远文文的技术博客</span></h3><p><img src="./imgs/IMG_1759.JPG" referrerpolicy="no-referrer" alt="IMG_1759"></p><p><img src="./imgs/IMG_1760.JPG" referrerpolicy="no-referrer" alt="IMG_1760"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://geek.xiaoww.com'><span>geek.xiaoww.com</span></a><span> | </span><a href='https://yugeek.me'><span>yugeek.me</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:pink"><strong><span>暂停服务，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> 软件编程，软件开发，软件编译，网站开发，电子开发，硬件开发，自动化，桌面运维，系统优化，软件汇编，密码破解，视频编辑，音频编辑，网络安全，服务器，通讯系统，广播系统，应用容器，负载均衡，高可用，动画编程，代码压缩，加密解密，数据备份，数据恢复，编码解码，接口测试，网络测试，语言模型，人工智能，工业技术，电子维修，物联网，音乐编程，压力测试，逆向分析，颜色色卡，芯片烧录，产品渲染，远程控制，硬件 DIY，3D 打印，无线电，模型设计，建筑设计，平面设计，虚拟化，模拟器，微观生物，电池电源，传感器，数据存储，硬件刷机。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-3思远文文的知识百科'><span>项目 3：思远文文的知识百科</span></h3><p><img src="./imgs/Snipaste_2024-07-29_10-10-50.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_10-10-50"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://wiki.xiaoww.com'><span>wiki.xiaoww.com</span></a><span> | </span><a href='https://knowledge.xiaoww.com'><span>knowledge.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> 编程思想，学习思想，人生知识，健康饮食，购物评价，网购攻略，智能家居，医疗药品，生活窍门，育儿纪录，视力保护，照顾建议，喂养技巧，页面开发，网站部署，部署工具，必备应用，工具笔记，读书方法，读书笔记，思维方式，自我认知，社会认知，市场营销，社会经济，健身计划，仪式清单，自我监控，时间管理，日常习惯，美容仪器，直播手册，星座知识，股票行情，求生知识，租房流程，优质播客，美食烹饪，清洗知识，网络知识，个人形象，个人提升，人脉关系，爱情婚姻，法律知识，电影学习，音乐学习，书法知识，乐器知识。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-4思远文文的直播'><span>项目 4：思远文文的直播</span></h3><p><img src="./imgs/Snipaste_2024-07-31_04-00-14.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-31_04-00-14"></p><p><img src="./imgs/Snipaste_2024-08-01_01-21-33.png" referrerpolicy="no-referrer" alt="Snipaste_2024-08-01_01-21-33"></p><p><img src="./imgs/Snipaste_2024-07-31_03-59-06.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-31_03-59-06"></p><p><img src="./imgs/Snipaste_2024-07-31_03-59-42.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-31_03-59-42"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://live.xiaoww.com'><span>live.xiaoww.com</span></a><span> | </span><a href='https://livestream.xiaoqy.com'><span>livestream.xiaoww.com</span></a><span> / </span><a href='https://xiaoqy.tv'><span>xiaoww.tv</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务试运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong></p><p><span>很早之前，我就有了开直播的想法。网络直播提供了一个即时互动的平台，让观众能够实时与主播交流，提出问题、分享意见。这种互动性增强了用户的参与感和体验，使内容更具吸引力。同时也可以和观众一起互动交流和观看影片。</span></p><p><span>通过直播，主播可以与观众互动交流，一起观看影片。此外，还可以实现多平台同步直播（联播多播），扩大受众群体。这一项目目前处于试运行阶段，正在进行各项测试，包括应用压力测试、网络连通稳定性、流媒体编解码负载、实时画面渲染优化、网络推拉流优化、视频采样率优化、全球网络内容分发、网络转播优化、反向代理调度、缓存机制优化等。</span></p><p><span>直播相比点播的最大优势在于，它能够减少单点对多点的回源访问压力，通过实时内容分发优化网络资源的使用。</span>
 <span>内容交付网络 (CDN) 是一组分布在一个区域内或全球各地的服务器，它们协同工作以加快 Web 上的内容交付。CDN 中的服务器会临时存储（或缓存）网页内容。无论观众身处何地，都能通过 CDN 节点获得流畅的观看体验，将内容分发到多个节点，CDN 能有效分散负载，减轻源服务器的负载压力，还能超低延迟访问。</span></p><p><span>对于我们所使用的各种软件播放器和网页播放器，它们在底层编码解码过程中，都是基于定制的 FFmpeg 和 FFplay 核心技术。这些播放器通过包装不同的用户界面，提供用户友好的操作体验，而实际的音视频处理则由这些底层技术来完成。</span></p><p><span>直播实现的核心原理是基于底层的 FFmpeg 和 FFplay 技术来进行音视频的编解码。通过这些工具，我们可以实现音视频的推拉流。但如果观众直接从服务器拉流观看，可能会导致服务器的超负荷运转。在这种情况下，使用 CDN（内容分发网络，也称内容交付网络）就显得尤为重要。</span></p><p><span>我的直播计划是 7 X 24 小时不间断进行，期待您的参与。如果您有有趣的想法和话题，欢迎分享。</span>
 <span>网络直播涵盖了广泛的内容类型，包括音乐、电影、教育、科技、旅游、绘画、演讲，也包括知识学习、户外旅游、个人提升等。不同兴趣的观众可以找到符合自己喜好的直播内容，满足多样化的需求等。</span></p><p><span>大平台同步直播（国内）：</span>
 <span>斗鱼：</span><a href='https://www.douyu.com/xiaoqy' target='_blank' class='url'>https://www.douyu.com/xiaoqy</a>
-<span>虎牙：</span><a href='https://www.huya.com/xiaoqy' target='_blank' class='url'>https://www.huya.com/xiaoqy</a></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-5思远文文的商店'><span>项目 5：思远文文的商店</span></h3><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://shop.xiaoww.com'><span>shop.xiaoww.com</span></a><span> | </span><a href='https://store.xiaoww.com'><span>store.xiaoww.com</span></a><span> / </span><a href='https://buy.xiaoww.com'><span>buy.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因和时间成本原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-6思远文文的相册'><span>项目 6：思远文文的相册</span></h3><p><img src="./imgs/image-20240725021516235.png" referrerpolicy="no-referrer" alt="image-20240725021516235"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://photos.xiaoww.com'><span>photos.xiaoww.com</span></a><span> | </span><a href='https://photo.xiaoww.com'><span>photo.xiaoww.com</span></a><span> / </span><a href='https://pictures.xiaoww.com'><span>pictures.xiaoww.com</span></a><span> / </span><a href='https://picture.xiaoww.com'><span>picture.xiaoww.com</span></a><span> / </span><a href='https://albums.xiaoww.com'><span>albums.xiaoww.com</span></a><span> / </span><a href='https://album.xiaoww.com'><span>album.xiaoww.com</span></a><span> / </span><a href='https://images.xiaoww.com'><span>images.xiaoww.com</span></a><span> / </span><a href='https://image.xiaoww.com'><span>image.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-7思远文文的音乐'><span>项目 7：思远文文的音乐</span></h3><p><img src="./imgs/2024-07-24-06-59-10-image.png" referrerpolicy="no-referrer"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://music.xiaoww.com'><span>music.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-8思远文文的社区'><span>项目 8：思远文文的社区</span></h3><p><img src="./imgs/Snipaste_2024-07-25_02-18-46.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_02-18-46"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://social.xiaoww.com'><span>social.xiaoww.com</span></a><span> | </span><a href='https://community.xiaoww.com'><span>community.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因和时间成本原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-9思远文文的实验室'><span>项目 9：思远文文的实验室</span></h3><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://xiaoww.com/experiment'><span>xiaoww.com/experiment</span></a><span> | </span><a href='https://xiaoww.com/lab'><span>xiaoww.com/lab</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-10文文云音乐'><span>项目 10：文文云音乐</span></h3><p><img src="./imgs/2024-07-24-06-55-50-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-57-03-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-57-49-image.png" ></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://cmusic.xiaoww.com'><span>cmusic.xiaoww.com</span></a><span> | </span><a href='https://cloudmusic.xiaoww.com'><span>cloudmusic.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-11文文书屋'><span>项目 11：文文书屋</span></h3><p><img src="./imgs/20230915173954.webp" referrerpolicy="no-referrer" alt="20230915173954"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://books.xiaoww.com'><span>books.xiaoww.com</span></a><span> | </span><a href='https://book.xiaoww.com'><span>book.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因和时间成本原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-12文文画板'><span>项目 12：文文画板</span></h3><p><img src="./imgs/Snipaste_2024-07-25_03-45-48.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_03-45-48"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://draw.xiaoww.com'><span>draw.xiaoww.com</span></a><span> | </span><a href='https://paint.xiaoww.com'><span>paint.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-13文文思维导图'><span>项目 13：文文思维导图</span></h3><p><img src="./imgs/Snipaste_2024-07-25_04-28-23.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_04-28-23"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://mindmap.xiaoww.com'><span>mindmap.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-14文文今日热榜'><span>项目 14：文文今日热榜</span></h3><p><img src="./imgs/2024-07-24-07-00-41-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-01-16-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-00-56-image.png" referrerpolicy="no-referrer"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://hot.xiaoww.com'><span>hot.xiaoww.com</span></a><span> | </span><a href='https://news.xiaoww.com'><span>news.xiaoww.com</span></a><span> / </span><a href='https://today.xiaoww.com'><span>today.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-15文文计算器'><span>项目 15：文文计算器</span></h3><p><img src="./imgs/2024-07-24-07-01-51-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-03-02-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-03-10-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-02-18-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-02-33-image.png" referrerpolicy="no-referrer"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://calc.xiaoww.com'><span>calc.xiaoww.com</span></a><span> | </span><a href='https://calculator.xiaoww.com'><span>calculator.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-16文文-ai-聊天'><span>项目 16：文文 AI 聊天</span></h3><p><img src="./imgs/2024-07-24-07-03-43-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-04-20-image.png" referrerpolicy="no-referrer"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://aichat.xiaoww.com'><span>aichat.xiaoww.com</span></a><span> | </span><a href='https://gpt.xiaoww.com'><span>gpt.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-17完美导航网'><span>项目 17：完美导航网</span></h3><p><img src="./imgs/IMG_1761.JPG" referrerpolicy="no-referrer" alt="IMG_1761"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://wmnav.com'><span>wmnav.com</span></a><span> ( 原：</span><a href='https://24ta.com'><span>24ta.com</span></a><span> )</span></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:pink"><strong><span>暂停服务，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-18爱好盘'><span>项目 18：爱好盘</span></h3><p><img src="./imgs/IMG_1762.JPG" referrerpolicy="no-referrer" alt="IMG_1762"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://ihpan.com'><span>ihpan.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:pink"><strong><span>暂停服务，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-19文文单词打字机'><span>项目 19：文文单词打字机</span></h3><p><img src="./imgs/2024-07-24-06-53-00-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-54-11-image.png" referrerpolicy="no-referrer"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://qwerty.xiaoww.com'><span>qwerty.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> 文文单词打字机：通过打字练习方式来实现肌肉记忆，让大脑更省力。学习时间更碎片化，更灵活！陪你从小到大，不分年龄，人人皆可学。</span></p><p><span>软件设计的目标群体为以英语作为主要工作语言的键盘工作者。部分人会出现输入母语时的打字速度快于英语的情况，因为多年的母语输入练就了非常坚固的肌肉记忆 💪，而英语输入的肌肉记忆相对较弱，易出现输入英语时“提笔忘字”的现象。</span></p><p><span>同时为了巩固英语技能，也需要持续的背诵单词，本软件将英语单词的记忆与英语键盘输入的肌肉记忆的锻炼相结合，可以在背诵单词的同时巩固肌肉记忆。</span></p><p><span>为了避免造成错误的肌肉记忆，设计上如果用户单词输入错误则需要重新输入单词，尽可能确保用户维持正确的肌肉记忆。</span></p><p><span>肌肉记忆是内隐记忆的一种，它指的是人在一段时间内重复做出一个动作后，大脑就会记住这一动作，最终人能在不用多想的情况下就能做出这一动作。许多日常活动中都有肌肉记忆的身影，例如骑自行车、驾驶机动车、玩球类运动、游泳、键盘打字、输入密码、演奏乐器、打扑克、表演武术和跳舞等。</span></p><p><span>软件也对需要机考英语的人群有一定的帮助。</span></p><p style="color:red;">背单词：</p><p><span>可以选择记忆或默写单词，提供了音标显示、发音功能（均可选美音、英音）、错误统计</span></p><p style="color:red;">错词本：</p><p><span>默写单词时输入错误会自动添加到错词本，以便后续复习。</span></p><p style="color:red;">默写模式：</p><p><span>在用户完成一个章节的练习后，如果有错误词，那么会重复练习错误词，直到没有错误词为止。完成之后弹出选项可选择默写本章、重复本章、下一章</span></p><p style="color:red;">词库：</p><p><span>内置了常用的大学英语、新概念英语、考研英语、雅思托福、多邻国、专业四级英语、专业八级英语，也有程序员常见英语单词以及多种编程语言 API 等词库。 尽可能满足大部分用户对背单词的需求。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-20生命周期管理'><span>项目 20：生命周期管理</span></h3><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://services.xiaoww.com/lifecycle'><span>services.xiaoww.com/lifecycle</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-21文文交互审计系统'><span>项目 21：文文交互审计系统</span></h3><p><img src="./imgs/Snipaste_2024-07-29_01-16-20.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_01-16-20"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://developer.xiaoww.com/ternimals'><span>developer.xiaoww.com/ternimals</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-22资产管理'><span>项目 22：资产管理</span></h3><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://services.xiaoww.com/finance'><span>services.xiaoww.com/finance</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-233d-查看器'><span>项目 23：3D 查看器</span></h3><p><img src="./imgs/Snipaste_2024-07-29_02-09-28.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_02-09-28"></p><p><img src="./imgs/Snipaste_2024-07-29_02-11-08.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_02-11-08"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://apps.xiaoww.com/3dviewer'><span>apps.xiaoww.com/3dviewer</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-24光学射线模拟器'><span>项目 24：光学射线模拟器</span></h3><p><img src="./imgs/Snipaste_2024-07-29_02-13-26.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_02-13-26"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://apps.xiaoww.com/raysimulator'><span>apps.xiaoww.com/raysimulator</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-25爱好猫科技'><span>项目 25：爱好猫科技</span></h3><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://ihmao.com'><span>ihmao.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因和时间成本原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-26爱好猫社区'><span>项目 26：爱好猫社区</span></h3><p><img src="./imgs/Snipaste_2024-07-29_01-05-30.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_01-05-30"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://forum.ihmao.com'><span>forum.ihmao.com</span></a><span> | </span><a href='https://social.xiaoww.com'><span>social.xiaoww.com</span></a><span> / </span><a href='https://community.ihmao.com'><span>community.ihmao.com</span></a><span> / </span><a href='https://bbs.ihmao.com'><span>bbs.ihmao.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因和时间成本原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-27宝库猫应用'><span>项目 27：宝库猫应用</span></h3><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://bkmao.com'><span>bkmao.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因和时间成本原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-28代码编辑器'><span>项目 28：代码编辑器</span></h3><p><img src="./imgs/Snipaste_2024-07-29_09-15-50.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_09-15-50"></p><p><img src="./imgs/Snipaste_2024-07-29_01-30-15.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_01-30-15"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://code.xiaoww.com'><span>code.xiaoww.com</span></a><span> | </span><a href='https://editor.xiaoww.com'><span>editor.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:pink"><strong><span>暂停服务，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-29文文安全聊天'><span>项目 29：文文安全聊天</span></h3><p><img src="./imgs/hp-hero-visual-alt_1hp-hero-visual-alt.webp" referrerpolicy="no-referrer" alt="hp-hero-visual-alt_1hp-hero-visual-alt"></p><p><img src="./imgs/IMG_1773.JPG" alt="IMG_1773"  /></p><p><img src="./imgs/IMG_1774.JPG" alt="IMG_1774"  /></p><p><img src="./imgs/IMG_1775.JPG" referrerpolicy="no-referrer" alt="IMG_1775"></p><p><img src="./imgs/IMG_1776.JPG" referrerpolicy="no-referrer" alt="IMG_1776"></p><p><img src="./imgs/IMG_1777.JPG" referrerpolicy="no-referrer" alt="IMG_1777"></p><p><img src="./imgs/IMG_1778.JPG" referrerpolicy="no-referrer" alt="IMG_1778"></p><p><img src="./imgs/IMG_1779.JPG" referrerpolicy="no-referrer" alt="IMG_1779"></p><p><img src="./imgs/IMG_1772.JPG" referrerpolicy="no-referrer" alt="IMG_1772"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://chat.xiaoww.com'><span>chat.xiaoww.com</span></a><span> | </span><a href='https://message.xiaoww.com'><span>message.xiaoww.com</span></a><span> / </span><a href='https://talk.xiaoww.com'><span>talk.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> 文文安全聊天，这是现在最好的聊天服务，也是最安全的聊天服务，没有之一！支持多个客户端： </span><code>Windows/Android/IOS/Web</code><span> 等</span></p><p><span>支持语音通话，视频通话，发文字语音，发表情，发视频图片，投票，位置等，是一款成熟稳定的社交平台。</span></p><p><span>在航天领域，互联网企业，网络安全领域广泛使用安全的加密软件。</span>
-<span>首先文文安全聊天是一个去中心化的聊天服务，实现了端对端的加密，这意味着不仅其他人无法查看你的聊天内容，哪怕你更换了一个终端，你也需要私钥才能够查看你的聊天记录。</span></p><p><span>这是终极的隐私保护方案，因为一旦你丢掉了这个密钥，这些内容就相当于被销毁了。</span></p><p><span>底层服务基于 </span><code>Matrix</code><span> 如果你能够访问到 </span><code>Matrix</code><span> 的服务器那么就可以直接使用 </span><code>Matrix</code><span> 的主聊天服务。</span></p><p><span>文文安全聊天未开发网页服务，目前仅只能使用客户端，未来将开发在线网页服务。</span></p><p><span>您仍可以使用第三方在线网页平台 </span><code>app.element.io</code><span> 和 </span><code>fluffychat.im/web</code><span> 来连接到 </span><code>chat.xiaoww.com</code><span> 服务器来使用文文安全聊天服务平台。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-30文文文件快传'><span>项目 30：文文文件快传</span></h3><p><img src="./imgs/Snipaste_2024-07-31_03-44-03.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-31_03-44-03"></p><p><img src="./imgs/Snipaste_2024-07-31_03-44-14.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-31_03-44-14"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://transfer.xiaoww.com'><span>transfer.xiaoww.com</span></a><span> | </span><a href='https://files.xiaoww.com'><span>files.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:pink"><strong><span>暂停服务，将进行二次开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-31文文-markdown-编辑器'><span>项目 31：文文 Markdown 编辑器</span></h3><p><img src="./imgs/Snipaste_2024-08-01_02-06-49.png" referrerpolicy="no-referrer" alt="Snipaste_2024-08-01_02-06-49"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://md.xiaoww.com'><span>md.xiaoww.com</span></a><span> | </span><a href='https://markdown.xiaoww.com'><span>markdown.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-32文文聚合阅读器'><span>项目 32：文文聚合阅读器</span></h3><p><img src="./imgs/Snipaste_2024-08-01_03-02-41.png" referrerpolicy="no-referrer" alt="Snipaste_2024-08-01_03-02-41"></p><p><img src="./imgs/Snipaste_2024-08-01_03-03-28.png" referrerpolicy="no-referrer" alt="Snipaste_2024-08-01_03-03-28"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://rss.xiaoww.com'><span>rss.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h2 id='思远文文软件开发项目'><span>思远文文软件开发项目</span></h2><p><a href="#top"><span>TOP</span></a></p><h3 id='文文时间计算器'><span>文文时间计算器</span></h3><p><a href="#top"><span>TOP</span></a></p><h3 id='文文身份生成器'><span>文文身份生成器</span></h3><p><a href="#top"><span>TOP</span></a></p><h3 id='文文随机数生成器'><span>文文随机数生成器</span></h3><p><a href="#top"><span>TOP</span></a></p><h2 id='思远文文电子开发项目'><span>思远文文电子开发项目</span></h2><p><img src="./imgs/IMG_1767.JPG" referrerpolicy="no-referrer" alt="IMG_1767"></p><p><img src="./imgs/IMG_1768.JPG" referrerpolicy="no-referrer" alt="IMG_1768"></p><p><span>未来开发电子项目清单（思远文文电子硬件创客计划）</span>
+<span>虎牙：</span><a href='https://www.huya.com/xiaoqy' target='_blank' class='url'>https://www.huya.com/xiaoqy</a></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-5思远文文的商店'><span>项目 5：思远文文的商店</span></h3><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://shop.xiaoww.com'><span>shop.xiaoww.com</span></a><span> | </span><a href='https://store.xiaoww.com'><span>store.xiaoww.com</span></a><span> / </span><a href='https://buy.xiaoww.com'><span>buy.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因和时间成本原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-6思远文文的相册'><span>项目 6：思远文文的相册</span></h3><p><img src="./imgs/image-20240725021516235.png" referrerpolicy="no-referrer" alt="image-20240725021516235"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://photos.xiaoww.com'><span>photos.xiaoww.com</span></a><span> | </span><a href='https://photo.xiaoww.com'><span>photo.xiaoww.com</span></a><span> / </span><a href='https://pictures.xiaoww.com'><span>pictures.xiaoww.com</span></a><span> / </span><a href='https://picture.xiaoww.com'><span>picture.xiaoww.com</span></a><span> / </span><a href='https://albums.xiaoww.com'><span>albums.xiaoww.com</span></a><span> / </span><a href='https://album.xiaoww.com'><span>album.xiaoww.com</span></a><span> / </span><a href='https://images.xiaoww.com'><span>images.xiaoww.com</span></a><span> / </span><a href='https://image.xiaoqy.com'><span>image.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-7思远文文的音乐'><span>项目 7：思远文文的音乐</span></h3><p><img src="./imgs/2024-07-24-06-59-10-image.png" referrerpolicy="no-referrer"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://music.xiaoqy.com'><span>music.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-8思远文文的社区'><span>项目 8：思远文文的社区</span></h3><p><img src="./imgs/Snipaste_2024-07-25_02-18-46.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_02-18-46"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://social.xiaoww.com'><span>social.xiaoww.com</span></a><span> | </span><a href='https://community.xiaoww.com'><span>community.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因和时间成本原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-9思远文文的实验室'><span>项目 9：思远文文的实验室</span></h3><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://xiaoww.com/experiment'><span>xiaoww.com/experiment</span></a><span> | </span><a href='https://xiaoww.com/lab'><span>xiaoww.com/lab</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-10文文云音乐'><span>项目 10：文文云音乐</span></h3><p><img src="./imgs/2024-07-24-06-55-50-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-57-03-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-57-49-image.png" ></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://cmusic.xiaoww.com'><span>cmusic.xiaoww.com</span></a><span> | </span><a href='https://cloudmusic.xiaoww.com'><span>cloudmusic.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-11文文书屋'><span>项目 11：文文书屋</span></h3><p><img src="./imgs/20230915173954.webp" referrerpolicy="no-referrer" alt="20230915173954"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://books.xiaoww.com'><span>books.xiaoww.com</span></a><span> | </span><a href='https://book.xiaoww.com'><span>book.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因和时间成本原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-12文文画板'><span>项目 12：文文画板</span></h3><p><img src="./imgs/Snipaste_2024-07-25_03-45-48.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_03-45-48"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://draw.xiaoww.com'><span>draw.xiaoww.com</span></a><span> | </span><a href='https://paint.xiaoww.com'><span>paint.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-13文文思维导图'><span>项目 13：文文思维导图</span></h3><p><img src="./imgs/Snipaste_2024-07-25_04-28-23.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-25_04-28-23"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://mindmap.xiaoww.com'><span>mindmap.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-14文文今日热榜'><span>项目 14：文文今日热榜</span></h3><p><img src="./imgs/2024-07-24-07-00-41-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-01-16-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-00-56-image.png" referrerpolicy="no-referrer"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://hot.xiaoww.com'><span>hot.xiaoww.com</span></a><span> | </span><a href='https://news.xiaoww.com'><span>news.xiaoww.com</span></a><span> / </span><a href='https://today.xiaoww.com'><span>today.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-15文文计算器'><span>项目 15：文文计算器</span></h3><p><img src="./imgs/2024-07-24-07-01-51-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-03-02-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-03-10-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-02-18-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-02-33-image.png" referrerpolicy="no-referrer"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://calc.xiaoww.com'><span>calc.xiaoww.com</span></a><span> | </span><a href='https://calculator.xiaoww.com'><span>calculator.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-16文文-ai-聊天'><span>项目 16：文文 AI 聊天</span></h3><p><img src="./imgs/2024-07-24-07-03-43-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-07-04-20-image.png" referrerpolicy="no-referrer"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://aichat.xiaoww.com'><span>aichat.xiaoww.com</span></a><span> | </span><a href='https://gpt.xiaoww.com'><span>gpt.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-17完美导航网'><span>项目 17：完美导航网</span></h3><p><img src="./imgs/IMG_1761.JPG" referrerpolicy="no-referrer" alt="IMG_1761"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://wmnav.com'><span>wmnav.com</span></a><span> ( 原：</span><a href='https://24ta.com'><span>24ta.com</span></a><span> )</span></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:pink"><strong><span>暂停服务，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-18爱好盘'><span>项目 18：爱好盘</span></h3><p><img src="./imgs/IMG_1762.JPG" referrerpolicy="no-referrer" alt="IMG_1762"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://ihpan.com'><span>ihpan.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:pink"><strong><span>暂停服务，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-19文文单词打字机'><span>项目 19：文文单词打字机</span></h3><p><img src="./imgs/2024-07-24-06-53-00-image.png" referrerpolicy="no-referrer"><img src="./imgs/2024-07-24-06-54-11-image.png" referrerpolicy="no-referrer"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://qwerty.xiaoww.com'><span>qwerty.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> 文文单词打字机：通过打字练习方式来实现肌肉记忆，让大脑更省力。学习时间更碎片化，更灵活！陪你从小到大，不分年龄，人人皆可学。</span></p><p><span>软件设计的目标群体为以英语作为主要工作语言的键盘工作者。部分人会出现输入母语时的打字速度快于英语的情况，因为多年的母语输入练就了非常坚固的肌肉记忆，而英语输入的肌肉记忆相对较弱，易出现输入英语时“提笔忘字”的现象。</span></p><p><span>同时为了巩固英语技能，也需要持续的背诵单词，本软件将英语单词的记忆与英语键盘输入的肌肉记忆的锻炼相结合，可以在背诵单词的同时巩固肌肉记忆。</span></p><p><span>为了避免造成错误的肌肉记忆，设计上如果用户单词输入错误则需要重新输入单词，尽可能确保用户维持正确的肌肉记忆。</span></p><p><span>肌肉记忆是内隐记忆的一种，它指的是人在一段时间内重复做出一个动作后，大脑就会记住这一动作，最终人能在不用多想的情况下就能做出这一动作。许多日常活动中都有肌肉记忆的身影，例如骑自行车、驾驶机动车、玩球类运动、游泳、键盘打字、输入密码、演奏乐器、打扑克、表演武术和跳舞等。</span></p><p><span>软件也对需要机考英语的人群有一定的帮助。</span></p><p style="color:red;">背单词：</p><p><span>可以选择记忆或默写单词，提供了音标显示、发音功能（均可选美音、英音）、错误统计</span></p><p style="color:red;">错词本：</p><p><span>默写单词时输入错误会自动添加到错词本，以便后续复习。</span></p><p style="color:red;">默写模式：</p><p><span>在用户完成一个章节的练习后，如果有错误词，那么会重复练习错误词，直到没有错误词为止。完成之后弹出选项可选择默写本章、重复本章、下一章</span></p><p style="color:red;">词库：</p><p><span>内置了常用的大学英语、新概念英语、考研英语、雅思托福、多邻国、专业四级英语、专业八级英语，也有程序员常见英语单词以及多种编程语言 API 等词库。 尽可能满足大部分用户对背单词的需求。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-20生命周期管理'><span>项目 20：生命周期管理</span></h3><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://services.xiaoww.com/lifecycle'><span>services.xiaoww.com/lifecycle</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-21文文交互审计系统'><span>项目 21：文文交互审计系统</span></h3><p><img src="./imgs/Snipaste_2024-07-29_01-16-20.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_01-16-20"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://developer.xiaoww.com/ternimals'><span>developer.xiaoww.com/ternimals</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-22资产管理'><span>项目 22：资产管理</span></h3><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://services.xiaoww.com/finance'><span>services.xiaoww.com/finance</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-233d-查看器'><span>项目 23：3D 查看器</span></h3><p><img src="./imgs/Snipaste_2024-07-29_02-09-28.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_02-09-28"></p><p><img src="./imgs/Snipaste_2024-07-29_02-11-08.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_02-11-08"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://apps.xiaoww.com/3dviewer'><span>apps.xiaoww.com/3dviewer</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-24光学射线模拟器'><span>项目 24：光学射线模拟器</span></h3><p><img src="./imgs/Snipaste_2024-07-29_02-13-26.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_02-13-26"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://apps.xiaoww.com/raysimulator'><span>apps.xiaoww.com/raysimulator</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-25爱好猫科技'><span>项目 25：爱好猫科技</span></h3><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://ihmao.com'><span>ihmao.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因和时间成本原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><h3 id='项目-26爱好猫社区'><span>项目 26：爱好猫社区</span></h3><p><img src="./imgs/Snipaste_2024-07-29_01-05-30.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_01-05-30"></p><p><span>(概念图仅供参考)</span></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://forum.ihmao.com'><span>forum.ihmao.com</span></a><span> | </span><a href='https://social.xiaoww.com'><span>social.xiaoww.com</span></a><span> / </span><a href='https://community.ihmao.com'><span>community.ihmao.com</span></a><span> / </span><a href='https://bbs.ihmao.com'><span>bbs.ihmao.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因和时间成本原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-27宝库猫应用'><span>项目 27：宝库猫应用</span></h3><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://bkmao.com'><span>bkmao.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发，因资金原因和时间成本原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-28代码编辑器'><span>项目 28：代码编辑器</span></h3><p><img src="./imgs/Snipaste_2024-07-29_09-15-50.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_09-15-50"></p><p><img src="./imgs/Snipaste_2024-07-29_01-30-15.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-29_01-30-15"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://code.xiaoww.com'><span>code.xiaoww.com</span></a><span> | </span><a href='https://editor.xiaoww.com'><span>editor.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:pink"><strong><span>暂停服务，因资金原因</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-29文文安全聊天'><span>项目 29：文文安全聊天</span></h3><p><img src="./imgs/hp-hero-visual-alt_1hp-hero-visual-alt.webp" referrerpolicy="no-referrer" alt="hp-hero-visual-alt_1hp-hero-visual-alt"></p><p><img src="./imgs/IMG_1773.JPG" alt="IMG_1773"  /></p><p><img src="./imgs/IMG_1774.JPG" alt="IMG_1774"  /></p><p><img src="./imgs/IMG_1775.JPG" referrerpolicy="no-referrer" alt="IMG_1775"></p><p><img src="./imgs/IMG_1776.JPG" referrerpolicy="no-referrer" alt="IMG_1776"></p><p><img src="./imgs/IMG_1777.JPG" referrerpolicy="no-referrer" alt="IMG_1777"></p><p><img src="./imgs/IMG_1778.JPG" referrerpolicy="no-referrer" alt="IMG_1778"></p><p><img src="./imgs/IMG_1779.JPG" referrerpolicy="no-referrer" alt="IMG_1779"></p><p><img src="./imgs/IMG_1772.JPG" referrerpolicy="no-referrer" alt="IMG_1772"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://chat.xiaoqy.com'><span>chat.xiaoqy.com</span></a><span> | </span><a href='https://message.xiaoqy.com'><span>message.xiaoqy.com</span></a><span> / </span><a href='https://talk.xiaoqy.com'><span>talk.xiaoqy.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:green"><strong><span>服务正常运行</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> 文文安全聊天，这是现在最好的聊天服务，也是最安全的聊天服务，没有之一！支持多个客户端： </span><code>Windows/Android/IOS/Web</code><span> 等</span></p><p><span>支持语音通话，视频通话，发文字语音，发表情，发视频图片，投票，位置等，是一款成熟稳定的社交平台。</span></p><p><span>在航天领域，互联网企业，网络安全领域广泛使用安全的加密软件。</span>
+<span>首先文文安全聊天是一个去中心化的聊天服务，实现了端对端的加密，这意味着不仅其他人无法查看你的聊天内容，哪怕你更换了一个终端，你也需要私钥才能够查看你的聊天记录。</span></p><p><span>这是终极的隐私保护方案，因为一旦你丢掉了这个密钥，这些内容就相当于被销毁了。</span></p><p><span>底层服务基于 </span><code>Matrix</code><span> 如果你能够访问到 </span><code>Matrix</code><span> 的服务器那么就可以直接使用 </span><code>Matrix</code><span> 的主聊天服务。</span></p><p><span>文文安全聊天未开发网页服务，目前仅只能使用客户端，未来将开发在线网页服务。</span></p><p><span>您仍可以使用第三方在线网页平台 </span><code>app.element.io</code><span> 和 </span><code>fluffychat.im/web</code><span> 来连接到 </span><code>chat.xiaoqy.com</code><span> 服务器来使用文文安全聊天服务平台。</span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-30文文文件快传'><span>项目 30：文文文件快传</span></h3><p><img src="./imgs/Snipaste_2024-07-31_03-44-03.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-31_03-44-03"></p><p><img src="./imgs/Snipaste_2024-07-31_03-44-14.png" referrerpolicy="no-referrer" alt="Snipaste_2024-07-31_03-44-14"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://transfer.xiaoww.com'><span>transfer.xiaoww.com</span></a><span> | </span><a href='https://files.xiaoww.com'><span>files.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:pink"><strong><span>暂停服务，将进行二次开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-31文文-markdown-编辑器'><span>项目 31：文文 Markdown 编辑器</span></h3><p><img src="./imgs/Snipaste_2024-08-01_02-06-49.png" referrerpolicy="no-referrer" alt="Snipaste_2024-08-01_02-06-49"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://md.xiaoww.com'><span>md.xiaoww.com</span></a><span> | </span><a href='https://markdown.xiaoww.com'><span>markdown.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h3 id='项目-32文文聚合阅读器'><span>项目 32：文文聚合阅读器</span></h3><p><img src="./imgs/Snipaste_2024-08-01_03-02-41.png" referrerpolicy="no-referrer" alt="Snipaste_2024-08-01_03-02-41"></p><p><img src="./imgs/Snipaste_2024-08-01_03-03-28.png" referrerpolicy="no-referrer" alt="Snipaste_2024-08-01_03-03-28"></p><p>🔗<span> </span><strong><span>网址：</span></strong><span> </span><a href='https://rss.xiaoww.com'><span>rss.xiaoww.com</span></a></p><p>📊<span> </span><strong><span>状态：</span></strong><span> </span><font style="color:red"><strong><span>未开发</span></strong></font></p><p>💬<span> </span><strong><span>描述：</span></strong><span> </span></p><p><a href="#top"><span>TOP</span></a></p><h2 id='思远文文软件开发项目'><span>思远文文软件开发项目</span></h2><p><a href="#top"><span>TOP</span></a></p><h3 id='文文时间计算器'><span>文文时间计算器</span></h3><p><a href="#top"><span>TOP</span></a></p><h3 id='文文身份生成器'><span>文文身份生成器</span></h3><p><a href="#top"><span>TOP</span></a></p><h3 id='文文随机数生成器'><span>文文随机数生成器</span></h3><p><a href="#top"><span>TOP</span></a></p><h2 id='思远文文电子开发项目'><span>思远文文电子开发项目</span></h2><p><img src="./imgs/IMG_1767.JPG" referrerpolicy="no-referrer" alt="IMG_1767"></p><p><img src="./imgs/IMG_1768.JPG" referrerpolicy="no-referrer" alt="IMG_1768"></p><p><span>未来开发电子项目清单（思远文文电子硬件创客计划）</span>
 <span>电源和电池类：</span>
 <span>220v 高频纯正弦波逆变器移动电源（120ah 宁德时代磷酸铁锂大单体 x16 + 极空电池保护板 + 智能显示屏 + 不锈钢铝合金电池箱等）</span>
 <span>太阳能单晶硅电池板 18v 200w（配备mppt太阳能控制器和220v工频纯正弦波逆变器和300ah 宁德时代磷酸铁锂电池组家用太阳能发电储能方案）</span>
@@ -1425,6 +1292,6 @@ input:not([type=range]):not([type=color]):focus {
 <span>桌面信息牌</span>
 <span>物联网桌面显示器时钟（采用ESP32开发，具有时钟闹钟，天气预报，网络信息同步，家电物联等功能）</span>
 <span>物联网RGB灯带</span>
-<span>物联网红外线万能遥控（比家用任何红外线遥控器更强，四周多灯珠无死角控制任何家电）</span></p><p><a href="#top"><span>TOP</span></a></p><h2 id='思远文文作品创作项目'><span>思远文文作品创作项目</span></h2><p><a href="#top"><span>TOP</span></a></p><h2 id='思远文文设备运维项目'><span>思远文文设备运维项目</span></h2><p><img src="./imgs/IMG_1766.JPG" referrerpolicy="no-referrer" alt="IMG_1766"></p><p><img src="./imgs/IMG_1765.JPG" referrerpolicy="no-referrer" alt="IMG_1765"></p><p><img src="./imgs/IMG_1764.JPG" referrerpolicy="no-referrer" alt="IMG_1764"></p><p><a href="#top"><span>TOP</span></a></p><h2 id='思远文文媒体管理项目'><span>思远文文媒体管理项目</span></h2><p><a href="#top"><span>TOP</span></a></p><h2 id='思远文文产品设计项目'><span>思远文文产品设计项目</span></h2><p><a href="#top"><span>TOP</span></a></p></div></div>
+<span>物联网红外线万能遥控（比家用任何红外线遥控器更强，四周多灯珠无死角控制任何家电）</span></p><p><a href="#top"><span>TOP</span></a></p><h2 id='思远文文作品创作项目'><span>思远文文作品创作项目</span></h2><p><a href="#top"><span>TOP</span></a></p><h2 id='思远文文设备运维项目'><span>思远文文设备运维项目</span></h2><p><img src="./imgs/IMG_1766.JPG" referrerpolicy="no-referrer" alt="IMG_1766"></p><p><img src="./imgs/IMG_1765.JPG" referrerpolicy="no-referrer" alt="IMG_1765"></p><p><img src="./imgs/IMG_1764.JPG" referrerpolicy="no-referrer" alt="IMG_1764"></p><p><a href="#top"><span>TOP</span></a></p><h2 id='个人长短途跑腿万能帮'><span>个人长短途跑腿万能帮</span></h2><p><span>个人长短途跑腿万能帮服务，你动嘴，我跑腿！璧山区 | 大学城 | 九龙坡区</span></p><p><span>帮取送、帮买、帮排队，万能帮万事帮！</span></p><p><span>代取送：文件、礼品、快递包裹、鲜花、蛋糕、酒水、手机、电脑、身份证、公交卡、银行卡、钥匙、箱包、五金机电；</span></p><p><span>代购：餐食、美食、零食、酒水、奶制品、袋装水、建材、生活用品、药品、票务；</span></p><p><span>代缴：话费、水电气费；</span></p><p><span>代办：手机业务、宽带业务、陪伴照顾、接送小孩、做图修图、复印打印、文档表格、数据统计；</span></p><p><span>代找：找地点、找工作、看房子、看车子；</span></p><p><span>代办事：搬东西、做清洁、遛宠物；</span></p><p><span>代拍摄：观光旅游、现场活动、风景建筑、门店商铺、商品物品；</span></p><p><span>代托管：快递包裹、行李物品、物业品；</span></p><p><span>代排队：挂号等待、看管物品；</span></p><p>&nbsp;</p><p><span>保障服务：全程可定位跟踪，全程可语音视频、全程取送拍照留证。</span></p><p><span>与我沟通时请说明时间、地点、任务内容，部分服务按需收费。</span></p><p><span>需要提前找我沟通，价格好协商，时间可定，长期服务更方便。</span></p><p><span>两轮车配送，不接受大件物品、超重物品和超长物品。</span></p><p><span>贵重物品和紧急需求建议走其它平台。</span></p><p>&nbsp;</p><p><span>服务地区：</span></p><p><span>璧山区（常驻起点）：双星大道、聚金大道、东林大道、黛山大道、瀛嘉大道、永嘉大道、璧青路、中央大街、大润发、重百商场、梦园广场、大成广场、一天门、24 队车站、北门车站、湿地公园、秀湖公园、玉泉湖公园、地铁站、高铁站、云巴站</span></p><p><span>沙坪坝区：尖顶坡、大学城、陈家桥、微电园、赖家桥、曾家、西永、香炉山、歌乐山、三峡广场等</span></p><p><span>九龙坡区：杨家坪、谢家湾、石坪桥、重庆动物园、直港大道、云龙大道、火炬大道、山姆会员商店等</span></p><p><span>江北区：观音桥、野水沟、未来国际、朗晴广场、红旗河沟、龙湖新壹街等</span></p><p><span>渝北区：碧津公园、江北机场、空港广场、渝北广电等</span></p><p><span>南岸区：南坪、工贸、南坪万达广场、南坪会展中心、重庆汽车站等</span></p><p><span>主城区：大渡口区 | 渝中区 | 巴南区等</span></p><p>&nbsp;</p><p><span>信息服务正在完善，尽情期待！</span></p><p><a href="#top"><span>TOP</span></a></p><h2 id='思远文文媒体管理项目'><span>思远文文媒体管理项目</span></h2><p><a href="#top"><span>TOP</span></a></p><h2 id='思远文文产品设计项目'><span>思远文文产品设计项目</span></h2><p><a href="#top"><span>TOP</span></a></p></div></div>
 </body>
 </html>

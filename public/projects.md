@@ -13,6 +13,8 @@
 
 
 
+<video src="./videos/xiaoww.com.mp4"></video>
+
 ## 思远文文网站开发项目
 
 部分项目是采用的 `Vue3` + `Vite` + `TypeScript` + `JavaScript` + `React` + `Next.js`  + `Node.js` 等 `UI` 框架和组件等编程语言快速开发，部分静态站点由自托管平台运行，实现免维护，免受攻击，长期稳定运行，安全性极高。​
@@ -25,7 +27,7 @@
 
 ![IMG_1760](./imgs/IMG_1760.JPG)
 
-:link: **网址：** [blog.xiaoqy.com](https://blog.xiaoqy.com) | [yublog.me](https://yublog.me)
+:link: **网址：** [blog.xiaoww.com](https://blog.xiaoww.com) | [yublog.me](https://yublog.me)
 
 :bar_chart: **状态：** <font style="color:pink">**暂停服务，因资金原因**</font>
 
@@ -39,7 +41,7 @@
 
 ![IMG_1760](./imgs/IMG_1760.JPG)
 
-:link: **网址：** [geek.xiaoqy.com](https://geek.xiaoqy.com) | [yugeek.me](https://yugeek.me)
+:link: **网址：** [geek.xiaoww.com](https://geek.xiaoww.com) | [yugeek.me](https://yugeek.me)
 
 :bar_chart: **状态：** <font style="color:pink">**暂停服务，因资金原因**</font>
 
@@ -53,7 +55,7 @@
 
 (概念图仅供参考)
 
-:link: **网址：** [wiki.xiaoqy.com](https://wiki.xiaoqy.com) | [knowledge.xiaoqy.com](https://knowledge.xiaoqy.com)
+:link: **网址：** [wiki.xiaoww.com](https://wiki.xiaoww.com) | [knowledge.xiaoww.com](https://knowledge.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发，因资金原因**</font>
 
@@ -71,7 +73,7 @@
 
 ![Snipaste_2024-07-31_03-59-42](./imgs/Snipaste_2024-07-31_03-59-42.png)
 
-:link: **网址：** [live.xiaoqy.com](https://live.xiaoqy.com) | [livestream.xiaoqy.com](https://livestream.xiaoqy.com) / [xiaoqy.tv](https://xiaoqy.tv)
+:link: **网址：** [live.xiaoww.com](https://live.xiaoww.com) | [livestream.xiaoww.com](https://livestream.xiaoqy.com) / [xiaoww.tv](https://xiaoqy.tv)
 
 :bar_chart: **状态：** <font style="color:green">**服务试运行**</font>
 
@@ -99,7 +101,7 @@
 
 ### 项目 5：思远文文的商店
 
-:link: **网址：** [shop.xiaoqy.com](https://shop.xiaoqy.com) | [store.xiaoqy.com](https://store.xiaoqy.com) / [buy.xiaoqy.com](https://buy.xiaoqy.com)
+:link: **网址：** [shop.xiaoww.com](https://shop.xiaoww.com) | [store.xiaoww.com](https://store.xiaoww.com) / [buy.xiaoww.com](https://buy.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
@@ -113,7 +115,7 @@
 
 (概念图仅供参考)
 
-:link: **网址：** [photos.xiaoqy.com](https://photos.xiaoqy.com) | [photo.xiaoqy.com](https://photo.xiaoqy.com) / [pictures.xiaoqy.com](https://pictures.xiaoqy.com) / [picture.xiaoqy.com](https://picture.xiaoqy.com) / [albums.xiaoqy.com](https://albums.xiaoqy.com) / [album.xiaoqy.com](https://album.xiaoqy.com) / [images.xiaoqy.com](https://images.xiaoqy.com) / [image.xiaoqy.com](https://image.xiaoqy.com)
+:link: **网址：** [photos.xiaoww.com](https://photos.xiaoww.com) | [photo.xiaoww.com](https://photo.xiaoww.com) / [pictures.xiaoww.com](https://pictures.xiaoww.com) / [picture.xiaoww.com](https://picture.xiaoww.com) / [albums.xiaoww.com](https://albums.xiaoww.com) / [album.xiaoww.com](https://album.xiaoww.com) / [images.xiaoww.com](https://images.xiaoww.com) / [image.xiaoww.com](https://image.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发，因资金原因**</font>
 
@@ -125,7 +127,7 @@
 
 ![](./imgs/2024-07-24-06-59-10-image.png)
 
-:link: **网址：** [music.xiaoqy.com](https://music.xiaoqy.com)
+:link: **网址：** [music.xiaoww.com](https://music.xiaoqy.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -139,7 +141,7 @@
 
 (概念图仅供参考)
 
-:link: **网址：** [social.xiaoqy.com](https://social.xiaoqy.com) | [community.xiaoqy.com](https://community.xiaoqy.com)
+:link: **网址：** [social.xiaoww.com](https://social.xiaoww.com) | [community.xiaoww.com](https://community.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
@@ -149,7 +151,7 @@
 
 ### 项目 9：思远文文的实验室
 
-:link: **网址：** [xiaoqy.com/experiment](https://xiaoqy.com/experiment) | [xiaoqy.com/lab](https://xiaoqy.com/lab)
+:link: **网址：** [xiaoww.com/experiment](https://xiaoww.com/experiment) | [xiaoww.com/lab](https://xiaoww.com/lab)
 
 :bar_chart: **状态：** <font style="color:red">**未开发**</font>
 
@@ -161,7 +163,7 @@
 
 ![](./imgs/2024-07-24-06-55-50-image.png)![](./imgs/2024-07-24-06-57-03-image.png)<img src="./imgs/2024-07-24-06-57-49-image.png" >
 
-:link: **网址：** [cmusic.xiaoqy.com](https://cmusic.xiaoqy.com) | [cloudmusic.xiaoqy.com](https://cloudmusic.xiaoqy.com)
+:link: **网址：** [cmusic.xiaoww.com](https://cmusic.xiaoww.com) | [cloudmusic.xiaoww.com](https://cloudmusic.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -173,7 +175,7 @@
 
 ![20230915173954](./imgs/20230915173954.webp)
 
-:link: **网址：** [books.xiaoqy.com](https://books.xiaoqy.com) | [book.xiaoqy.com](https://book.xiaoqy.com)
+:link: **网址：** [books.xiaoww.com](https://books.xiaoww.com) | [book.xiaoww.com](https://book.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
@@ -185,7 +187,7 @@
 
 ![Snipaste_2024-07-25_03-45-48](./imgs/Snipaste_2024-07-25_03-45-48.png)
 
-:link: **网址：** [draw.xiaoqy.com](https://draw.xiaoqy.com) | [paint.xiaoqy.com](https://paint.xiaoqy.com)
+:link: **网址：** [draw.xiaoww.com](https://draw.xiaoww.com) | [paint.xiaoww.com](https://paint.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -197,7 +199,7 @@
 
 ![Snipaste_2024-07-25_04-28-23](./imgs/Snipaste_2024-07-25_04-28-23.png)
 
-:link: **网址：** [mindmap.xiaoqy.com](https://mindmap.xiaoqy.com)
+:link: **网址：** [mindmap.xiaoww.com](https://mindmap.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -209,7 +211,7 @@
 
 ![](./imgs/2024-07-24-07-00-41-image.png)![](./imgs/2024-07-24-07-01-16-image.png)![](./imgs/2024-07-24-07-00-56-image.png)
 
-:link: **网址：** [hot.xiaoqy.com](https://hot.xiaoqy.com) | [news.xiaoqy.com](https://news.xiaoqy.com) / [today.xiaoqy.com](https://today.xiaoqy.com)
+:link: **网址：** [hot.xiaoww.com](https://hot.xiaoww.com) | [news.xiaoww.com](https://news.xiaoww.com) / [today.xiaoww.com](https://today.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -221,7 +223,7 @@
 
 ![](./imgs/2024-07-24-07-01-51-image.png)![](./imgs/2024-07-24-07-03-02-image.png)![](./imgs/2024-07-24-07-03-10-image.png)![](./imgs/2024-07-24-07-02-18-image.png)![](./imgs/2024-07-24-07-02-33-image.png)
 
-:link: **网址：** [calc.xiaoqy.com](https://calc.xiaoqy.com) | [calculator.xiaoqy.com](https://calculator.xiaoqy.com)
+:link: **网址：** [calc.xiaoww.com](https://calc.xiaoww.com) | [calculator.xiaoww.com](https://calculator.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -233,7 +235,7 @@
 
 ![](./imgs/2024-07-24-07-03-43-image.png)![](./imgs/2024-07-24-07-04-20-image.png)
 
-:link: **网址：** [aichat.xiaoqy.com](https://aichat.xiaoqy.com) | [gpt.xiaoqy.com](https://gpt.xiaoqy.com)
+:link: **网址：** [aichat.xiaoww.com](https://aichat.xiaoww.com) | [gpt.xiaoww.com](https://gpt.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
@@ -269,13 +271,13 @@
 
 ![](./imgs/2024-07-24-06-53-00-image.png)![](./imgs/2024-07-24-06-54-11-image.png)
 
-:link: **网址：** [qwerty.xiaoqy.com](https://qwerty.xiaoqy.com)
+:link: **网址：** [qwerty.xiaoww.com](https://qwerty.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:green">**服务正常运行**</font>
 
 :speech_balloon: **描述：** 文文单词打字机：通过打字练习方式来实现肌肉记忆，让大脑更省力。学习时间更碎片化，更灵活！陪你从小到大，不分年龄，人人皆可学。
 
-软件设计的目标群体为以英语作为主要工作语言的键盘工作者。部分人会出现输入母语时的打字速度快于英语的情况，因为多年的母语输入练就了非常坚固的肌肉记忆 💪，而英语输入的肌肉记忆相对较弱，易出现输入英语时“提笔忘字”的现象。
+软件设计的目标群体为以英语作为主要工作语言的键盘工作者。部分人会出现输入母语时的打字速度快于英语的情况，因为多年的母语输入练就了非常坚固的肌肉记忆，而英语输入的肌肉记忆相对较弱，易出现输入英语时“提笔忘字”的现象。
 
 同时为了巩固英语技能，也需要持续的背诵单词，本软件将英语单词的记忆与英语键盘输入的肌肉记忆的锻炼相结合，可以在背诵单词的同时巩固肌肉记忆。
 
@@ -305,7 +307,7 @@
 
 ### 项目 20：生命周期管理
 
-:link: **网址：** [services.xiaoqy.com/lifecycle](https://services.xiaoqy.com/lifecycle)
+:link: **网址：** [services.xiaoww.com/lifecycle](https://services.xiaoww.com/lifecycle)
 
 :bar_chart: **状态：** <font style="color:red">**未开发**</font>
 
@@ -319,7 +321,7 @@
 
 (概念图仅供参考)
 
-:link: **网址：** [developer.xiaoqy.com/ternimals](https://developer.xiaoqy.com/ternimals)
+:link: **网址：** [developer.xiaoww.com/ternimals](https://developer.xiaoww.com/ternimals)
 
 :bar_chart: **状态：** <font style="color:red">**未开发**</font>
 
@@ -329,7 +331,7 @@
 
 ### 项目 22：资产管理
 
-:link: **网址：** [services.xiaoqy.com/finance](https://services.xiaoqy.com/finance)
+:link: **网址：** [services.xiaoww.com/finance](https://services.xiaoww.com/finance)
 
 :bar_chart: **状态：** <font style="color:red">**未开发**</font>
 
@@ -345,7 +347,7 @@
 
 (概念图仅供参考)
 
-:link: **网址：** [apps.xiaoqy.com/3dviewer](https://apps.xiaoqy.com/3dviewer)
+:link: **网址：** [apps.xiaoww.com/3dviewer](https://apps.xiaoww.com/3dviewer)
 
 :bar_chart: **状态：** <font style="color:red">**未开发**</font>
 
@@ -359,7 +361,7 @@
 
 (概念图仅供参考)
 
-:link: **网址：** [apps.xiaoqy.com/raysimulator](https://apps.xiaoqy.com/raysimulator)
+:link: **网址：** [apps.xiaoww.com/raysimulator](https://apps.xiaoww.com/raysimulator)
 
 :bar_chart: **状态：** <font style="color:red">**未开发**</font>
 
@@ -381,7 +383,7 @@
 
 (概念图仅供参考)
 
-:link: **网址：** [forum.ihmao.com](https://forum.ihmao.com) | [social.xiaoqy.com](https://social.xiaoqy.com) / [community.ihmao.com](https://community.ihmao.com) / [bbs.ihmao.com](https://bbs.ihmao.com)
+:link: **网址：** [forum.ihmao.com](https://forum.ihmao.com) | [social.xiaoww.com](https://social.xiaoww.com) / [community.ihmao.com](https://community.ihmao.com) / [bbs.ihmao.com](https://bbs.ihmao.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发，因资金原因和时间成本原因**</font>
 
@@ -405,7 +407,7 @@
 
 ![Snipaste_2024-07-29_01-30-15](./imgs/Snipaste_2024-07-29_01-30-15.png)
 
-:link: **网址：** [code.xiaoqy.com](https://code.xiaoqy.com) | [editor.xiaoqy.com](https://editor.xiaoqy.com)
+:link: **网址：** [code.xiaoww.com](https://code.xiaoww.com) | [editor.xiaoww.com](https://editor.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:pink">**暂停服务，因资金原因**</font>
 
@@ -460,7 +462,7 @@
 
 ![Snipaste_2024-07-31_03-44-14](./imgs/Snipaste_2024-07-31_03-44-14.png)
 
-:link: **网址：** [transfer.xiaoqy.com](https://transfer.xiaoqy.com) | [files.xiaoqy.com](https://files.xiaoqy.com)
+:link: **网址：** [transfer.xiaoww.com](https://transfer.xiaoww.com) | [files.xiaoww.com](https://files.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:pink">**暂停服务，将进行二次开发**</font>
 
@@ -472,7 +474,7 @@
 
 ![Snipaste_2024-08-01_02-06-49](./imgs/Snipaste_2024-08-01_02-06-49.png)
 
-:link: **网址：** [md.xiaoqy.com](https://md.xiaoqy.com) | [markdown.xiaoqy.com](https://markdown.xiaoqy.com)
+:link: **网址：** [md.xiaoww.com](https://md.xiaoww.com) | [markdown.xiaoww.com](https://markdown.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发**</font>
 
@@ -486,7 +488,7 @@
 
 ![Snipaste_2024-08-01_03-03-28](./imgs/Snipaste_2024-08-01_03-03-28.png)
 
-:link: **网址：** [rss.xiaoqy.com](https://rss.xiaoqy.com)
+:link: **网址：** [rss.xiaoww.com](https://rss.xiaoww.com)
 
 :bar_chart: **状态：** <font style="color:red">**未开发**</font>
 
@@ -610,6 +612,66 @@ NFC智能标签墨水屏卡片（具有读写模拟NFC RFID加密卡片功能）
 ![IMG_1765](./imgs/IMG_1765.JPG)
 
 ![IMG_1764](./imgs/IMG_1764.JPG)
+
+<a href="#top">TOP</a>
+
+## 个人长短途跑腿万能帮
+
+个人长短途跑腿万能帮服务，你动嘴，我跑腿！璧山区 | 大学城 | 九龙坡区
+
+帮取送、帮买、帮排队，万能帮万事帮！
+
+代取送：文件、礼品、快递包裹、鲜花、蛋糕、酒水、手机、电脑、身份证、公交卡、银行卡、钥匙、箱包、五金机电；
+
+代购：餐食、美食、零食、酒水、奶制品、袋装水、建材、生活用品、药品、票务；
+
+代缴：话费、水电气费；
+
+代办：手机业务、宽带业务、陪伴照顾、接送小孩、做图修图、复印打印、文档表格、数据统计；
+
+代找：找地点、找工作、看房子、看车子；
+
+代办事：搬东西、做清洁、遛宠物；
+
+代拍摄：观光旅游、现场活动、风景建筑、门店商铺、商品物品；
+
+代托管：快递包裹、行李物品、物业品；
+
+代排队：挂号等待、看管物品；
+
+
+
+保障服务：全程可定位跟踪，全程可语音视频、全程取送拍照留证。
+
+与我沟通时请说明时间、地点、任务内容，部分服务按需收费。
+
+需要提前找我沟通，价格好协商，时间可定，长期服务更方便。
+
+两轮车配送，不接受大件物品、超重物品和超长物品。
+
+贵重物品和紧急需求建议走其它平台。
+
+
+
+服务地区：
+
+璧山区（常驻起点）：双星大道、聚金大道、东林大道、黛山大道、瀛嘉大道、永嘉大道、璧青路、中央大街、大润发、重百商场、梦园广场、大成广场、一天门、24 队车站、北门车站、湿地公园、秀湖公园、玉泉湖公园、地铁站、高铁站、云巴站
+
+沙坪坝区：尖顶坡、大学城、陈家桥、微电园、赖家桥、曾家、西永、香炉山、歌乐山、三峡广场等
+
+九龙坡区：杨家坪、谢家湾、石坪桥、重庆动物园、直港大道、云龙大道、火炬大道、山姆会员商店等
+
+江北区：观音桥、野水沟、未来国际、朗晴广场、红旗河沟、龙湖新壹街等
+
+渝北区：碧津公园、江北机场、空港广场、渝北广电等
+
+南岸区：南坪、工贸、南坪万达广场、南坪会展中心、重庆汽车站等
+
+主城区：大渡口区 | 渝中区 | 巴南区等
+
+
+
+信息服务正在完善，尽情期待！
 
 <a href="#top">TOP</a>
 
