@@ -2,6 +2,10 @@
 
 # 思远文文服务项目
 
+<title>思远文文服务项目</title>
+
+<script type="text/javascript" src="./script.js"></script>
+
 > [!NOTE]
 >
 > [:house: 主页](https://www.xiaoqy.com) | ​[:heart: 捐赠](https://ko-fi.com/xiaoqy) ​ | ​[:e-mail: E-Mail​](mailto:ixiaoqy@outlook.com) | [:smiley: 关于我](https://about.xiaoqy.com)
