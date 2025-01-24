@@ -79,8 +79,9 @@
         <div id="greeting">点击按钮开始生成新的结果</div>
         <button onclick="generateGreeting_phrases()">生成短语</button>
         <button style="background-color:dodgerblue;" onclick="generateGreeting()">生成成语</button>
+        <button style="background-color:rgb(7, 98, 255);" onclick="home()">作者主页</button>
+        <button style="background-color:rgb(245, 151, 19);" onclick="about()">关于</button>
     </div>
-    <span style="position: absolute; left: 0; right: 0; bottom: 20px;">Copyright&nbsp;&copy; 2025 - Now & Allen Shaw. All Rights Reserved.</span>
 
     <script>
         const greetings_phrases = [
@@ -508,6 +509,14 @@
                 }
             }
             document.getElementById('greeting').innerHTML = uniqueGreetings.map(g => `<p>${g}</p>`).join('');
+        }
+
+        function home() {
+            window.open("https://www.xiaoww.com");
+        }
+
+        function about() {
+            document.getElementById('greeting').innerHTML = "版权声明：Copyright &copy; 2025 - Now & Allen Shaw. All Rights Reserved.";
         }
     </script>
 
