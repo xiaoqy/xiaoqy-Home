@@ -82,6 +82,7 @@ const siteIcon = {
   Calculator,
   FileWord,
   Atom,
+  Star,
   FacebookMessenger,
   ProductHunt
 };
