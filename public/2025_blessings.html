@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>文文随机祝福语</title>
     <style>
         body {
@@ -10,7 +13,7 @@
             padding: 0;
             font-family: 'Arial', sans-serif;
             text-align: center;
-            background: linear-gradient(135deg, #FF7F50, #FFD700, #FF4500);
+            background: linear-gradient(135deg, #e8198b 0%, #c7eafd 100%);
             background-size: 400% 400%;
             animation: gradientBG 10s ease infinite;
             color: #fff;
@@ -78,9 +81,9 @@
         <h4 style="color:hotpink">2025 蛇年祝福语，新年一年，新的开始，为您的家人朋友送上祝福吧！</h4>
         <div id="greeting">点击按钮开始生成新的结果</div>
         <button onclick="generateGreeting_phrases()">生成短语</button>
-        <button style="background-color:dodgerblue;" onclick="generateGreeting()">生成成语</button>
+        <button onclick="generateGreeting()">生成成语</button><br /><br />
+        <button onclick="generateGreeting_phrases_eng()">生成英文短语</button>
         <button style="background-color:rgb(7, 98, 255);" onclick="home()">作者主页</button>
-        <button style="background-color:rgb(245, 151, 19);" onclick="about()">关于</button>
     </div>
 
     <script>
@@ -291,6 +294,209 @@
             "在2025这个新的起点上，愿你勇敢地追求梦想，即使路途遥远，也要相信终点的美丽。加油，未来可期！"
         ];
 
+        const greetings_phrases_eng = [
+            "Wishing you a prosperous Snake Year full of health and happiness!",
+            "May the Snake Year bring you luck, wealth, and endless joy!",
+            "Wishing you a year of new beginnings, great success, and boundless opportunities.",
+            "May the Snake Year bless you with good fortune and all your dreams come true.",
+            "Wishing you good health, happiness, and success in the Snake Year ahead!",
+            "May the Snake Year be filled with joy, peace, and prosperity for you and your family.",
+            "Here's to a Snake Year full of wisdom, fortune, and joy!",
+            "Wishing you a year of growth, prosperity, and happiness in the Snake Year.",
+            "May the Snake Year bring you happiness, luck, and endless blessings.",
+            "Here's to a new year full of prosperity, good health, and happy moments.",
+            "May the Snake Year fill your life with success, health, and good fortune.",
+            "Wishing you a happy, prosperous, and fulfilling Snake Year.",
+            "May this Snake Year bring all your hopes and dreams to life!",
+            "A year of endless luck, joy, and good fortune is ahead—Happy Snake Year!",
+            "Wishing you happiness, peace, and good fortune throughout the Snake Year.",
+            "May the Snake Year bring new opportunities and success your way!",
+            "Wishing you a vibrant Snake Year full of health, wealth, and happiness!",
+            "May the Snake Year fill your heart with peace, love, and prosperity.",
+            "May you enjoy good health, happiness, and success all year long!",
+            "Wishing you a year of smooth sailing, great achievements, and endless joy!",
+            "May the Snake Year bring you success in every step of your career!",
+            "Wishing you a year of growth, prosperity, and career advancement in the Snake Year.",
+            "May you reach new heights and achieve great success in the Snake Year!",
+            "Here's to a Snake Year filled with career growth, good business deals, and prosperity.",
+            "May the Snake Year bless you with wisdom, success, and positive progress.",
+            "Wishing you a productive and prosperous Snake Year at work!",
+            "May the Snake Year be a year of breakthroughs and achievements for you.",
+            "Wishing you success and growth in your career throughout the Snake Year.",
+            "May the Snake Year bring wealth, growth, and success to your business.",
+            "Wishing you a fruitful Snake Year full of accomplishments and new opportunities.",
+            "May you thrive in the Snake Year with good health, wealth, and success in your career!",
+            "Wishing you prosperity and success as you scale new heights in the Snake Year.",
+            "May your career and business reach new heights of success and fulfillment in the Snake Year!",
+            "Here's to a year of promotions, salary hikes, and professional growth!",
+            "Wishing you a productive Snake Year filled with success in every project.",
+            "May the Snake Year bring you the perfect balance of work and happiness.",
+            "Wishing you the success you deserve and all the fortune you desire in the Snake Year.",
+            "May the Snake Year bring you endless opportunities and career breakthroughs.",
+            "Here's to a year full of successful endeavors and professional achievements.",
+            "Wishing you a successful and prosperous Snake Year ahead!",
+            "May the Snake Year bless your family with good health, joy, and togetherness.",
+            "Wishing you and your loved ones a Snake Year filled with peace and happiness.",
+            "May the Snake Year bring your family health, happiness, and harmony!",
+            "Here's to a year of family unity, good health, and endless blessings.",
+            "May the Snake Year fill your home with love, peace, and happiness.",
+            "Wishing your family a joyful, prosperous, and healthy Snake Year!",
+            "May the Snake Year bring your family closer and fill your home with love and laughter.",
+            "Wishing you and your family health, wealth, and happiness in the Snake Year.",
+            "May your home be filled with joy and your loved ones stay healthy and happy throughout the Snake Year!",
+            "Wishing you and your family good health, wealth, and happiness in the Snake Year.",
+            "May the Snake Year bring you and your family endless happiness and good fortune.",
+            "Wishing your loved ones peace, love, and prosperity throughout the Snake Year.",
+            "May the Snake Year bless your family with long-lasting health and joy.",
+            "May your family enjoy a year of good health, peace, and harmony in the Snake Year.",
+            "Wishing you and your family a peaceful, prosperous, and happy Snake Year.",
+            "May the Snake Year bring your family peace, happiness, and prosperity.",
+            "Here's to a year of good health, happiness, and prosperity for you and your family.",
+            "May the Snake Year bring good fortune and health to you and your loved ones.",
+            "Wishing your family endless blessings, happiness, and health in the Snake Year.",
+            "May the Snake Year bring peace, harmony, and joy to your family!",
+            "May the Snake Year bring your friendships closer, and fill your life with love and joy.",
+            "Wishing you a year of great moments with friends and loved ones in the Snake Year!",
+            "May the Snake Year be filled with good times, great memories, and beautiful friendships.",
+            "Wishing you a year of happiness, love, and endless fun with your friends!",
+            "Here's to a year of joy, laughter, and wonderful moments shared with friends in the Snake Year!",
+            "May you and your friends have an amazing year full of laughter, love, and prosperity.",
+            "Wishing you a year of good friends, great adventures, and unforgettable memories!",
+            "May the Snake Year bring you lasting friendships, joy, and shared happiness!",
+            "Wishing you a year full of good times with the people who make you smile!",
+            "May you and your friends enjoy a wonderful year of togetherness and joy!",
+            "Wishing you friendship, love, and laughter throughout the Snake Year.",
+            "May the Snake Year strengthen your friendships and bring you more wonderful moments!",
+            "Wishing you a year filled with laughter, happiness, and cherished moments with friends.",
+            "Here's to a year of lasting bonds, shared joy, and unforgettable memories with friends!",
+            "May the Snake Year bring you joy, good times, and lasting friendships!",
+            "Wishing you the best of everything in the Snake Year, surrounded by loving friends and family!",
+            "May your friendships grow stronger, your heart fuller, and your life richer in the Snake Year!",
+            "Wishing you a Snake Year full of laughter, good times, and unforgettable friendships!",
+            "May you find happiness and love in the company of good friends in the Snake Year!",
+            "Wishing you joy, laughter, and unforgettable moments with friends in the Snake Year!",
+            "May the Snake Year bring you endless joy, adventure, and excitement!",
+            "Here's to a year filled with opportunities and the courage to grab them!",
+            "Wishing you a Snake Year full of surprises, good fortune, and delightful moments!",
+            "May this Snake Year be a time of growth, happiness, and endless possibilities!",
+            "Wishing you a year as dynamic, vibrant, and prosperous as the Snake itself!",
+            "May the Snake Year be as exciting, lucky, and fulfilling as you’ve always dreamed!",
+            "Here’s to a year filled with unexpected joys, lucky surprises, and great adventures!",
+            "Wishing you a year full of blessings, new opportunities, and endless happiness!",
+            "May the Snake Year wrap you in good fortune and bring you closer to your dreams!",
+            "Wishing you all the best in the Snake Year—may it be as lucky and bright as a rainbow!",
+            "May the Snake Year be filled with hope, happiness, and all your heart’s desires!",
+            "Wishing you a year of prosperity, adventure, and wonderful surprises in the Snake Year!",
+            "May the Snake Year bring you joy, fulfillment, and all the success you deserve!",
+            "Wishing you a Snake Year full of good health, amazing moments, and prosperity!",
+            "May the Snake Year be the best one yet—filled with happiness, wealth, and love!",
+            "Wishing you a year of abundance, peace, and endless happiness in the Snake Year!",
+            "May the Snake Year bring you all the happiness and fortune you can handle!",
+            "Wishing you a year of success, joy, and creativity in the Snake Year!",
+            "May your Snake Year be as lucky as a snake shedding its skin and stepping into new opportunities!",
+            "Here's to a year full of new adventures, growth, and endless joy in the Snake Year!",
+            "May the Snake Year bring you boundless success, joy, and prosperity!",
+            "Wishing you a year of good health, happiness, and endless blessings in the Snake Year.",
+            "May this Snake Year be your most successful and joyous year yet!",
+            "May the Snake Year bring you fortune, wisdom, and a year full of achievements!",
+            "Wishing you a New Year filled with prosperity, love, and endless happiness!",
+            "May the Snake Year surround you with positive energy, good fortune, and harmony.",
+            "Wishing you a year of growth, success, and good fortune in the Snake Year.",
+            "May the Snake Year bless you with the courage to pursue your dreams and make them come true!",
+            "May you rise to new heights and find success in every endeavor this Snake Year.",
+            "Wishing you a year of abundance, peace, and fulfillment in the Snake Year.",
+            "May the Snake Year open doors to new opportunities and blessings for you!",
+            "Wishing you a year full of wonderful surprises, good luck, and happiness!",
+            "May you find your path to success and happiness in the Snake Year ahead.",
+            "Wishing you a prosperous and joyful Snake Year filled with good health and success.",
+            "May the Snake Year be your year of renewal, transformation, and great accomplishments!",
+            "May every step you take in the Snake Year bring you closer to your goals and dreams!",
+            "Wishing you all the best in this new year: good health, happiness, and prosperity!",
+            "May your heart be filled with peace and your life filled with success in the Snake Year.",
+            "Wishing you a year full of growth, prosperity, and joyful moments in the Snake Year.",
+            "May this year bring you new opportunities, fresh beginnings, and the success you deserve!",
+            "May the Snake Year bring you the strength and determination to achieve your professional goals!",
+            "Wishing you a year of career advancement and financial prosperity in the Snake Year!",
+            "May you soar to new heights in your career and achieve everything you desire in the Snake Year.",
+            "Wishing you a successful and fulfilling Snake Year filled with professional achievements!",
+            "May the Snake Year open new doors of success and opportunity in your career.",
+            "May your hard work be rewarded with success and wealth in the Snake Year!",
+            "Wishing you a year of growth in your career, filled with prosperity and recognition!",
+            "May the Snake Year bring you career breakthroughs and financial success.",
+            "Wishing you a year of career milestones, salary hikes, and professional growth!",
+            "May your business thrive and your career flourish in the Snake Year.",
+            "Wishing you the courage to seize new opportunities and achieve your career goals in the Snake Year!",
+            "May the Snake Year bring you clear direction and great success in your professional life.",
+            "Wishing you an incredibly productive and successful year in your business ventures.",
+            "May the Snake Year bring new career opportunities and increase your wealth and happiness.",
+            "Wishing you a year full of exciting professional achievements and personal growth!",
+            "May your hard work pay off with career success and financial prosperity in the Snake Year!",
+            "Wishing you a prosperous and successful Snake Year full of career opportunities and growth.",
+            "May this year be a turning point in your career, bringing you joy and success in everything you do.",
+            "Wishing you a career filled with new opportunities and great accomplishments in the Snake Year!",
+            "May the Snake Year bring you endless prosperity and success in your business and work.",
+            "May your family be blessed with love, peace, and good health in the Snake Year!",
+            "Wishing your family a year full of happiness, prosperity, and good health.",
+            "May your loved ones stay healthy and happy throughout the Snake Year.",
+            "Wishing you and your family a year of prosperity, good health, and abundant joy!",
+            "May the Snake Year bring your family closer, strengthening your bonds with love and happiness.",
+            "Wishing your family peace, love, and health in the Snake Year.",
+            "May the Snake Year bring health, wealth, and happiness to your family!",
+            "May your family enjoy peace, prosperity, and all the blessings the Snake Year brings.",
+            "Wishing you and your loved ones a year full of good health, happiness, and wonderful moments!",
+            "May the Snake Year bless your family with joy, love, and health.",
+            "Wishing your family a prosperous Snake Year filled with warmth, love, and happiness.",
+            "May this Snake Year bring good health and lasting happiness to your family.",
+            "Wishing you a year of love, unity, and well-being for your family.",
+            "May your family’s love and happiness grow stronger in the Snake Year!",
+            "Wishing your family success, health, and great joy in the year ahead.",
+            "May the Snake Year bring your family all the health, love, and happiness you deserve!",
+            "Wishing your family a year of good health, peace, and great prosperity.",
+            "May the Snake Year bring endless blessings to your family’s health and happiness.",
+            "Wishing you and your family all the joy, health, and prosperity that the Snake Year has to offer.",
+            "May the Snake Year fill your home with laughter, love, and good health.",
+            "Wishing you and your friends a joyful, prosperous, and unforgettable Snake Year!",
+            "May the Snake Year bring you closer to your friends and family, creating lasting memories.",
+            "Wishing you a year full of laughter, joy, and unforgettable moments with friends!",
+            "May the Snake Year bring wonderful new friendships and strengthen old ones!",
+            "Wishing you and your friends a year of success, joy, and amazing experiences.",
+            "May your friendships grow deeper and your heart fuller in the Snake Year.",
+            "Wishing you a Snake Year full of love, laughter, and the support of great friends.",
+            "May you and your friends enjoy a year full of wonderful adventures and happy moments.",
+            "Wishing you a year of cherished moments with those you hold dear in the Snake Year.",
+            "May you and your friends create beautiful memories and have lots of fun in the Snake Year!",
+            "Wishing you a year full of meaningful connections, new friendships, and happy reunions.",
+            "May the Snake Year strengthen your friendships and bring love and happiness into your life.",
+            "Wishing you a joyful Snake Year full of love, fun, and great times with friends.",
+            "May your friendships grow stronger, and your happiness grow deeper in the Snake Year.",
+            "Wishing you a Snake Year filled with laughter, good times, and endless love from friends!",
+            "May your relationships thrive in the Snake Year, bringing happiness and mutual success.",
+            "Wishing you and your friends endless laughter, love, and success in the Snake Year.",
+            "May the Snake Year bring you the best of friends, unforgettable moments, and endless joy.",
+            "Wishing you a year full of fun adventures, lasting friendships, and deep connections.",
+            "May the Snake Year bring you closer to your friends and loved ones, filling your life with happiness.",
+            "May this Snake Year slither in with great fortune, love, and happiness for you!",
+            "Wishing you a year of fabulous surprises, good fortune, and joyful moments in the Snake Year!",
+            "May the Snake Year wrap you in luck, prosperity, and endless excitement!",
+            "Wishing you a creative and adventurous Snake Year full of new opportunities and exciting paths.",
+            "May the Snake Year inspire you to take bold steps and make your dreams a reality!",
+            "Wishing you a year of fun, laughter, and amazing adventures in the Snake Year.",
+            "May the Snake Year bring you fresh perspectives, exciting challenges, and great rewards!",
+            "Wishing you a year full of prosperity, new beginnings, and exciting opportunities!",
+            "May the Snake Year be filled with transformative growth and unexpected blessings.",
+            "Wishing you a Snake Year full of thrilling adventures, new experiences, and happiness!",
+            "May the Snake Year shine with luck, fortune, and good times for you and your loved ones!",
+            "Wishing you a year of joy, discovery, and unforgettable moments in the Snake Year.",
+            "May this Snake Year bring you the energy and courage to chase your dreams and embrace new possibilities!",
+            "Wishing you endless opportunities, prosperity, and happiness in the Snake Year!",
+            "May the Snake Year offer you new beginnings, fresh experiences, and all the success you desire.",
+            "Wishing you a year full of creativity, prosperity, and exciting discoveries in the Snake Year!",
+            "May the Snake Year be filled with magical moments, creative ideas, and fresh perspectives!",
+            "Wishing you a Snake Year full of charm, fun, and unexpected happiness!",
+            "May the Snake Year bring you endless opportunities to shine, succeed, and grow.",
+            "Wishing you a year full of new adventures, rich experiences, and unforgettable memories in the Snake Year."
+        ];
+
         const greetings = [
             "蛇年大吉，万事如意！",
             "龙蛇飞舞，福运连连！",
@@ -499,9 +705,14 @@
             document.getElementById('greeting').innerText = greetings_phrases[randomIndex];
         }
 
+        function generateGreeting_phrases_eng() {
+            const randomIndex = Math.floor(Math.random() * greetings_phrases_eng.length);
+            document.getElementById('greeting').innerText = greetings_phrases_eng[randomIndex];
+        }
+
         function generateGreeting() {
             const uniqueGreetings = [];
-            while (uniqueGreetings.length < 5) {
+            while (uniqueGreetings.length < 3) {
                 const randomIndex = Math.floor(Math.random() * greetings.length);
                 const greeting = greetings[randomIndex];
                 if (!uniqueGreetings.includes(greeting)) {
@@ -513,10 +724,6 @@
 
         function home() {
             window.open("https://www.xiaoww.com");
-        }
-
-        function about() {
-            document.getElementById('greeting').innerHTML = "版权声明：Copyright &copy; 2025 - Now & Allen Shaw. All Rights Reserved.";
         }
     </script>
 
