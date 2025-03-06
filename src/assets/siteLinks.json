@@ -1,17 +1,17 @@
 [
   {
     "icon": "Blog",
-    "name": "个人博客|Paused",
+    "name": "个人博客|暂停",
     "link": "https://blog.xiaoww.com"
   },
   {
     "icon": "Blog",
-    "name": "技术博客|Paused",
+    "name": "技术博客|暂停",
     "link": "https://geek.xiaoww.com"
   },
   {
     "icon": "BookOpen",
-    "name": "知识百科|Undev",
+    "name": "知识百科|未开发",
     "link": "https://wiki.xiaoww.com"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "icon": "Compass",
-    "name": "导航|Paused",
+    "name": "导航|暂停",
     "link": "https://www.wmnav.com"
   },
   {
@@ -31,17 +31,17 @@
   },
   {
     "icon": "PhotoVideo",
-    "name": "相册|Undev",
+    "name": "相册|未开发",
     "link": "https://photos.xiaoww.com"
   },
   {
     "icon": "ShoppingCart",
-    "name": "店铺|Undev",
+    "name": "店铺|未开发",
     "link": "https://shop.xiaoww.com"
   },
   {
     "icon": "Cloud",
-    "name": "网盘|Paused",
+    "name": "网盘|暂停",
     "link": "https://www.ihpan.com"
   },
   {
@@ -91,17 +91,17 @@
   },
   {
     "icon": "LaptopCode",
-    "name": "状态|Dev",
+    "name": "状态|开发中",
     "link": "https://status.xiaoww.com"
   },
   {
     "icon": "Atom",
-    "name": "实验室|Undev",
+    "name": "实验室|未开发",
     "link": "https://lab.xiaoww.com"
   },
     {
     "icon": "Book",
-    "name": "网址集|Undev",
+    "name": "网址集|未开发",
     "link": "https://web.xiaoww.com"
   },
   {
