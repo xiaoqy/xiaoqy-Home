@@ -1,13 +1,13 @@
 [
   {
     "icon": "Blog",
-    "name": "个人博客|暂停",
-    "link": "https://blog.xiaoww.com"
+    "name": "个人博客|301",
+    "link": "http://blog.xiaoww.com"
   },
   {
     "icon": "Blog",
-    "name": "技术博客|暂停",
-    "link": "https://geek.xiaoww.com"
+    "name": "技术博客|301",
+    "link": "http://geek.xiaoww.com"
   },
   {
     "icon": "BookOpen",
